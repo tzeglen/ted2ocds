@@ -16,6 +16,7 @@ logger = logging.getLogger(__name__)
 # Maps form types to corresponding OCDS tags and tender statuses
 form_type_mapping: dict[str, dict[str, list[str] | str | None]] = {
     "planning": {"tag": ["tender"], "status": "planned"},
+    "consultation": {"tag": ["tender"], "status": "planned"},
     "competition": {"tag": ["tender"], "status": "active"},
     "change": {"tag": ["tenderUpdate"], "status": None},
     "result": {"tag": ["award", "contract"], "status": "complete"},
