@@ -54,7 +54,7 @@ def parse_ubo_firstname(xml_content: str | bytes) -> dict[str, Any] | None:
 
     for org in organizations:
         org_id = org.xpath(
-            "efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()",
+            "efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()",
             namespaces=namespaces,
         )
         if not org_id:

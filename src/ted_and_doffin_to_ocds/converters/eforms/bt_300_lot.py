@@ -47,7 +47,7 @@ def parse_lot_additional_info(xml_content: str | bytes) -> dict | None:
 
     for note in lot_notes:
         lot_id = note.xpath(
-            "../../cbc:ID[@schemeName='Lot']/text()",
+            "../../cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
             namespaces=namespaces,
         )[0]
         note_text = note.text

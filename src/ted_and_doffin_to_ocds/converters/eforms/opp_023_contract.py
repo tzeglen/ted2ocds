@@ -43,7 +43,7 @@ def parse_asset_predominance(xml_content: str | bytes) -> dict[str, Any] | None:
         for contract in settled_contracts:
             try:
                 contract_id = contract.xpath(
-                    "cbc:ID[@schemeName='contract']/text()",
+                    "cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()",
                     namespaces=NAMESPACES,
                 )[0]
 
@@ -56,13 +56,13 @@ def parse_asset_predominance(xml_content: str | bytes) -> dict[str, Any] | None:
                     lot_results = root.xpath(
                         f"/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/"
                         f"efext:EformsExtension/efac:NoticeResult/efac:LotResult"
-                        f"[efac:SettledContract/cbc:ID[@schemeName='contract']/text()='{contract_id}']",
+                        f"[efac:SettledContract/cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()='{contract_id}']",
                         namespaces=NAMESPACES,
                     )
 
                     for lot_result in lot_results:
                         lot_id = lot_result.xpath(
-                            "efac:TenderLot/cbc:ID[@schemeName='Lot']/text()",
+                            "efac:TenderLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
                             namespaces=NAMESPACES,
                         )[0]
 

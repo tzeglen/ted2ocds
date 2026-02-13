@@ -67,7 +67,7 @@ def parse_tender_value_lowest(
             namespaces=namespaces,
         )
         lot_id = lot_result.xpath(
-            "efac:TenderLot/cbc:ID[@schemeName='Lot']/text()",
+            "efac:TenderLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
             namespaces=namespaces,
         )
 

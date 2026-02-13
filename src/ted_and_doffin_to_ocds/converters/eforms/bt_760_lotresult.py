@@ -73,7 +73,7 @@ def parse_received_submissions_type(xml_content: str | bytes) -> dict | None:
 
         for lot_result in lot_results:
             lot_id = lot_result.xpath(
-                "efac:TenderLot/cbc:ID[@schemeName='Lot']/text()", namespaces=NAMESPACES
+                "efac:TenderLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()", namespaces=NAMESPACES
             )
 
             if not lot_id:

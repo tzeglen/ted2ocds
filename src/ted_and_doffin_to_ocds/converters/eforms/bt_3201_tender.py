@@ -420,7 +420,7 @@ def parse_tender_identifier(xml_content: str | bytes) -> dict | None:
     for lot_tender in lot_tenders:
         try:
             tender_id = lot_tender.xpath(
-                "cbc:ID[@schemeName='tender']/text()",
+                "cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()",
                 namespaces=namespaces,
             )[0]
             tender_reference = lot_tender.xpath(

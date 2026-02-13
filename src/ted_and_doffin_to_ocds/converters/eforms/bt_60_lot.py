@@ -60,7 +60,7 @@ def parse_eu_funds(xml_content: str | bytes) -> dict | None:
             "ancestor::cac:ProcurementProjectLot[1]", namespaces=namespaces
         )[0]
         lot_id_elements = lot_element.xpath(
-            "cbc:ID[@schemeName='Lot']/text()", namespaces=namespaces
+            "cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()", namespaces=namespaces
         )
         if not lot_id_elements:
             continue

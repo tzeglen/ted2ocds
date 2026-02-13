@@ -38,7 +38,7 @@ def parse_tender_evaluator_part(xml_content: str | bytes) -> dict[str, Any] | No
         "cbc": "urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2",
     }
 
-    xpath = "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TenderEvaluationParty/cac:PartyIdentification/cbc:ID[@schemeName='touchpoint']"
+    xpath = "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Part']/cac:TenderingTerms/cac:TenderEvaluationParty/cac:PartyIdentification/cbc:ID[@schemeName='touchpoint' or (not(@schemeName) and not(../cbc:ID[@schemeName='touchpoint']))]"
     tender_evaluators = root.xpath(xpath, namespaces=namespaces)
 
     if not tender_evaluators:

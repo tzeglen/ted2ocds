@@ -99,7 +99,7 @@ def parse_touchpoint_country(xml_content: str | bytes) -> dict | None:
 
     for organization in organizations:
         touchpoint_id = organization.xpath(
-            "efac:TouchPoint/cac:PartyIdentification/cbc:ID[@schemeName='touchpoint']/text()",
+            "efac:TouchPoint/cac:PartyIdentification/cbc:ID[@schemeName='touchpoint' or (not(@schemeName) and not(../cbc:ID[@schemeName='touchpoint']))]/text()",
             namespaces=namespaces,
         )
         country_code = organization.xpath(

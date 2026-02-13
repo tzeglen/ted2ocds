@@ -57,11 +57,11 @@ def parse_contract_identifier(xml_content: str | bytes) -> dict | None:
     )
     for lot_result in lot_results:
         award_id = lot_result.xpath(
-            "cbc:ID[@schemeName='result']/text()",
+            "cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()",
             namespaces=namespaces,
         )
         contract_id = lot_result.xpath(
-            "efac:SettledContract/cbc:ID[@schemeName='contract']/text()",
+            "efac:SettledContract/cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()",
             namespaces=namespaces,
         )
         if award_id and contract_id:
@@ -70,7 +70,7 @@ def parse_contract_identifier(xml_content: str | bytes) -> dict | None:
     # Process each contract
     for contract in settled_contracts:
         contract_id = contract.xpath(
-            "cbc:ID[@schemeName='contract']/text()",
+            "cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()",
             namespaces=namespaces,
         )
         reference_id = contract.xpath(

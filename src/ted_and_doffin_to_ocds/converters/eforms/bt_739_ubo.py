@@ -56,7 +56,7 @@ def parse_ubo_contact_fax(xml_content: str | bytes) -> dict | None:
 
         for org in organizations:
             org_id = org.xpath(
-                ".//cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()",
+                ".//cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()",
                 namespaces=NAMESPACES,
             )
 

@@ -34,14 +34,14 @@ def parse_tender_ranked(xml_content: str | bytes) -> dict | None:
     result = {"bids": {"details": []}}
 
     lot_tenders = root.xpath(
-        "//efext:EformsExtension/efac:NoticeResult/efac:LotTender[efbc:TenderRankedIndicator and cbc:ID[@schemeName='tender']]",
+        "//efext:EformsExtension/efac:NoticeResult/efac:LotTender[efbc:TenderRankedIndicator and cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]]",
         namespaces=namespaces,
     )
 
     for lot_tender in lot_tenders:
         try:
             tender_id = lot_tender.xpath(
-                "cbc:ID[@schemeName='tender']/text()",
+                "cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()",
                 namespaces=namespaces,
             )[0]
             ranked_indicator = lot_tender.xpath(
@@ -49,7 +49,7 @@ def parse_tender_ranked(xml_content: str | bytes) -> dict | None:
                 namespaces=namespaces,
             )[0]
             lot_id = lot_tender.xpath(
-                "efac:TenderLot/cbc:ID[@schemeName='Lot']/text()",
+                "efac:TenderLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
                 namespaces=namespaces,
             )[0]
 

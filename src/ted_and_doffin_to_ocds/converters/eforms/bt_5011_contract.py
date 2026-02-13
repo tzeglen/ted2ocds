@@ -39,7 +39,7 @@ def parse_contract_eu_funds_financing_identifier(
         for contract in settled_contracts:
             try:
                 contract_id = contract.xpath(
-                    "cbc:ID[@schemeName='contract']/text()", namespaces=NAMESPACES
+                    "cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()", namespaces=NAMESPACES
                 )[0]
 
                 # Using exact XPath from BT-5011 definition

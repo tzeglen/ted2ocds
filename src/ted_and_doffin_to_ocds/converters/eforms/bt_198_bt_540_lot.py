@@ -39,7 +39,7 @@ def parse_bt198_bt540_lot_unpublished_access_date(xml_content):
 
     for fields_privacy in fields_privacy_elements:
         lot_id = fields_privacy.xpath(
-            "ancestor::cac:ProcurementProjectLot/cbc:ID[@schemeName='Lot']/text()",
+            "ancestor::cac:ProcurementProjectLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
             namespaces=namespaces,
         )
         publication_date = fields_privacy.xpath(

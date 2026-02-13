@@ -73,7 +73,7 @@ def parse_dps_termination(xml_content: str | bytes) -> dict | None:
         for lot_result in lot_results:
             # Get the lot ID reference if available
             lot_reference = lot_result.xpath(
-                "cbc:ID[@schemeName='Lot']/text() | cbc:ID[not(@schemeName)]/text()",
+                "cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
                 namespaces=namespaces,
             )
 
@@ -81,7 +81,7 @@ def parse_dps_termination(xml_content: str | bytes) -> dict | None:
                 # Find the matching TenderLot
                 for tender_lot in tender_lots:
                     lot_id = tender_lot.xpath(
-                        "cbc:ID[@schemeName='Lot']/text()",
+                        "cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
                         namespaces=namespaces,
                     )
                     if lot_id and lot_id[0] == lot_reference[0]:
@@ -105,7 +105,7 @@ def parse_dps_termination(xml_content: str | bytes) -> dict | None:
                 # If we can find a TenderLot at the same position
                 if int(lot_position) < len(tender_lots):
                     lot_id = tender_lots[int(lot_position)].xpath(
-                        "cbc:ID[@schemeName='Lot']/text()",
+                        "cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
                         namespaces=namespaces,
                     )
                     if lot_id:

@@ -53,7 +53,7 @@ def parse_lot_public_opening_date(xml_content: str | bytes) -> dict | None:
     )
 
     for lot in lots:
-        lot_id = lot.xpath("cbc:ID[@schemeName='Lot']/text()", namespaces=namespaces)[0]
+        lot_id = lot.xpath("cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()", namespaces=namespaces)[0]
         date = lot.xpath(
             "cac:TenderingProcess/cac:OpenTenderEvent/cbc:OccurrenceDate/text()",
             namespaces=namespaces,

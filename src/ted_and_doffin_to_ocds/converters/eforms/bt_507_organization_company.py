@@ -48,7 +48,7 @@ def parse_organization_country_subdivision(
     )
     for org in organizations:
         org_id = org.xpath(
-            "efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()",
+            "efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()",
             namespaces=namespaces,
         )
         country_subdivision = org.xpath(

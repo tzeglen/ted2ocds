@@ -63,11 +63,11 @@ def parse_concession_revenue_user(xml_content: str | bytes) -> dict | None:
     )
     for lot_result in lot_results:
         award_id = lot_result.xpath(
-            "cbc:ID[@schemeName='result']/text()",
+            "cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()",
             namespaces=namespaces,
         )
         contract_id = lot_result.xpath(
-            "efac:SettledContract/cbc:ID[@schemeName='contract']/text()",
+            "efac:SettledContract/cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()",
             namespaces=namespaces,
         )
         if award_id and contract_id:
@@ -81,7 +81,7 @@ def parse_concession_revenue_user(xml_content: str | bytes) -> dict | None:
 
     for lot_tender in lot_tenders:
         tender_id = lot_tender.xpath(
-            "cbc:ID[@schemeName='tender']/text()",
+            "cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()",
             namespaces=namespaces,
         )
         revenue = lot_tender.xpath(
@@ -96,12 +96,12 @@ def parse_concession_revenue_user(xml_content: str | bytes) -> dict | None:
         if tender_id and revenue and currency:
             # Find corresponding contract
             contract = root.xpath(
-                f"//efac:NoticeResult/efac:SettledContract[efac:LotTender/cbc:ID[@schemeName='tender']='{tender_id[0]}']",
+                f"//efac:NoticeResult/efac:SettledContract[efac:LotTender/cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]='{tender_id[0]}']",
                 namespaces=namespaces,
             )
             if contract:
                 contract_id = contract[0].xpath(
-                    "cbc:ID[@schemeName='contract']/text()",
+                    "cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()",
                     namespaces=namespaces,
                 )
                 if contract_id:

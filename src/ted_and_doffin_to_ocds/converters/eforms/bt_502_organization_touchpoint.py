@@ -53,7 +53,7 @@ def parse_touchpoint_contact_point(xml_content: str | bytes) -> dict | None:
         if touchpoint:
             touchpoint = touchpoint[0]
             touchpoint_id = touchpoint.xpath(
-                "cac:PartyIdentification/cbc:ID[@schemeName='touchpoint']/text()",
+                "cac:PartyIdentification/cbc:ID[@schemeName='touchpoint' or (not(@schemeName) and not(../cbc:ID[@schemeName='touchpoint']))]/text()",
                 namespaces=namespaces,
             )
             contact_name = touchpoint.xpath(

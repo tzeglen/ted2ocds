@@ -53,7 +53,7 @@ def parse_touchpoint_website(xml_content: str | bytes) -> dict | None:
         if touchpoint:
             touchpoint = touchpoint[0]
             touchpoint_id = touchpoint.xpath(
-                "cac:PartyIdentification/cbc:ID[@schemeName='touchpoint']/text()",
+                "cac:PartyIdentification/cbc:ID[@schemeName='touchpoint' or (not(@schemeName) and not(../cbc:ID[@schemeName='touchpoint']))]/text()",
                 namespaces=namespaces,
             )
             website = touchpoint.xpath("cbc:WebsiteURI/text()", namespaces=namespaces)

@@ -50,7 +50,7 @@ def parse_winner_size(xml_content: str | bytes) -> dict | None:
 
     for organization in organizations:
         org_id = organization.xpath(
-            "efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()",
+            "efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()",
             namespaces=namespaces,
         )
         company_size = organization.xpath(

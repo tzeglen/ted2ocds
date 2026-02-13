@@ -57,7 +57,7 @@ def parse_service_provider_identifier(
 
         # Find the corresponding organization details
         org = root.xpath(
-            f"//efac:Organizations/efac:Organization/efac:Company[cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()='{org_id}']",
+            f"//efac:Organizations/efac:Organization/efac:Company[cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()='{org_id}']",
             namespaces=namespaces,
         )
         if org:

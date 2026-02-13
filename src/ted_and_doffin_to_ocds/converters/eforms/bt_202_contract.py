@@ -67,7 +67,7 @@ def parse_contract_modification_summary(
         if contract_id and change_desc:
             # Find all related lot results
             lot_results = root.xpath(
-                f"//efac:NoticeResult/efac:LotResult[efac:SettledContract/cbc:ID[@schemeName='contract']='{contract_id[0]}']",
+                f"//efac:NoticeResult/efac:LotResult[efac:SettledContract/cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]='{contract_id[0]}']",
                 namespaces=namespaces,
             )
 
@@ -80,12 +80,12 @@ def parse_contract_modification_summary(
 
             # Handle award IDs based on number of lot results
             award_ids = [
-                lot.xpath("cbc:ID[@schemeName='result']/text()", namespaces=namespaces)[
+                lot.xpath("cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()", namespaces=namespaces)[
                     0
                 ]
                 for lot in lot_results
                 if lot.xpath(
-                    "cbc:ID[@schemeName='result']/text()", namespaces=namespaces
+                    "cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()", namespaces=namespaces
                 )
             ]
 

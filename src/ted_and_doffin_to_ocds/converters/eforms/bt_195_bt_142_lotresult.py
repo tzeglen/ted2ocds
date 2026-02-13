@@ -57,7 +57,7 @@ def parse_bt195_bt142_unpublished_identifier(
 
     for lot_result in lot_results:
         lot_id = lot_result.xpath(
-            "cbc:ID[@schemeName='result']/text()",
+            "cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()",
             namespaces=namespaces,
         )
         field_identifier = lot_result.xpath(

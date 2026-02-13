@@ -52,7 +52,7 @@ def parse_organization_natural_person(
 
     for organization in organizations:
         org_id = organization.xpath(
-            "efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()",
+            "efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()",
             namespaces=namespaces,
         )
         natural_person_indicator = organization.xpath(

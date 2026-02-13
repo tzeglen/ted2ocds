@@ -49,7 +49,7 @@ def parse_lot_result_identifier(xml_content: str | bytes) -> dict[str, Any] | No
         for lot_result in lot_results:
             try:
                 award_id = lot_result.xpath(
-                    "cbc:ID[@schemeName='result']/text()", namespaces=NAMESPACES
+                    "cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()", namespaces=NAMESPACES
                 )
 
                 # Properly handle missing award ID
@@ -64,7 +64,7 @@ def parse_lot_result_identifier(xml_content: str | bytes) -> dict[str, Any] | No
                     continue
 
                 lot_ids = lot_result.xpath(
-                    "efac:TenderLot/cbc:ID[@schemeName='Lot']/text()",
+                    "efac:TenderLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
                     namespaces=NAMESPACES,
                 )
 

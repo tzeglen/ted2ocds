@@ -55,7 +55,7 @@ def parse_touchpoint_country_subdivision(
         if touchpoint:
             touchpoint = touchpoint[0]
             touchpoint_id = touchpoint.xpath(
-                "cac:PartyIdentification/cbc:ID[@schemeName='touchpoint']/text()",
+                "cac:PartyIdentification/cbc:ID[@schemeName='touchpoint' or (not(@schemeName) and not(../cbc:ID[@schemeName='touchpoint']))]/text()",
                 namespaces=namespaces,
             )
             country_subdivision = touchpoint.xpath(

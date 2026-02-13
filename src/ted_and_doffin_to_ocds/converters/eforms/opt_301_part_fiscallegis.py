@@ -58,7 +58,7 @@ def parse_fiscal_legislation_org_part(
     for ref in fiscal_leg_refs:
         doc_id = ref.xpath("cbc:ID/text()", namespaces=namespaces)
         org_id = ref.xpath(
-            "cac:IssuerParty/cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()",
+            "cac:IssuerParty/cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()",
             namespaces=namespaces,
         )
 

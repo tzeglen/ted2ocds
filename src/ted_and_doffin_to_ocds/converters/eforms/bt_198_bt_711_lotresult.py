@@ -51,7 +51,7 @@ def parse_bt198_bt711_unpublished_access_date(xml_content):
                 namespaces=namespaces,
             )
             lot_id = lot_result.xpath(
-                "cbc:ID[@schemeName='result']/text()",
+                "cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()",
                 namespaces=namespaces,
             )
 

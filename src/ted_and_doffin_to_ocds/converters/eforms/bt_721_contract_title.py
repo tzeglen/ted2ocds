@@ -41,7 +41,7 @@ def parse_contract_title(
 
     for settled_contract in settled_contracts:
         contract_id = settled_contract.xpath(
-            "cbc:ID[@schemeName='contract']/text()",
+            "cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()",
             namespaces=namespaces,
         )
         contract_title = settled_contract.xpath(
@@ -53,12 +53,12 @@ def parse_contract_title(
 
             # Find corresponding LotResult
             lot_result = root.xpath(
-                f"//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult[efac:SettledContract/cbc:ID[@schemeName='contract']/text()='{contract_id[0]}']",
+                f"//ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/efext:EformsExtension/efac:NoticeResult/efac:LotResult[efac:SettledContract/cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()='{contract_id[0]}']",
                 namespaces=namespaces,
             )
             if lot_result:
                 result_id = lot_result[0].xpath(
-                    "cbc:ID[@schemeName='result']/text()",
+                    "cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()",
                     namespaces=namespaces,
                 )
                 if result_id:

@@ -60,7 +60,7 @@ def parse_subcontracting_value(
 
     for lot_tender in lot_tenders:
         tender_id = lot_tender.xpath(
-            "cbc:ID[@schemeName='tender']/text()",
+            "cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()",
             namespaces=namespaces,
         )
         subcontracting_amount = lot_tender.xpath(
@@ -72,7 +72,7 @@ def parse_subcontracting_value(
             namespaces=namespaces,
         )
         related_lot = lot_tender.xpath(
-            "efac:TenderLot/cbc:ID[@schemeName='Lot']/text()",
+            "efac:TenderLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
             namespaces=namespaces,
         )
 

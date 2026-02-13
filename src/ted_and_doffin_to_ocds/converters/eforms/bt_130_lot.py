@@ -52,7 +52,7 @@ def parse_dispatch_invitation_tender(xml_content: str | bytes) -> dict | None:
     )
 
     for lot in lots:
-        lot_id = lot.xpath("cbc:ID[@schemeName='Lot']/text()", namespaces=namespaces)[0]
+        lot_id = lot.xpath("cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()", namespaces=namespaces)[0]
         invitation_date = lot.xpath(
             "cac:TenderingProcess/cac:InvitationSubmissionPeriod/cbc:StartDate/text()",
             namespaces=namespaces,

@@ -70,7 +70,7 @@ def parse_employment_legislation_org(
         for doc in empl_docs:
             doc_id = doc.xpath("cbc:ID/text()", namespaces=namespaces)
             org_id = doc.xpath(
-                "cac:IssuerParty/cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()",
+                "cac:IssuerParty/cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()",
                 namespaces=namespaces,
             )
 

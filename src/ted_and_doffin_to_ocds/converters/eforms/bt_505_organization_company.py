@@ -46,7 +46,7 @@ def parse_organization_website(xml_content: str | bytes) -> dict | None:
     )
     for org in organizations:
         org_id = org.xpath(
-            "efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()",
+            "efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()",
             namespaces=namespaces,
         )
         website = org.xpath("efac:Company/cbc:WebsiteURI/text()", namespaces=namespaces)

@@ -41,7 +41,7 @@ def parse_group_lot_identifier(xml_content: str | bytes) -> dict | None:
     for group in lots_groups:
         group_id = group.xpath("cbc:LotsGroupID/text()", namespaces=namespaces)[0]
         lot_ids = group.xpath(
-            "cac:ProcurementProjectLotReference/cbc:ID[@schemeName='Lot']/text()",
+            "cac:ProcurementProjectLotReference/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
             namespaces=namespaces,
         )
 

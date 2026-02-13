@@ -70,7 +70,7 @@ def parse_signatory_identifier_reference(
 
         # Find the corresponding organization details
         org = root.xpath(
-            f"//efac:Organizations/efac:Organization/efac:Company[cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()='{org_id}']",
+            f"//efac:Organizations/efac:Organization/efac:Company[cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()='{org_id}']",
             namespaces=namespaces,
         )
         if org:
@@ -88,7 +88,7 @@ def parse_signatory_identifier_reference(
             "ancestor::efac:SettledContract", namespaces=namespaces
         )[0]
         contract_id = contract.xpath(
-            "cbc:ID[@schemeName='contract']/text()", namespaces=namespaces
+            "cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()", namespaces=namespaces
         )
         if contract_id:
             contract_id = contract_id[0]

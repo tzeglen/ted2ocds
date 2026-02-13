@@ -25,12 +25,12 @@ def _process_lot_results(root, lot_data) -> None:
     for lot_result in lot_results:
         try:
             tender_id = lot_result.xpath(
-                "efac:LotTender/cbc:ID[@schemeName='tender']/text()",
+                "efac:LotTender/cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()",
                 namespaces=NAMESPACES,
             )[0]
 
             lot_id = lot_result.xpath(
-                "efac:TenderLot/cbc:ID[@schemeName='Lot']/text()",
+                "efac:TenderLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
                 namespaces=NAMESPACES,
             )[0]
 
@@ -137,7 +137,7 @@ def _process_lot_tenders(root, lot_data) -> None:
     for lot_tender in lot_tenders:
         try:
             tender_id = lot_tender.xpath(
-                "cbc:ID[@schemeName='tender']/text()",
+                "cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()",
                 namespaces=NAMESPACES,
             )
 

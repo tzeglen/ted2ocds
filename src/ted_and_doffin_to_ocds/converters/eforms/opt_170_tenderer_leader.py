@@ -48,7 +48,7 @@ def parse_tendering_party_leader(xml_content: str | bytes) -> dict[str, Any] | N
 
     for tenderer in tenderers:
         org_id = tenderer.xpath(
-            "cbc:ID[@schemeName='organization']/text()", namespaces=namespaces
+            "cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()", namespaces=namespaces
         )
         is_leader = tenderer.xpath(
             "efbc:GroupLeadIndicator/text()", namespaces=namespaces

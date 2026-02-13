@@ -52,7 +52,7 @@ def parse_lot_bid_opening_location(xml_content: str | bytes) -> dict | None:
     )
 
     for lot in lots:
-        lot_id = lot.xpath("cbc:ID[@schemeName='Lot']/text()", namespaces=namespaces)[0]
+        lot_id = lot.xpath("cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()", namespaces=namespaces)[0]
         description = lot.xpath(
             "cac:TenderingProcess/cac:OpenTenderEvent/cac:OccurenceLocation/cbc:Description/text()",
             namespaces=namespaces,

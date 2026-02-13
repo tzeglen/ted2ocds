@@ -48,7 +48,7 @@ def parse_ubo_postcode(xml_content: str | bytes) -> dict | None:
 
     for org in organizations:
         company_id = org.xpath(
-            "efac:Organization/efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()",
+            "efac:Organization/efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()",
             namespaces=namespaces,
         )
         ubo_id = org.xpath(

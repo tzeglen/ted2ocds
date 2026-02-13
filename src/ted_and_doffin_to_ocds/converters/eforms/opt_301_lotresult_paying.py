@@ -47,7 +47,7 @@ def parse_payer_party(xml_content: str | bytes) -> dict[str, Any] | None:
     result = {"parties": []}
 
     payer_parties = root.xpath(
-        "//efac:NoticeResult/efac:LotResult/cac:PayerParty/cac:PartyIdentification/cbc:ID[@schemeName='organization']",
+        "//efac:NoticeResult/efac:LotResult/cac:PayerParty/cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]",
         namespaces=namespaces,
     )
 

@@ -46,7 +46,7 @@ def parse_touchpoint_technical_identifier(
     result = {"parties": []}
 
     touchpoints = root.xpath(
-        "//efac:Organizations/efac:Organization/efac:TouchPoint/cac:PartyIdentification/cbc:ID[@schemeName='touchpoint']",
+        "//efac:Organizations/efac:Organization/efac:TouchPoint/cac:PartyIdentification/cbc:ID[@schemeName='touchpoint' or (not(@schemeName) and not(../cbc:ID[@schemeName='touchpoint']))]",
         namespaces=namespaces,
     )
 

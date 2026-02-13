@@ -55,7 +55,7 @@ def parse_tender_technical_identifier(
 
     for lot_tender in lot_tenders:
         tender_id = lot_tender.xpath(
-            "cbc:ID[@schemeName='tender']/text()", namespaces=namespaces
+            "cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()", namespaces=namespaces
         )
 
         if tender_id:

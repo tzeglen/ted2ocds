@@ -52,7 +52,7 @@ def parse_deadline_receipt_tenders(xml_content: str | bytes) -> dict | None:
     )
 
     for lot in lots:
-        lot_id = lot.xpath("cbc:ID[@schemeName='Lot']/text()", namespaces=namespaces)[0]
+        lot_id = lot.xpath("cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()", namespaces=namespaces)[0]
         end_date_str = lot.xpath(
             "cac:TenderingProcess/cac:TenderSubmissionDeadlinePeriod/cbc:EndDate/text()",
             namespaces=namespaces,

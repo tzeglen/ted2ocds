@@ -46,7 +46,7 @@ def parse_contract_eu_funds_details(xml_content: str | bytes) -> dict[str, Any] 
         for contract in settled_contracts:
             try:
                 contract_id = contract.xpath(
-                    "cbc:ID[@schemeName='contract']/text()",
+                    "cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()",
                     namespaces=NAMESPACES,
                 )[0]
 
@@ -76,7 +76,7 @@ def parse_contract_eu_funds_details(xml_content: str | bytes) -> dict[str, Any] 
                     award_id = root.xpath(
                         f"//efac:NoticeResult/efac:LotResult[efac:SettledContract/cbc:ID"
                         f"[@schemeName='contract']/text()='{contract_id}']/"
-                        "cbc:ID[@schemeName='result']/text()",
+                        "cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()",
                         namespaces=NAMESPACES,
                     )
                     if award_id:

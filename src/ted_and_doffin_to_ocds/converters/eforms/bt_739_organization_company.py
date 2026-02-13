@@ -53,7 +53,7 @@ def parse_organization_contact_fax(xml_content: str | bytes) -> dict | None:
 
         for company in companies:
             org_id = company.xpath(
-                "cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()",
+                "cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()",
                 namespaces=NAMESPACES,
             )
             fax_number = company.xpath(

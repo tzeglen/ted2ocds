@@ -66,7 +66,7 @@ def parse_subcontractor(xml_content: str | bytes) -> dict[str, Any] | None:
 
     for subcontractor in subcontractors:
         subcontractor_id = subcontractor.xpath(
-            "cbc:ID[@schemeName='organization']/text()", namespaces=namespaces
+            "cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()", namespaces=namespaces
         )
 
         if subcontractor_id:
@@ -77,7 +77,7 @@ def parse_subcontractor(xml_content: str | bytes) -> dict[str, Any] | None:
 
             # Find corresponding LotTender
             lot_tender_id = root.xpath(
-                "//efac:NoticeResult/efac:LotTender/cbc:ID[@schemeName='tender']/text()",
+                "//efac:NoticeResult/efac:LotTender/cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()",
                 namespaces=namespaces,
             )
             if lot_tender_id:

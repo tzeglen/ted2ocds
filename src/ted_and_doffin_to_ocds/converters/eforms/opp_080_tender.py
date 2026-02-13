@@ -45,7 +45,7 @@ def parse_kilometers_public_transport(
         for lot_tender in lot_tenders:
             try:
                 tender_id = lot_tender.xpath(
-                    "cbc:ID[@schemeName='tender']/text()",
+                    "cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()",
                     namespaces=NAMESPACES,
                 )[0]
 
@@ -61,13 +61,13 @@ def parse_kilometers_public_transport(
                     contract = root.xpath(
                         f"/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/"
                         f"efext:EformsExtension/efac:NoticeResult/efac:SettledContract"
-                        f"[efac:LotTender/cbc:ID[@schemeName='tender']/text()='{tender_id}']",
+                        f"[efac:LotTender/cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()='{tender_id}']",
                         namespaces=NAMESPACES,
                     )
 
                     if contract:
                         contract_id = contract[0].xpath(
-                            "cbc:ID[@schemeName='contract']/text()",
+                            "cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()",
                             namespaces=NAMESPACES,
                         )[0]
 
@@ -75,8 +75,8 @@ def parse_kilometers_public_transport(
                         award_id = root.xpath(
                             f"/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/"
                             f"efext:EformsExtension/efac:NoticeResult/efac:LotResult"
-                            f"[efac:SettledContract/cbc:ID[@schemeName='contract']/text()='{contract_id}']"
-                            f"/cbc:ID[@schemeName='result']/text()",
+                            f"[efac:SettledContract/cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()='{contract_id}']"
+                            f"/cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()",
                             namespaces=NAMESPACES,
                         )
 

@@ -93,7 +93,7 @@ def parse_authority_activity(xml_content: str | bytes) -> dict[str, Any] | None:
 
     for party in contracting_parties:
         organization_id = party.xpath(
-            "cac:Party/cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()",
+            "cac:Party/cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()",
             namespaces=NAMESPACES,
         )
         activity_code = party.xpath(

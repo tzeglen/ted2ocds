@@ -62,7 +62,7 @@ def parse_touchpoint_contact_fax(xml_content: str | bytes) -> dict | None:
             touchpoints = org.xpath("efac:TouchPoint", namespaces=NAMESPACES)
             for touchpoint in touchpoints:
                 tp_id = touchpoint.xpath(
-                    "cac:PartyIdentification/cbc:ID[@schemeName='touchpoint']/text()",
+                    "cac:PartyIdentification/cbc:ID[@schemeName='touchpoint' or (not(@schemeName) and not(../cbc:ID[@schemeName='touchpoint']))]/text()",
                     namespaces=NAMESPACES,
                 )
                 fax = touchpoint.xpath(

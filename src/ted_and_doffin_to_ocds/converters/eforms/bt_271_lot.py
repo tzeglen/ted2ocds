@@ -56,7 +56,7 @@ def parse_bt_271_lot(xml_content: str | bytes) -> dict | None:
 
     for lot in lots:
         lot_id = lot.xpath(
-            "cbc:ID[@schemeName='Lot']/text()",
+            "cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
             namespaces=namespaces,
         )
         amount_element = lot.xpath(

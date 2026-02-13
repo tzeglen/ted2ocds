@@ -48,7 +48,7 @@ def parse_extended_duration_indicator(
         for contract in contracts:
             try:
                 contract_id = contract.xpath(
-                    "cbc:ID[@schemeName='contract']/text()",
+                    "cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()",
                     namespaces=NAMESPACES,
                 )[0]
 
@@ -78,14 +78,14 @@ def parse_extended_duration_indicator(
             try:
                 # Get the contract ID from the LotResult
                 contract_ref = lot_result.xpath(
-                    "efac:SettledContract/cbc:ID[@schemeName='contract']/text()",
+                    "efac:SettledContract/cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()",
                     namespaces=NAMESPACES,
                 )
 
                 if not contract_ref:
                     # Try alternate path based on example
                     contract_ref = lot_result.xpath(
-                        "cbc:ID[@schemeName='contract']/text()",
+                        "cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()",
                         namespaces=NAMESPACES,
                     )
 

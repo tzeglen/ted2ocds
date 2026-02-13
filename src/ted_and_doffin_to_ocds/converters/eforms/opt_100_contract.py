@@ -48,7 +48,7 @@ def parse_framework_notice_identifier(
         for contract in settled_contracts:
             try:
                 contract_id = contract.xpath(
-                    "cbc:ID[@schemeName='contract']/text()",
+                    "cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()",
                     namespaces=NAMESPACES,
                 )[0]
 
@@ -78,8 +78,8 @@ def parse_framework_notice_identifier(
                     award_id = root.xpath(
                         f"/*/ext:UBLExtensions/ext:UBLExtension/ext:ExtensionContent/"
                         f"efext:EformsExtension/efac:NoticeResult/efac:LotResult"
-                        f"[efac:SettledContract/cbc:ID[@schemeName='contract']/text()='{contract_id}']"
-                        f"/cbc:ID[@schemeName='result']/text()",
+                        f"[efac:SettledContract/cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()='{contract_id}']"
+                        f"/cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()",
                         namespaces=NAMESPACES,
                     )
                     if award_id:

@@ -62,7 +62,7 @@ def parse_received_submissions_count(xml_content: str | bytes) -> dict | None:
 
         for lot_result in lot_results:
             lot_id = lot_result.xpath(
-                "efac:TenderLot/cbc:ID[@schemeName='Lot']/text()", namespaces=NAMESPACES
+                "efac:TenderLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()", namespaces=NAMESPACES
             )
             count = lot_result.xpath(
                 "efac:ReceivedSubmissionsStatistics/efbc:StatisticsNumeric/text()",

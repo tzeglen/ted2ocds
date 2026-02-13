@@ -45,7 +45,7 @@ def parse_organization_technical_identifier(
     result = {"parties": []}
 
     organizations = root.xpath(
-        "//efac:Organizations/efac:Organization/efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization']",
+        "//efac:Organizations/efac:Organization/efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]",
         namespaces=namespaces,
     )
 

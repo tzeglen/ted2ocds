@@ -56,7 +56,7 @@ def parse_bt195_bt5423_lot(xml_content: str | bytes) -> dict | None:
 
     for field_identifier_code in field_identifier_codes:
         lot_id = field_identifier_code.xpath(
-            "ancestor::cac:ProcurementProjectLot/cbc:ID[@schemeName='Lot']/text()",
+            "ancestor::cac:ProcurementProjectLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
             namespaces=namespaces,
         )[0]
 

@@ -51,7 +51,7 @@ def parse_tender_identifier_reference(
 
     for lot_result in lot_results:
         lot_tenders = lot_result.xpath(
-            "efac:LotTender/cbc:ID[@schemeName='tender']/text()", namespaces=namespaces
+            "efac:LotTender/cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()", namespaces=namespaces
         )
 
         # Filter out IDs that don't match the required pattern

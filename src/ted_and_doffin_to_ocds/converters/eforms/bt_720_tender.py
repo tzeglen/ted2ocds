@@ -41,7 +41,7 @@ def parse_tender_value(
 
     for lot_tender in lot_tenders:
         tender_id = lot_tender.xpath(
-            "cbc:ID[@schemeName='tender']/text()",
+            "cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()",
             namespaces=namespaces,
         )
         payable_amount = lot_tender.xpath(
@@ -53,7 +53,7 @@ def parse_tender_value(
             namespaces=namespaces,
         )
         lot_id = lot_tender.xpath(
-            "efac:TenderLot/cbc:ID[@schemeName='Lot']/text()",
+            "efac:TenderLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
             namespaces=namespaces,
         )
 
@@ -66,12 +66,12 @@ def parse_tender_value(
 
             # Find corresponding LotResult
             lot_result = root.xpath(
-                f"//efac:LotResult[efac:LotTender/cbc:ID[@schemeName='tender']/text()='{tender_id[0]}']",
+                f"//efac:LotResult[efac:LotTender/cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()='{tender_id[0]}']",
                 namespaces=namespaces,
             )
             if lot_result:
                 result_id = lot_result[0].xpath(
-                    "cbc:ID[@schemeName='result']/text()",
+                    "cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()",
                     namespaces=namespaces,
                 )
                 if result_id:

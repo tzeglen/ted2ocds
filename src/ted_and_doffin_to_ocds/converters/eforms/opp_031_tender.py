@@ -60,7 +60,7 @@ def process_lot_tender_terms(
 
     try:
         lot_ids = lot_tender.xpath(
-            "efac:TenderLot/cbc:ID[@schemeName='Lot']/text()",
+            "efac:TenderLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
             namespaces=namespaces,
         )
         if not lot_ids:
@@ -152,7 +152,7 @@ def check_inconsistent_terms(lot_tenders: list, namespaces: dict) -> None:
     lot_terms = {}
     for lot_tender in lot_tenders:
         lot_ids = lot_tender.xpath(
-            "efac:TenderLot/cbc:ID[@schemeName='Lot']/text()",
+            "efac:TenderLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
             namespaces=namespaces,
         )
         if not lot_ids:

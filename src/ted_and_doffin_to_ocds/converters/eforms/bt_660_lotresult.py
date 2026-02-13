@@ -56,7 +56,7 @@ def parse_framework_reestimated_value(
 
     for lot_result in lot_results:
         award_id = lot_result.xpath(
-            "cbc:ID[@schemeName='result']/text()",
+            "cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()",
             namespaces=namespaces,
         )
         reestimated_value = lot_result.xpath(
@@ -68,7 +68,7 @@ def parse_framework_reestimated_value(
             namespaces=namespaces,
         )
         related_lot = lot_result.xpath(
-            "efac:TenderLot/cbc:ID[@schemeName='Lot']/text()",
+            "efac:TenderLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
             namespaces=namespaces,
         )
 

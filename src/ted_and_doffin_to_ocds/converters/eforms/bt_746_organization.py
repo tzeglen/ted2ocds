@@ -59,7 +59,7 @@ def parse_organization_regulated_market(
                 "efbc:ListedOnRegulatedMarketIndicator/text()", namespaces=NAMESPACES
             )
             org_id = org.xpath(
-                "efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()",
+                "efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()",
                 namespaces=NAMESPACES,
             )
 

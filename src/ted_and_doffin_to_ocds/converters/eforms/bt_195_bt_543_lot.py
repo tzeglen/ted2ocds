@@ -57,7 +57,7 @@ def parse_bt195_bt543_lot_unpublished_identifier(
 
     for fields_privacy in fields_privacy_elements:
         lot_id = fields_privacy.xpath(
-            "ancestor::cac:ProcurementProjectLot/cbc:ID[@schemeName='Lot']/text()",
+            "ancestor::cac:ProcurementProjectLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
             namespaces=namespaces,
         )
         field_identifier = fields_privacy.xpath(

@@ -41,10 +41,10 @@ def parse_foreign_subsidies_measures(xml_content: str) -> dict | None:
 
     for tender in lot_tenders:
         tender_id = tender.xpath(
-            "cbc:ID[@schemeName='tender']/text()", namespaces=namespaces
+            "cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()", namespaces=namespaces
         )
         lot_id = tender.xpath(
-            "efac:TenderLot/cbc:ID[@schemeName='Lot']/text()", namespaces=namespaces
+            "efac:TenderLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()", namespaces=namespaces
         )
         measures_code = tender.xpath(
             "efbc:ForeignSubsidiesMeasuresCode[@listName='foreign-subsidy-measure-conclusion']/text()",

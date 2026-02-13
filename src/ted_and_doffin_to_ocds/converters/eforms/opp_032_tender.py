@@ -47,7 +47,7 @@ def parse_revenues_allocation(xml_content: str | bytes) -> dict[str, Any] | None
         for lot_tender in lot_tenders:
             try:
                 lot_id = lot_tender.xpath(
-                    "efac:TenderLot/cbc:ID[@schemeName='Lot']/text()",
+                    "efac:TenderLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
                     namespaces=NAMESPACES,
                 )[0]
 

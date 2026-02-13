@@ -51,7 +51,7 @@ def parse_concession_value_description(
 
     for lot_tender in lot_tenders:
         tender_id = lot_tender.xpath(
-            "cbc:ID[@schemeName='tender']/text()",
+            "cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()",
             namespaces=namespaces,
         )
         value_desc = lot_tender.xpath(
@@ -62,16 +62,16 @@ def parse_concession_value_description(
         if tender_id and value_desc:
             # Find corresponding lot result
             lot_result = root.xpath(
-                f"//efac:NoticeResult/efac:LotResult[efac:LotTender/cbc:ID[@schemeName='tender']='{tender_id[0]}']",
+                f"//efac:NoticeResult/efac:LotResult[efac:LotTender/cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]='{tender_id[0]}']",
                 namespaces=namespaces,
             )
             if lot_result:
                 result_id = lot_result[0].xpath(
-                    "cbc:ID[@schemeName='result']/text()",
+                    "cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()",
                     namespaces=namespaces,
                 )
                 lot_id = lot_result[0].xpath(
-                    "efac:TenderLot/cbc:ID[@schemeName='Lot']/text()",
+                    "efac:TenderLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
                     namespaces=namespaces,
                 )
 

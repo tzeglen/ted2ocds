@@ -73,7 +73,7 @@ def parse_bt197_bt710_unpublished_justification_code(xml_content):
                 namespaces=namespaces,
             )
             lot_id = lot_result.xpath(
-                "cbc:ID[@schemeName='result']/text()",
+                "cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()",
                 namespaces=namespaces,
             )
 

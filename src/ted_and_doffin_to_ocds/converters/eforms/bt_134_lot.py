@@ -50,7 +50,7 @@ def parse_lot_public_opening_description(
     )
 
     for lot in lots:
-        lot_id = lot.xpath("cbc:ID[@schemeName='Lot']/text()", namespaces=namespaces)[0]
+        lot_id = lot.xpath("cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()", namespaces=namespaces)[0]
         description = lot.xpath(
             "cac:TenderingProcess/cac:OpenTenderEvent/cbc:Description/text()",
             namespaces=namespaces,

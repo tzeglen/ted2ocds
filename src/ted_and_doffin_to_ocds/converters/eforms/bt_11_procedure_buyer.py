@@ -88,7 +88,7 @@ def parse_buyer_legal_type(
 
     for party in contracting_parties:
         org_id = party.xpath(
-            ".//cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()",
+            ".//cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()",
             namespaces=NAMESPACES,
         )
         legal_type = party.xpath(

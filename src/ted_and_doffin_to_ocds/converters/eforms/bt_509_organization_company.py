@@ -45,7 +45,7 @@ def parse_organization_edelivery_gateway(
 
     for org in organizations:
         org_id = org.xpath(
-            "efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()",
+            "efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()",
             namespaces=namespaces,
         )
         endpoint_id = org.xpath(

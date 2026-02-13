@@ -56,7 +56,7 @@ def parse_strategic_procurement(xml_content: str | bytes) -> dict | None:
         for lot in lots:
             # Get lot ID, ensuring the schemeName attribute is correct
             lot_ids = lot.xpath(
-                "cbc:ID[@schemeName='Lot']/text()",
+                "cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
                 namespaces=NAMESPACES,
             )
             if not lot_ids:

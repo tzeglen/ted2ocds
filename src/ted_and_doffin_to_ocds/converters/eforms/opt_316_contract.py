@@ -51,7 +51,7 @@ def parse_contract_technical_identifier(
 
     for settled_contract in settled_contracts:
         contract_id = settled_contract.xpath(
-            "cbc:ID[@schemeName='contract']/text()", namespaces=namespaces
+            "cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()", namespaces=namespaces
         )
 
         if contract_id:

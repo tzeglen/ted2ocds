@@ -52,7 +52,7 @@ def parse_subcontracting(xml_content: str | bytes) -> dict | None:
 
     for tender in tenders:
         tender_id_elements = tender.xpath(
-            "cbc:ID[@schemeName='tender']/text()",
+            "cbc:ID[@schemeName='tender' or (not(@schemeName) and not(../cbc:ID[@schemeName='tender']))]/text()",
             namespaces=namespaces,
         )
 

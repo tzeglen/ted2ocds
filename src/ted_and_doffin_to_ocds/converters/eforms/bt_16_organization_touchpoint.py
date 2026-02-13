@@ -42,7 +42,7 @@ def parse_organization_touchpoint_part_name(
         if touchpoint:
             touchpoint = touchpoint[0]
             touchpoint_id = touchpoint.xpath(
-                "cac:PartyIdentification/cbc:ID[@schemeName='touchpoint']/text()",
+                "cac:PartyIdentification/cbc:ID[@schemeName='touchpoint' or (not(@schemeName) and not(../cbc:ID[@schemeName='touchpoint']))]/text()",
                 namespaces=namespaces,
             )
             org_name = touchpoint.xpath(

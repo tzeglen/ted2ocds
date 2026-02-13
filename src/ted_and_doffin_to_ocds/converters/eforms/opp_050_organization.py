@@ -44,7 +44,7 @@ def parse_buyers_group_lead_indicator(xml_content: str | bytes) -> dict | None:
             efbc:GroupLeadIndicator and
             (efbc:GroupLeadIndicator[translate(text(), 'TRUE', 'true')='true'] or
              efbc:GroupLeadIndicator[text()='1'])
-        ]/efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()""",
+        ]/efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()""",
         namespaces=namespaces,
     )
 

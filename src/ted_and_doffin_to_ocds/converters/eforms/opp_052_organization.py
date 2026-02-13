@@ -40,7 +40,7 @@ def parse_acquiring_cpb_buyer_indicator(xml_content: str | bytes) -> dict | None
         """//efac:Organizations/efac:Organization[
             efbc:AcquiringCPBIndicator and
             efbc:AcquiringCPBIndicator[translate(text(), 'TRUE', 'true')='true']
-        ]/efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization']/text()""",
+        ]/efac:Company/cac:PartyIdentification/cbc:ID[@schemeName='organization' or (not(@schemeName) and not(../cbc:ID[@schemeName='organization']))]/text()""",
         namespaces=namespaces,
     )
 

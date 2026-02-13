@@ -57,7 +57,7 @@ def parse_bt196_bt540_lot_unpublished_justification(
 
     for privacy in fields_privacy:
         lot_id = privacy.xpath(
-            "ancestor::cac:ProcurementProjectLot/cbc:ID[@schemeName='Lot']/text()",
+            "ancestor::cac:ProcurementProjectLot/cbc:ID[@schemeName='Lot' or (not(@schemeName) and not(../cbc:ID[@schemeName='Lot']))]/text()",
             namespaces=namespaces,
         )[0]
         reason = privacy.xpath("efbc:ReasonDescription/text()", namespaces=namespaces)[

@@ -48,7 +48,7 @@ def parse_winner_decision_date(xml_content: str | bytes) -> dict | None:
 
         for settled_contract in settled_contracts:
             contract_id = settled_contract.xpath(
-                "cbc:ID[@schemeName='contract']/text()",
+                "cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()",
                 namespaces=namespaces,
             )
             award_date = settled_contract.xpath(
@@ -62,11 +62,11 @@ def parse_winner_decision_date(xml_content: str | bytes) -> dict | None:
 
                 for lot_result in lot_results:
                     lot_contract_id = lot_result.xpath(
-                        "efac:SettledContract/cbc:ID[@schemeName='contract']/text()",
+                        "efac:SettledContract/cbc:ID[@schemeName='contract' or (not(@schemeName) and not(../cbc:ID[@schemeName='contract']))]/text()",
                         namespaces=namespaces,
                     )
                     lot_result_id = lot_result.xpath(
-                        "cbc:ID[@schemeName='result']/text()",
+                        "cbc:ID[@schemeName='result' or (not(@schemeName) and not(../cbc:ID[@schemeName='result']))]/text()",
                         namespaces=namespaces,
                     )
 
