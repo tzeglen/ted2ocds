@@ -150,6 +150,22 @@ def merge_eu_funds(release_json: dict, eu_funds_data: dict | None) -> None:
         logger.info("No EU funds data to merge")
         return
 
+    if "tender" in eu_funds_data and "lots" in eu_funds_data["tender"]:
+        existing_lots = release_json.setdefault("tender", {}).setdefault("lots", [])
+        for new_lot in eu_funds_data["tender"]["lots"]:
+            existing_lot = next(
+                (lot for lot in existing_lots if lot["id"] == new_lot["id"]),
+                None,
+            )
+            if existing_lot:
+                existing_lot["euFunded"] = new_lot["euFunded"]
+            else:
+                existing_lots.append(new_lot)
+
+    if "parties" not in eu_funds_data:
+        logger.info("No EU funder party data to merge")
+        return
+
     parties = release_json.setdefault("parties", [])
     eu_party = next(
         (party for party in parties if party.get("name") == "European Union"),
@@ -173,17 +189,5 @@ def merge_eu_funds(release_json: dict, eu_funds_data: dict | None) -> None:
     for finance_obj in eu_funds_data.get("finance", []):
         finance_obj["financingParty"]["id"] = eu_party["id"]
         release_json["planning"]["budget"]["finance"].append(finance_obj)
-
-    if "tender" in eu_funds_data and "lots" in eu_funds_data["tender"]:
-        existing_lots = release_json.setdefault("tender", {}).setdefault("lots", [])
-        for new_lot in eu_funds_data["tender"]["lots"]:
-            existing_lot = next(
-                (lot for lot in existing_lots if lot["id"] == new_lot["id"]),
-                None,
-            )
-            if existing_lot:
-                existing_lot["euFunded"] = new_lot["euFunded"]
-            else:
-                existing_lots.append(new_lot)
 
     logger.info("Merged EU funds data")
