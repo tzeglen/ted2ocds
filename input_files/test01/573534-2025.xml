@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">16</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <efac:Organizations>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://platformazakupowa.pl/</cbc:WebsiteURI>
+                        <cbc:EndpointID>https://platformazakupowa.pl/</cbc:EndpointID>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="POL">33 Wojskowy Oddział Gospodarczy w Nowej Dębie</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:Department>33 Wojskowy Oddział Gospodarczy</cbc:Department>
+                           <cbc:CityName>Nowa Dęba</cbc:CityName>
+                           <cbc:PostalZone>39-460</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">PL824</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">POL</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>33 Wojskowy Oddział Gospodarczy</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Name>https://platformazakupowa.pl/</cbc:Name>
+                           <cbc:Telephone>261-162-206</cbc:Telephone>
+                           <cbc:ElectronicMail>33wog.zamowienia-publiczne@ron.mil.pl</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                     <efac:TouchPoint>
+                        <cbc:WebsiteURI>https://www.uzp.gov.pl/kio</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="touchpoint">TPO-0001</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="POL">Krajowa Izba Odwoławcza</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:CityName>Warszawa</cbc:CityName>
+                           <cbc:PostalZone>02-676</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">PL911</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">POL</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:Contact>
+                           <cbc:ElectronicMail>odwolania@uzp.gov.pl</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:TouchPoint>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://op.europa.eu</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="POL">Publications Office of the European Union</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <cbc:PostalZone>2417</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>PUBL</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+352 29291</cbc:Telephone>
+                           <cbc:ElectronicMail>ted@publications.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+            <efac:Publication><efbc:NoticePublicationID schemeName="ojs-notice-id">00573534-2025</efbc:NoticePublicationID><efbc:GazetteID schemeName="ojs-id">168/2025</efbc:GazetteID><efbc:PublicationDate>2025-09-03+02:00</efbc:PublicationDate></efac:Publication></efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-1.13</cbc:CustomizationID>
+   <cbc:ID schemeName="notice-id">6015ecd7-22bc-421d-8145-a2e3206fce49</cbc:ID>
+   <cbc:ContractFolderID>65d14688-7ecf-4e79-9936-410c3b85c06b</cbc:ContractFolderID>
+   <cbc:IssueDate>2025-09-02Z</cbc:IssueDate>
+   <cbc:IssueTime>12:33:42Z</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="competition">cn-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode listName="language">POL</cbc:NoticeLanguageCode>
+   <cac:ContractingParty>
+      <cbc:BuyerProfileURI>https://platformazakupowa.pl/</cbc:BuyerProfileURI>
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">defence</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0001</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:ServiceProviderParty>
+            <cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+            <cac:Party>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:Party>
+         </cac:ServiceProviderParty>
+      </cac:Party>
+   </cac:ContractingParty>
+   <cac:TenderingTerms>
+      <cac:ProcurementLegislationDocumentReference>
+         <cbc:ID>LocalLegalBasis</cbc:ID>
+         <cbc:DocumentDescription languageID="POL">art. 132 ustawy z dnia 11 września 2019r. Prawo Zamówień Publicznych</cbc:DocumentDescription>
+      </cac:ProcurementLegislationDocumentReference>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-grounds-source">epo-notice</cbc:TendererRequirementTypeCode>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-crim-corrpt</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="POL">Zgodnie z Rozdziałem XV Specyfikacji Warunków Zamówienia</cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-crim-fraud</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="POL">Zgodnie z Rozdziałem XV Specyfikacji Warunków Zamówienia</cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-mis-bre-lab-law</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="POL">Zgodnie z Rozdziałem XV Specyfikacji Warunków Zamówienia</cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-pmt-bre-ssc</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="POL">Zgodnie z Rozdziałem XV Specyfikacji Warunków Zamówienia</cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-pmt-bre-tax</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="POL">Zgodnie z Rozdziałem XV Specyfikacji Warunków Zamówienia</cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-natl-bre-nat-law</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="POL">Zgodnie z Rozdziałem XV Specyfikacji Warunków Zamówienia</cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-mis-distortion</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="POL">Zgodnie z Rozdziałem XV Specyfikacji Warunków Zamówienia</cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-crim-traffick</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="POL">Zgodnie z Rozdziałem XV Specyfikacji Warunków Zamówienia</cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-crim-laund</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="POL">Zgodnie z Rozdziałem XV Specyfikacji Warunków Zamówienia</cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-crim-terror</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="POL">Zgodnie z Rozdziałem XV Specyfikacji Warunków Zamówienia</cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-crim-part</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="POL">Zgodnie z Rozdziałem XV Specyfikacji Warunków Zamówienia</cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:TendererQualificationRequest>
+         <cac:SpecificTendererRequirement>
+            <cbc:TendererRequirementTypeCode listName="exclusion-ground">exg-mis-prep-confl</cbc:TendererRequirementTypeCode>
+            <cbc:Description languageID="POL">Zgodnie z Rozdziałem XV Specyfikacji Warunków Zamówienia</cbc:Description>
+         </cac:SpecificTendererRequirement>
+      </cac:TendererQualificationRequest>
+      <cac:LotDistribution>
+         <cbc:MaximumLotsAwardedNumeric>3</cbc:MaximumLotsAwardedNumeric>
+         <cbc:MaximumLotsSubmittedNumeric>3</cbc:MaximumLotsSubmittedNumeric>
+      </cac:LotDistribution>
+   </cac:TenderingTerms>
+   <cac:TenderingProcess>
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+      <cac:ProcessJustification>
+         <cbc:ProcessReasonCode listName="accelerated-procedure">false</cbc:ProcessReasonCode>
+      </cac:ProcessJustification>
+   </cac:TenderingProcess>
+   <cac:ProcurementProject>
+      <cbc:ID schemeName="InternalID">Zp49/2025</cbc:ID>
+      <cbc:Name languageID="POL">„Sukcesywna dostawa ryb do magazynów 33 Wojskowego Oddziału Gospodarczego zlokalizowanych w m. Nowa Dęba, Kielce oraz Sandomierz (zamówienie z podziałem na 3 części)”
+</cbc:Name>
+      <cbc:Description languageID="POL">Niniejsze zamówienie zostało podzielone na trzy następujące części:
+1)	Część 1 - Sukcesywna dostawa ryb do magazynu zlokalizowanego w m. Nowa Dęba;
+2)	Część 2 - Sukcesywna dostawa ryb do magazynu zlokalizowanego w m. Kielce;
+3)	Część 3 - Sukcesywna dostawa ryb do magazynu zlokalizowanego w m. Sandomierz.
+Szczegółowy opis przedmiotu zamówienia, dla każdej pozycji asortymentowej został przedstawiony w załączniku do SWZ – Minimalne wymagania jakościowe. Szczegółowe określenie ilości poszczególnego asortymentu stanowiącego przedmiot zamówienia realizowanego w ramach zamówienia podstawowego oraz zamówienia realizowanego w ramach  prawa opcji określają załączniki do niniejszej SWZ - Formularze szczegółowej wyceny.
+Wytworzenie przedmiotu zamówienia, sposób jego opakowania i transportu muszą spełniać wymagania obowiązujących, krajowych i unijnych, przepisów prawa żywnościowego. Przepisy te określa załącznik do SWZ – projekt umowy. Wykonawcy jako podmioty działające na rynku spożywczym, prowadzące zakłady obrotu żywnością lub gastronomii zobowiązane są zapewnić bezpieczeństwo żywności zgodnie z zasadami Hazard Analysis and Critical Control Points System, zwanym „systemem HACCP” (postępowanie mające na celu zapewnienie bezpieczeństwa żywności przez identyfikację i oszacowanie zagrożeń z punktu widzenia wymagań zdrowotnych żywności oraz ryzyka wystąpienia zagrożeń podczas przebiegu wszystkich etapów produkcji i obrotu żywnością, system ten ma również na celu określenie metod eliminacji lub ograniczania zagrożeń oraz ustalenie działań korygujących).
+Umowa w zakresie każdej z części na jakie zostało podzielone niniejsze postępowanie będzie obowiązywała od dnia jej zawarcia do 31 grudnia 2026r. Strony przyszłej umowy ustalają, iż realizacja zamówienia rozpocznie się nie wcześniej niż 1 stycznia 2026r. i będzie trwała do 31 grudnia 2026r. lub do wyczerpania kwoty, stanowiącej maksymalne wynagrodzenie przysługujące Wykonawcy z tytułu realizacji zamówienia, zgodnie z treścią oferty, złożonej przez Wykonawcę. W przypadku skorzystania przez Zamawiającego z zamówienia realizowanego w ramach prawa opcji, Zamawiający najpóźniej w terminie do 30 listopada 2025r. złoży Wykonawcy pierwsze pisemne oświadczenie w przedmiocie zamówienia udzielanego w ramach prawa opcji wraz z określeniem jego zakresu. Dostawa produktów stanowiących przedmiot niniejszego postępowania odbywać się będzie maksymalnie 6 razy w tygodniu.
+Wykonawca zobowiązany jest do zabezpieczenia swojej oferty wadium (dla każdej z części osobno) w wysokości: 
+Część 1: 19 000,00 zł;
+Część 2: w zakresie części 2 niniejszego postępowania, Zamawiający nie wymaga zabezpieczenia oferty wadium;
+Część 3: w zakresie części 3 niniejszego postępowania, Zamawiający nie wymaga zabezpieczenia oferty wadium.
+Najpóźniej w dniu zawarcia umowy Wykonawca, którego oferta została uznana za najkorzystniejszą (w zakresie danej części) zobowiązany jest przedłożyć zgodnie 
+z § 9 ust. 1 projektu umowy – polisę potwierdzającą ubezpieczenie OC w zakresie prowadzonej działalności. 
+Zamawiający przewiduje możliwość unieważnienia przedmiotowego postępowania na podstawie art. 310 pkt 1) ustawy Pzp, tj. w przypadku jeżeli środki, które Zamawiający zamierzał przeznaczyć na sfinansowanie całości lub części zamówienia nie zostały mu przyznane.
+Wykonawca będzie związany złożoną ofertą przez okres 90 dni tj. do dnia 3 stycznia 2026r. Bieg terminu związania z ofertą rozpoczyna się wraz z upływem terminu składania ofert. W przypadku, gdy wybór najkorzystniejszej oferty nie nastąpi przed upływem terminu związania ofertą określonego w SWZ, Zamawiający przed upływem terminu związania ofertą zwraca się jednokrotnie do Wykonawców o wyrażenie zgody na przedłużenie tego terminu o wskazany przez niego okres, nie dłuższy niż 60 dni.
+Ofertę można składać w odniesieniu do jednej, dwóch lub wszystkich części postępowania.
+Wykonawcy wspólnie ubiegający się o udzielenie zamówienia (Konsorcjum / wspólnicy Spółki Cywilnej) w rozumieniu art. 58 ustawy Pzp:
+1)	ponoszą solidarną odpowiedzialność za niewykonanie lub nienależyte wykonanie zamówienia;
+2)	muszą ustanowić pełnomocnika do reprezentowania ich w postępowaniu o udzielenie zamówienia albo do reprezentowania w postępowaniu i zawarcia umowy w sprawie niniejszego zamówienia, zgodnie z art. 58 ust. 2 ustawy Pzp - fakt ustanowienia pełnomocnika musi wynikać z załączonych do oferty dokumentów (pełnomocnictwa lub innych dokumentów z których wynikać będzie fakt ustanowienia pełnomocnika).
+W niniejszym postępowaniu o udzielenie zamówienia, komunikacja między Zamawiającym, a Wykonawcami odbywa się drogą elektroniczną za pośrednictwem Platformy zakupowej dostępnej pod adresem:  https://platformazakupowa.pl/transakcja/1164060 i formularza „Wyślij wiadomość do Zamawiającego”. Przycisk “Wyślij wiadomość do zamawiającego” służy do zadawania pytań do SWZ, odpowiedzi na wezwania Zamawiającego czy przesłania odwołań. 
+Podmiotowe środki dowodowe oraz inne dokumenty lub oświadczenia, o których mowa w Rozporządzeniu, składa się w formie elektronicznej tj. opatrzonej kwalifikowanym podpisem elektronicznym.</cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+      <cbc:Note languageID="POL">Z postępowania o udzielenie zamówienia wyklucza się Wykonawcę w stosunku do którego zachodzi którakolwiek z okoliczności wskazanych w:
+1) art. 108 ust. 1 ustawy Pzp, z zastrzeżeniem art. 110 ust. 2 ustawy Pzp. 
+2) art. 7 ust. 1 ustawy z dnia 13 kwietnia 2022r. o szczególnych rozwiązaniach w zakresie przeciwdziałania wspieraniu agresji na Ukrainę oraz służących ochronie bezpieczeństwa narodowego. 
+3) art. 5k Rozporządzenia Rady (UE) 2022/576 z dnia 8 kwietnia 2022r. w sprawie zmiany rozporządzenia (UE) nr 833/2014 dotyczącego środków ograniczających w związku z działaniami Rosji destabilizującymi sytuację na Ukrainie.
+O udzielenie zamówienia mogą ubiegać się Wykonawcy, którzy spełniają warunki udziału w postępowaniu dotyczące uprawnień do prowadzenia określonej działalności gospodarczej lub zawodowej, o ile wynika to z odrębnych przepisów. O udzielenie przedmiotowego zamówienia mogą ubiegać się Wykonawcy, którzy posiadają: 
+a)	uprawnienie do prowadzenia działalności w zakresie produkcji lub wprowadzania do obrotu żywność pochodzenia nie zwierzęcego lub wprowadzają do obrotu produkty pochodzenia zwierzęcego, nie objęte urzędową kontrolą organów Inspekcji Weterynaryjnej, zgodnie z art. 62 ust. 1 pkt. 2 ustawy z dnia 25 sierpnia 2006r. 
+o bezpieczeństwie żywności i żywienia
+lub
+b)	uprawnienie do prowadzenia działalności w zakresie wprowadzania do obrotu produktów pochodzenia zwierzęcego, zgodnie z art. 20 ust. 1 pkt. 2 ustawy z dnia 
+16 grudnia 2005r. o produktach pochodzenia zwierzęcego
+lub
+c)	uprawnienie do produkcji lub wprowadzania do obrotu żywności podlegającej urzędowej kontroli Państwowej Inspekcji Sanitarnej. 
+Wykonawca wraz z ofertą zobowiązany jest złożyć aktualne na dzień składania ofert oświadczenie wstępne potwierdzające, że Wykonawca nie podlega wykluczeniu oraz spełnia warunki udziału w postępowaniu w zakresie wskazanym przez Zamawiającego na formularzu Jednolitego Europejskiego Dokumentu Zamówienia, sporządzonego zgodnie ze wzorem standardowego formularza określonego w Rozporządzeniu Wykonawczym Komisji (UE) 2016/7 z dnia 5 stycznia 2016 ustanawiającym standardowy formularz Jednolitego Europejskiego Dokumentu Zamówienia, zwanego dalej JEDZ.
+W przypadku oferty składanej przez Wykonawców wspólnie ubiegających się o udzielenie zamówienia publicznego (członkowie Konsorcjum/wspólnicy Spółki Cywilnej), oświadczenie o którym mowa powyżej w części odnoszącej się do braku podstaw wykluczenia składa każdy z Wykonawców wspólnie ubiegających się o udzielenie zamówienia publicznego oddzielnie. 
+W przypadku oferty składanej przez Wykonawców wspólnie ubiegających się o udzielenie zamówienia publicznego (członkowie Konsorcjum/wspólnicy Spółki Cywilnej), oświadczenie o którym mowa powyżej w części odnoszącej się do warunków udziału w postępowaniu składa ten z Wykonawców, który wykazuje ich spełnienie.
+Oświadczenie, o którym mowa powyżej stanowi dowód potwierdzający brak podstaw wykluczenia z postępowania oraz spełnienie warunków udziału w postępowaniu na dzień składania ofert tymczasowo zastępujący wymagane przez Zamawiającego podmiotowe środki dowodowe. Oświadczenie Wykonawca zobowiązany jest złożyć pod rygorem nieważności w formie elektronicznej, tj. opatrzone kwalifikowanym podpisem elektronicznym, zgodnie z zasadami określonymi poniżej.
+Wykonawca wraz z ofertą zobowiązany jest złożyć aktualne na dzień składania ofert oświadczenie wstępne potwierdzające, że Wykonawca nie podlega wykluczeniu na podstawie:
+1)	art. 7 ust. 1 ustawy z dnia 13 kwietnia 2022r. o szczególnych rozwiązaniach w zakresie przeciwdziałania wspieraniu agresji na Ukrainę oraz służących ochronie bezpieczeństwa narodowego,
+2)	art. 5k ROZPORZĄDZENIA RADY (UE) 2022/576 z dnia 8 kwietnia 2022r. 
+w sprawie zmiany rozporządzenia (UE) nr 833/2014 dotyczącego środków ograniczających w związku z działaniami Rosji destabilizującymi sytuację na Ukrainie.
+Wzór oświadczenia stanowi załącznik do niniejszej SWZ.
+W przypadku Wykonawców wspólnie ubiegających się o udzielenie zamówienia (członkowie Konsorcjum, wspólnicy Spółki Cywilnej) dokumenty, o których mowa powyżej musi złożyć każdy z Wykonawców wspólnie ubiegających się o udzielenie zamówienia oddzielnie.
+Wykonawcy wspólnie ubiegający się o udzielenie niniejszego zamówienia tj. członkowie Konsorcjum oraz wspólnicy Spółki Cywilnej wraz z ofertą zobowiązani są złożyć aktualne na dzień składania ofert oświadczenie składane na podstawie art. 117 ust. 4 ustawy Pzp, z którego wprost wynikać będzie, którą część zamówienia wykonają poszczególni Wykonawcy. Wzór oświadczenia stanowi załącznik do niniejszej SWZ.
+Zamawiający przed wyborem najkorzystniejszej oferty wezwie Wykonawcę, którego oferta została najwyżej oceniona, do złożenia w wyznaczonym terminie, nie krótszym niż 10 dni, aktualnych na dzień złożenia podmiotowych środków dowodowych potwierdzających brak podstaw wykluczenia Wykonawcy z postępowania:
+1)	Informacji z Krajowego Rejestru Karnego, sporządzonej nie wcześniej niż 6 miesięcy przed jej złożeniem w zakresie:
+a)	art. 108 ust. 1 pkt 1) i 2) ustawy z dnia 11 września 2019r. Prawo zamówień publicznych (informacja o osobie)
+oraz
+b)	art. 108 ust. 1 pkt 4) ustawy z dnia 11 września 2019r. Prawo zamówień publicznych – dotyczącej orzeczenia zakazu ubiegania się o zamówienia publiczne tytułem środka karnego.
+W przypadku Wykonawców wspólnie ubiegających się o udzielenie zamówienia (członkowie Konsorcjum, wspólnicy Spółki Cywilnej) dokumenty, o których mowa powyżej musi złożyć każdy z Wykonawców wspólnie ubiegających się o udzielenie zamówienia oddzielnie.
+Informacja z KRK powinna być sporządzona nie wcześniej niż 6 miesięcy przed jej złożeniem i musi być aktualna na dzień złożenia.
+2)	Oświadczenia Wykonawcy w zakresie art. 108 ust. 1 pkt 5) ustawy z dnia 11 września 2019r. Prawo zamówień publicznych, o braku przynależności do tej samej grupy kapitałowej w rozumieniu ustawy z dnia 16 lutego 2007r. o ochronie konkurencji i konsumentów z innym Wykonawcą, który złożył odrębną ofertę, ofertę częściową lub wniosek o dopuszczenie do udziału w postępowaniu, albo oświadczenia o przynależności do tej samej grupy kapitałowej wraz z dokumentami lub informacjami potwierdzającymi przygotowanie oferty, oferty częściowej lub wniosku o dopuszczenie do udziału w postępowaniu niezależnie od innego Wykonawcy należącego do tej samej grupy kapitałowej. 
+Wzór oświadczenia będzie stanowił załącznik do wezwania.
+W przypadku Wykonawców wspólnie ubiegających się o udzielenie zamówienia (członkowie Konsorcjum, wspólnicy Spółki Cywilnej) dokumenty, o których mowa powyżej musi złożyć każdy z Wykonawców wspólnie ubiegających się o udzielenie zamówienia oddzielnie.
+3)	Oświadczenia Wykonawcy o aktualności informacji zawartych w oświadczeniu, o którym mowa w art. 125 ust. 1 ustawy z dnia 11 września 2019r. Prawo zamówień publicznych (oświadczenie JEDZ), w zakresie podstaw wykluczenia z postępowania wskazanych przez Zamawiającego, o których mowa w:
+a)	art. 108 ust. 1 pkt 3) ustawy z dnia 11 września 2019r. Prawo zamówień publicznych;
+b)	art. 108 ust. 1 pkt 6) ustawy z dnia 11 września 2019r. Prawo zamówień publicznych.
+Wzór oświadczenia będzie stanowił załącznik do wezwania.
+W przypadku Wykonawców wspólnie ubiegających się o udzielenie zamówienia (członkowie Konsorcjum, wspólnicy Spółki Cywilnej) dokumenty, o których mowa powyżej musi złożyć każdy z Wykonawców wspólnie ubiegających się o udzielenie zamówienia oddzielnie.
+4)	Oświadczenia Wykonawcy o aktualności informacji zawartych w oświadczeniu potwierdzającym brak podstaw wykluczenia z postępowania, o których mowa w:
+a)	art. 7 ust. 1 ustawy z dnia 13 kwietnia 2022 – o szczególnych rozwiązaniach w zakresie przeciwdziałania wspieraniu agresji na Ukrainę oraz służących ochronie bezpieczeństwa narodowego,
+b)	art. 5k ROZPORZĄDZENIA RADY (UE) 2022/576 z dnia 8 kwietnia 2022r. w sprawie zmiany rozporządzenia (UE) nr 833/2014 dotyczącego środków ograniczających w związku z działaniami Rosji destabilizującymi sytuację na Ukrainie.
+Wzór oświadczenia będzie stanowił załącznik do wezwania.
+W przypadku Wykonawców wspólnie ubiegających się o udzielenie zamówienia (członkowie Konsorcjum, wspólnicy Spółki Cywilnej) dokumenty, o których mowa powyżej musi złożyć każdy z Wykonawców wspólnie ubiegających się o udzielenie zamówienia oddzielnie.
+Zamawiający przed wyborem najkorzystniejszej oferty wezwie Wykonawcę, którego oferta została najwyżej oceniona, do złożenia w wyznaczonym terminie, nie krótszym niż 10 dni, aktualnych na dzień złożenia podmiotowych środków dowodowych potwierdzających spełnienie warunków udziału w postępowaniu dotyczących uprawnień do prowadzenia określonej działalności gospodarczej lub zawodowej tj.:
+a)	aktualnej decyzji administracyjnej właściwego organu Państwowej Inspekcji Sanitarnej w sprawie zatwierdzenia, warunkowego zatwierdzenia, przedłużania warunkowego zatwierdzenia zakładów, które produkują lub wprowadzają do obrotu żywność pochodzenia nie zwierzęcego lub wprowadzają do obrotu produkty pochodzenia zwierzęcego, nie objęte urzędową kontrolą organów Inspekcji Weterynaryjnej, zgodnie z art. 62 ust. 1 pkt 2) ustawy z dnia 25 sierpnia 2006r. o bezpieczeństwie żywności i żywienia
+lub
+b)	aktualnej decyzji administracyjnej właściwego powiatowego lekarza weterynarii w sprawie zatwierdzenia, przedłużeni albo przedłużenia warunkowego zatwierdzenia produktów pochodzenia zwierzęcego zgodnie z art. 20 ust. 12 pkt 2) ustawy z dnia 16 grudnia 2005r. o produktach pochodzenia zwierzęcego
+lub
+c)	zaświadczenia o wpisie do rejestru zakładów zgodnie z rozporządzeniem Ministra Zdrowia z dnia 29 maja 2007r. w sprawie wzorów dokumentów dotyczących rejestracji i zatwierdzenia zakładów produkujących lub wprowadzających do obrotu żywność podlegających urzędowej kontroli Państwowej Inspekcji Sanitarnej.</cbc:Note>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">15200000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <cac:RealizedLocation>
+         <cbc:Description languageID="POL">Nowa Dęba, Kielce, Sandomierz</cbc:Description>
+         <cac:Address>
+            <cbc:CountrySubentityCode listName="nuts">PL824</cbc:CountrySubentityCode>
+            <cac:Country>
+               <cbc:IdentificationCode listName="country">POL</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:Address>
+      </cac:RealizedLocation>
+   </cac:ProcurementProject>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <cac:TenderingTerms>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cac:CallForTendersDocumentReference>
+            <ext:UBLExtensions>
+               <ext:UBLExtension>
+                  <ext:ExtensionContent>
+                     <efext:EformsExtension>
+                        <efac:OfficialLanguages>
+                           <cac:Language>
+                              <cbc:ID>POL</cbc:ID>
+                           </cac:Language>
+                        </efac:OfficialLanguages>
+                     </efext:EformsExtension>
+                  </ext:ExtensionContent>
+               </ext:UBLExtension>
+            </ext:UBLExtensions>
+            <cbc:ID>SWZ wraz z załącznikami Zp49/2025</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>https://platformazakupowa.pl/transakcja/1164060</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-procurement-document</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterNumeric>100</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="POL">Cena ofertowa brutto zamówienia podstawowego</cbc:Name>
+                  <cbc:Description languageID="POL">Cena 100 pkt</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>https://platformazakupowa.pl/transakcja/1164060</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="DAY">90</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="POL">Odwołanie wobec treści ogłoszenia wszczynającego postępowanie o udzielenie zamówienia lub wobec treści dokumentów zamówienia wnosi się w terminie 10 dni od dnia publikacji ogłoszenia w Dzienniku Urzędowym Unii Europejskiej lub zamieszczenia dokumentów zamówienia na stronie internetowej prowadzonego postępowania.
+Odwołanie wnosi się w terminie:
+1)	10 dni od dnia przekazania informacji o czynności Zamawiającego stanowiącej podstawę jego wniesienia, jeżeli informacja została przekazana przy użyciu środków komunikacji elektronicznej,
+2)	15 dni od dnia przekazania informacji o czynności Zamawiającego stanowiącej podstawę jego wniesienia, jeżeli informacja została przekazana w sposób inny niż określony w pkt 1) powyżej.
+</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>TPO-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>TPO-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>POL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2025-10-06+02:00</cbc:EndDate>
+            <cbc:EndTime>11:00:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2025-10-06+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>11:30:00+02:00</cbc:OccurrenceTime>
+            <cac:OccurenceLocation>
+               <cbc:Description languageID="POL">https://platformazakupowa.pl/</cbc:Description>
+            </cac:OccurenceLocation>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">Część 1</cbc:ID>
+         <cbc:Name languageID="POL">Sukcesywna dostawa ryb do magazynu zlokalizowanego w m. Nowa Dęba</cbc:Name>
+         <cbc:Description languageID="POL">Sukcesywna dostawa ryb do magazynu zlokalizowanego w m. Nowa Dęba</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <cbc:SMESuitableIndicator>true</cbc:SMESuitableIndicator>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">15200000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:RealizedLocation>
+            <cbc:Description languageID="POL">Nowa Dęba</cbc:Description>
+            <cac:Address>
+               <cbc:CountrySubentityCode listName="nuts">PL824</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">POL</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:StartDate>2026-01-01+01:00</cbc:StartDate>
+            <cbc:EndDate>2026-12-31+01:00</cbc:EndDate>
+         </cac:PlannedPeriod>
+         <cac:ContractExtension>
+            <cbc:OptionsDescription languageID="POL">Zgodnie z art. 441 ustawy z dnia 11 września 2019r. - Prawo zamówień publicznych, Zamawiający przewiduje możliwość skorzystania z prawa opcji w zakresie każdej z części na jakie zostało podzielone niniejsze zamówienie. Prawo opcji stanowi uprawnienie Zamawiającego, z którego może, ale nie musi skorzystać w ramach realizacji umowy. Szczegółowe ilości asortymentu, którego dostarczenie stanowi przedmiot zamówienia opcjonalnego przedstawione zostały w Formularzu szczegółowej wyceny – odrębnie dla każdej z części na jakie zostało podzielone zamówienie. Zamawiający zastrzega, iż dostawy objęte prawem opcji muszą być realizowane na warunkach określonych dla zamówienia podstawowego. Zamawiający wymaga, aby wartość cen jednostkowych poszczególnych pozycji asortymentowych, przysługujących Wykonawcy z tytułu realizacji zamówienia była jednakowa w odniesieniu do zamówienia podstawowego oraz zamówienia realizowanego w ramach prawa opcji.
+W ramach prawa opcji Zamawiający zastrzega sobie możliwość pełnego albo wyłącznie częściowego wykorzystania zamówienia objętego prawem opcji, co każdorazowo zostanie sprecyzowane w oświadczeniu o udzieleniu zamówienia składanym w ramach prawa opcji. Warunkiem uruchomienia zamówienia w ramach prawa opcji będzie każdorazowo oświadczenie woli Zamawiającego, określające zakres zamówienia udzielanego w ramach prawa opcji. Zamawiający jest uprawniony według własnego wyboru do składania oświadczenia w przedmiocie zamówienia udzielanego w ramach prawa opcji jednokrotnie, bądź wielokrotnie według potrzeb Zamawiającego. Bez względu na to, na jakim poziomie zostanie Wykonawcy udzielone zamówienie w ramach prawa opcji, Wykonawcy zawsze przysługiwało będzie wyłącznie wynagrodzenie z tytułu zrealizowanych dostaw. Wykonawca oświadcza, że zgadza się na przewidziane w niniejszym zamówieniu prawo opcji i nie przysługuje mu żadne roszczenie z tytułu nie udzielenia przez Zamawiającego realizacji dostaw objętych prawem opcji. Szczegóły dotyczące realizacji zamówienia opcjonalnego zostały ujęte w projekcie umowy.
+</cbc:OptionsDescription>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+      <cac:TenderingTerms>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cac:CallForTendersDocumentReference>
+            <ext:UBLExtensions>
+               <ext:UBLExtension>
+                  <ext:ExtensionContent>
+                     <efext:EformsExtension>
+                        <efac:OfficialLanguages>
+                           <cac:Language>
+                              <cbc:ID>POL</cbc:ID>
+                           </cac:Language>
+                        </efac:OfficialLanguages>
+                     </efext:EformsExtension>
+                  </ext:ExtensionContent>
+               </ext:UBLExtension>
+            </ext:UBLExtensions>
+            <cbc:ID>SWZ wraz z załącznikami Zp49/2025</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>https://platformazakupowa.pl/transakcja/1164060</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-procurement-document</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterNumeric>100</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="POL">Cena ofertowa brutto zamówienia podstawowego</cbc:Name>
+                  <cbc:Description languageID="POL">Cena 100 pkt</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>https://platformazakupowa.pl/transakcja/1164060</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="DAY">90</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="POL">Odwołanie wobec treści ogłoszenia wszczynającego postępowanie o udzielenie zamówienia lub wobec treści dokumentów zamówienia wnosi się w terminie 10 dni od dnia publikacji ogłoszenia w Dzienniku Urzędowym Unii Europejskiej lub zamieszczenia dokumentów zamówienia na stronie internetowej prowadzonego postępowania.
+Odwołanie wnosi się w terminie:
+1)	10 dni od dnia przekazania informacji o czynności Zamawiającego stanowiącej podstawę jego wniesienia, jeżeli informacja została przekazana przy użyciu środków komunikacji elektronicznej,
+2)	15 dni od dnia przekazania informacji o czynności Zamawiającego stanowiącej podstawę jego wniesienia, jeżeli informacja została przekazana w sposób inny niż określony w pkt 1) powyżej.
+</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>TPO-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>TPO-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>POL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2025-10-06+02:00</cbc:EndDate>
+            <cbc:EndTime>11:00:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2025-10-06+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>11:30:00+02:00</cbc:OccurrenceTime>
+            <cac:OccurenceLocation>
+               <cbc:Description languageID="POL">https://platformazakupowa.pl/</cbc:Description>
+            </cac:OccurenceLocation>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">Część 2</cbc:ID>
+         <cbc:Name languageID="POL">Sukcesywna dostawa ryb do magazynu zlokalizowanego w m. Kielce</cbc:Name>
+         <cbc:Description languageID="POL">Sukcesywna dostawa ryb do magazynu zlokalizowanego w m. Kielce</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <cbc:SMESuitableIndicator>true</cbc:SMESuitableIndicator>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">15200000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:RealizedLocation>
+            <cbc:Description languageID="POL">Kielce</cbc:Description>
+            <cac:Address>
+               <cbc:CountrySubentityCode listName="nuts">PL721</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">POL</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:StartDate>2026-01-01+01:00</cbc:StartDate>
+            <cbc:EndDate>2026-12-31+01:00</cbc:EndDate>
+         </cac:PlannedPeriod>
+         <cac:ContractExtension>
+            <cbc:OptionsDescription languageID="POL">Zgodnie z art. 441 ustawy z dnia 11 września 2019r. - Prawo zamówień publicznych, Zamawiający przewiduje możliwość skorzystania z prawa opcji w zakresie każdej z części na jakie zostało podzielone niniejsze zamówienie. Prawo opcji stanowi uprawnienie Zamawiającego, z którego może, ale nie musi skorzystać w ramach realizacji umowy. Szczegółowe ilości asortymentu, którego dostarczenie stanowi przedmiot zamówienia opcjonalnego przedstawione zostały w Formularzu szczegółowej wyceny – odrębnie dla każdej z części na jakie zostało podzielone zamówienie. Zamawiający zastrzega, iż dostawy objęte prawem opcji muszą być realizowane na warunkach określonych dla zamówienia podstawowego. Zamawiający wymaga, aby wartość cen jednostkowych poszczególnych pozycji asortymentowych, przysługujących Wykonawcy z tytułu realizacji zamówienia była jednakowa w odniesieniu do zamówienia podstawowego oraz zamówienia realizowanego w ramach prawa opcji.
+W ramach prawa opcji Zamawiający zastrzega sobie możliwość pełnego albo wyłącznie częściowego wykorzystania zamówienia objętego prawem opcji, co każdorazowo zostanie sprecyzowane w oświadczeniu o udzieleniu zamówienia składanym w ramach prawa opcji. Warunkiem uruchomienia zamówienia w ramach prawa opcji będzie każdorazowo oświadczenie woli Zamawiającego, określające zakres zamówienia udzielanego w ramach prawa opcji. Zamawiający jest uprawniony według własnego wyboru do składania oświadczenia w przedmiocie zamówienia udzielanego w ramach prawa opcji jednokrotnie, bądź wielokrotnie według potrzeb Zamawiającego. Bez względu na to, na jakim poziomie zostanie Wykonawcy udzielone zamówienie w ramach prawa opcji, Wykonawcy zawsze przysługiwało będzie wyłącznie wynagrodzenie z tytułu zrealizowanych dostaw. Wykonawca oświadcza, że zgadza się na przewidziane w niniejszym zamówieniu prawo opcji i nie przysługuje mu żadne roszczenie z tytułu nie udzielenia przez Zamawiającego realizacji dostaw objętych prawem opcji. Szczegóły dotyczące realizacji zamówienia opcjonalnego zostały ujęte w projekcie umowy.
+</cbc:OptionsDescription>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0003</cbc:ID>
+      <cac:TenderingTerms>
+         <cbc:VariantConstraintCode listName="permission">not-allowed</cbc:VariantConstraintCode>
+         <cbc:FundingProgramCode listName="eu-funded">no-eu-funds</cbc:FundingProgramCode>
+         <cac:CallForTendersDocumentReference>
+            <ext:UBLExtensions>
+               <ext:UBLExtension>
+                  <ext:ExtensionContent>
+                     <efext:EformsExtension>
+                        <efac:OfficialLanguages>
+                           <cac:Language>
+                              <cbc:ID>POL</cbc:ID>
+                           </cac:Language>
+                        </efac:OfficialLanguages>
+                     </efext:EformsExtension>
+                  </ext:ExtensionContent>
+               </ext:UBLExtension>
+            </ext:UBLExtensions>
+            <cbc:ID>SWZ wraz z załącznikami Zp49/2025</cbc:ID>
+            <cbc:DocumentType>non-restricted-document</cbc:DocumentType>
+            <cac:Attachment>
+               <cac:ExternalReference>
+                  <cbc:URI>https://platformazakupowa.pl/transakcja/1164060</cbc:URI>
+               </cac:ExternalReference>
+            </cac:Attachment>
+         </cac:CallForTendersDocumentReference>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="selection-criteria-source">epo-procurement-document</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:TendererQualificationRequest>
+            <cac:SpecificTendererRequirement>
+               <cbc:TendererRequirementTypeCode listName="reserved-procurement">none</cbc:TendererRequirementTypeCode>
+            </cac:SpecificTendererRequirement>
+         </cac:TendererQualificationRequest>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="reserved-execution">no</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="einvoicing">allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="ecatalog-submission">not-allowed</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:ContractExecutionRequirement>
+            <cbc:ExecutionRequirementCode listName="esignature-submission">true</cbc:ExecutionRequirementCode>
+         </cac:ContractExecutionRequirement>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterNumeric>100</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <cbc:Name languageID="POL">Cena ofertowa brutto zamówienia podstawowego</cbc:Name>
+                  <cbc:Description languageID="POL">Cena 100 pkt</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:TenderRecipientParty>
+            <cbc:EndpointID>https://platformazakupowa.pl/transakcja/1164060</cbc:EndpointID>
+         </cac:TenderRecipientParty>
+         <cac:TenderValidityPeriod>
+            <cbc:DurationMeasure unitCode="DAY">90</cbc:DurationMeasure>
+         </cac:TenderValidityPeriod>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="POL">Odwołanie wobec treści ogłoszenia wszczynającego postępowanie o udzielenie zamówienia lub wobec treści dokumentów zamówienia wnosi się w terminie 10 dni od dnia publikacji ogłoszenia w Dzienniku Urzędowym Unii Europejskiej lub zamieszczenia dokumentów zamówienia na stronie internetowej prowadzonego postępowania.
+Odwołanie wnosi się w terminie:
+1)	10 dni od dnia przekazania informacji o czynności Zamawiającego stanowiącej podstawę jego wniesienia, jeżeli informacja została przekazana przy użyciu środków komunikacji elektronicznej,
+2)	15 dni od dnia przekazania informacji o czynności Zamawiającego stanowiącej podstawę jego wniesienia, jeżeli informacja została przekazana w sposób inny niż określony w pkt 1) powyżej.
+</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>TPO-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>TPO-0001</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+         <cac:Language>
+            <cbc:ID>POL</cbc:ID>
+         </cac:Language>
+         <cac:PostAwardProcess>
+            <cbc:ElectronicOrderUsageIndicator>true</cbc:ElectronicOrderUsageIndicator>
+            <cbc:ElectronicPaymentUsageIndicator>true</cbc:ElectronicPaymentUsageIndicator>
+         </cac:PostAwardProcess>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:SubmissionMethodCode listName="esubmission">required</cbc:SubmissionMethodCode>
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:TenderSubmissionDeadlinePeriod>
+            <cbc:EndDate>2025-10-06+02:00</cbc:EndDate>
+            <cbc:EndTime>11:00:00+02:00</cbc:EndTime>
+         </cac:TenderSubmissionDeadlinePeriod>
+         <cac:OpenTenderEvent>
+            <cbc:OccurrenceDate>2025-10-06+02:00</cbc:OccurrenceDate>
+            <cbc:OccurrenceTime>11:30:00+02:00</cbc:OccurrenceTime>
+            <cac:OccurenceLocation>
+               <cbc:Description languageID="POL">https://platformazakupowa.pl/</cbc:Description>
+            </cac:OccurenceLocation>
+         </cac:OpenTenderEvent>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">Część 3</cbc:ID>
+         <cbc:Name languageID="POL">Sukcesywna dostawa ryb do magazynu zlokalizowanego w m. Sandomierz</cbc:Name>
+         <cbc:Description languageID="POL">Sukcesywna dostawa ryb do magazynu zlokalizowanego w m. Sandomierz</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">supplies</cbc:ProcurementTypeCode>
+         <cbc:SMESuitableIndicator>true</cbc:SMESuitableIndicator>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">15200000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:RealizedLocation>
+            <cbc:Description languageID="POL">Sandomierz</cbc:Description>
+            <cac:Address>
+               <cbc:CountrySubentityCode listName="nuts">PL722</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">POL</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:StartDate>2026-01-01+01:00</cbc:StartDate>
+            <cbc:EndDate>2026-12-31+01:00</cbc:EndDate>
+         </cac:PlannedPeriod>
+         <cac:ContractExtension>
+            <cbc:OptionsDescription languageID="POL">Zgodnie z art. 441 ustawy z dnia 11 września 2019r. - Prawo zamówień publicznych, Zamawiający przewiduje możliwość skorzystania z prawa opcji w zakresie każdej z części na jakie zostało podzielone niniejsze zamówienie. Prawo opcji stanowi uprawnienie Zamawiającego, z którego może, ale nie musi skorzystać w ramach realizacji umowy. Szczegółowe ilości asortymentu, którego dostarczenie stanowi przedmiot zamówienia opcjonalnego przedstawione zostały w Formularzu szczegółowej wyceny – odrębnie dla każdej z części na jakie zostało podzielone zamówienie. Zamawiający zastrzega, iż dostawy objęte prawem opcji muszą być realizowane na warunkach określonych dla zamówienia podstawowego. Zamawiający wymaga, aby wartość cen jednostkowych poszczególnych pozycji asortymentowych, przysługujących Wykonawcy z tytułu realizacji zamówienia była jednakowa w odniesieniu do zamówienia podstawowego oraz zamówienia realizowanego w ramach prawa opcji.
+W ramach prawa opcji Zamawiający zastrzega sobie możliwość pełnego albo wyłącznie częściowego wykorzystania zamówienia objętego prawem opcji, co każdorazowo zostanie sprecyzowane w oświadczeniu o udzieleniu zamówienia składanym w ramach prawa opcji. Warunkiem uruchomienia zamówienia w ramach prawa opcji będzie każdorazowo oświadczenie woli Zamawiającego, określające zakres zamówienia udzielanego w ramach prawa opcji. Zamawiający jest uprawniony według własnego wyboru do składania oświadczenia w przedmiocie zamówienia udzielanego w ramach prawa opcji jednokrotnie, bądź wielokrotnie według potrzeb Zamawiającego. Bez względu na to, na jakim poziomie zostanie Wykonawcy udzielone zamówienie w ramach prawa opcji, Wykonawcy zawsze przysługiwało będzie wyłącznie wynagrodzenie z tytułu zrealizowanych dostaw. Wykonawca oświadcza, że zgadza się na przewidziane w niniejszym zamówieniu prawo opcji i nie przysługuje mu żadne roszczenie z tytułu nie udzielenia przez Zamawiającego realizacji dostaw objętych prawem opcji. Szczegóły dotyczące realizacji zamówienia opcjonalnego zostały ujęte w projekcie umowy.
+</cbc:OptionsDescription>
+         </cac:ContractExtension>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+</ContractNotice>

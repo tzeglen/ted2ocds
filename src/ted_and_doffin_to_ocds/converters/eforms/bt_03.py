@@ -29,7 +29,7 @@ form_type_mapping: dict[str, dict[str, list[str] | str | None]] = {
 
 def parse_form_type(
     xml_content: str | bytes,
-) -> dict[str, list[str] | dict[str, str]] | None:
+) -> dict[str, list[str] | dict[str, str] | str] | None:
     """Parse the form type from XML content and return corresponding OCDS mapping.
 
     Args:
@@ -63,20 +63,25 @@ def parse_form_type(
             return None
 
         list_name = notice_type_code[0].get("listName")
+        notice_type_value = (notice_type_code[0].text or "").strip()
+
+        result: dict[str, list[str] | dict[str, str] | str] = {}
+        if notice_type_value:
+            result["tedNoticeType"] = notice_type_value
 
         # Discard notices with form type "bri" as they relate to events
         # outside the lifecycle of a contracting process
         if list_name == "bri":
             logger.info("Discarding notice with form type 'bri'")
-            return None
+            return result or None
 
         if list_name not in form_type_mapping:
             logger.warning("Unknown form type: %s", list_name)
-            return None
+            return result or None
 
         mapping = form_type_mapping[list_name]
 
-        result = {"tag": mapping["tag"]}
+        result["tag"] = mapping["tag"]
 
         if mapping["status"] is not None:
             result["tender"] = {"status": mapping["status"]}
@@ -110,9 +115,13 @@ def merge_form_type(
         logger.info("No form type data to merge.")
         return
 
-    release_json["tag"] = form_type_data["tag"]
+    if "tag" in form_type_data:
+        release_json["tag"] = form_type_data["tag"]
 
     if "tender" in form_type_data:
         release_json.setdefault("tender", {}).update(form_type_data["tender"])
+
+    if "tedNoticeType" in form_type_data:
+        release_json["tedNoticeType"] = form_type_data["tedNoticeType"]
 
     logger.info("Merged form type data: %s", str(form_type_data))

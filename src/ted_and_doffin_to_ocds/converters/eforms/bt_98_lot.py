@@ -74,7 +74,11 @@ def parse_tender_validity_deadline(xml_content: str | bytes) -> dict | None:
                 lot_data = {
                     "id": lot_id,
                     "submissionTerms": {
-                        "bidValidityPeriod": {"durationInDays": duration_in_days}
+                        "bidValidityPeriod": {
+                            "durationInDays": duration_in_days,
+                            "duration": value,
+                            "durationUnit": unit_code,
+                        }
                     },
                 }
                 result["tender"]["lots"].append(lot_data)

@@ -1583,6 +1583,10 @@ from ted_and_doffin_to_ocds.converters.eforms.bt_538_part import (
     merge_part_duration_other,
     parse_part_duration_other,
 )
+from ted_and_doffin_to_ocds.converters.eforms.bt_award_criteria_subordinate import (
+    merge_subordinate_award_criteria,
+    parse_subordinate_award_criteria,
+)
 from ted_and_doffin_to_ocds.converters.eforms.bt_539_lot import (
     merge_award_criterion_type,
     parse_award_criterion_type,
@@ -1796,17 +1800,13 @@ from ted_and_doffin_to_ocds.converters.eforms.bt_727_procedure import (
     merge_procedure_place_performance,
     parse_procedure_place_performance,
 )
-from ted_and_doffin_to_ocds.converters.eforms.bt_728_lot import (
-    merge_lot_place_performance_additional,
-    parse_lot_place_performance_additional,
+from ted_and_doffin_to_ocds.converters.eforms.bt_place_performance_address_lot import (
+    merge_lot_place_performance_address,
+    parse_lot_place_performance_address,
 )
 from ted_and_doffin_to_ocds.converters.eforms.bt_728_part import (
     merge_part_place_performance_additional,
     parse_part_place_performance_additional,
-)
-from ted_and_doffin_to_ocds.converters.eforms.bt_728_procedure import (
-    merge_procedure_place_performance_additional,
-    parse_procedure_place_performance_additional,
 )
 from ted_and_doffin_to_ocds.converters.eforms.bt_729_lot import (
     merge_lot_subcontracting_obligation_maximum,
@@ -2052,81 +2052,37 @@ from ted_and_doffin_to_ocds.converters.eforms.bt_5011_contract import (
     merge_contract_eu_funds_financing_identifier,
     parse_contract_eu_funds_financing_identifier,
 )
-from ted_and_doffin_to_ocds.converters.eforms.bt_5071_lot import (
-    merge_place_performance_country_subdivision,
-    parse_place_performance_country_subdivision,
-)
 from ted_and_doffin_to_ocds.converters.eforms.bt_5071_part import (
     merge_place_performance_country_subdivision_part,
     parse_place_performance_country_subdivision_part,
-)
-from ted_and_doffin_to_ocds.converters.eforms.bt_5071_procedure import (
-    merge_place_performance_country_subdivision_procedure,
-    parse_place_performance_country_subdivision_procedure,
-)
-from ted_and_doffin_to_ocds.converters.eforms.bt_5101_lot import (
-    merge_place_performance_street_lot,
-    parse_place_performance_street_lot,
 )
 from ted_and_doffin_to_ocds.converters.eforms.bt_5101a_part import (
     merge_part_place_performance_street,
     parse_part_place_performance_street,
 )
-from ted_and_doffin_to_ocds.converters.eforms.bt_5101a_procedure import (
-    merge_procedure_place_performance_street,
-    parse_procedure_place_performance_street,
-)
 from ted_and_doffin_to_ocds.converters.eforms.bt_5101b_part import (
     merge_part_place_performance_streetline1,
     parse_part_place_performance_streetline1,
-)
-from ted_and_doffin_to_ocds.converters.eforms.bt_5101b_procedure import (
-    merge_procedure_place_performance_streetline1,
-    parse_procedure_place_performance_streetline1,
 )
 from ted_and_doffin_to_ocds.converters.eforms.bt_5101c_part import (
     merge_part_place_performance_streetline2,
     parse_part_place_performance_streetline2,
 )
-from ted_and_doffin_to_ocds.converters.eforms.bt_5101c_procedure import (
-    merge_procedure_place_performance_streetline2,
-    parse_procedure_place_performance_streetline2,
-)
-from ted_and_doffin_to_ocds.converters.eforms.bt_5121_lot import (
-    merge_place_performance_post_code,
-    parse_place_performance_post_code,
-)
 from ted_and_doffin_to_ocds.converters.eforms.bt_5121_part import (
     merge_place_performance_post_code_part,
     parse_place_performance_post_code_part,
-)
-from ted_and_doffin_to_ocds.converters.eforms.bt_5121_procedure import (
-    merge_place_performance_post_code_procedure,
-    parse_place_performance_post_code_procedure,
-)
-from ted_and_doffin_to_ocds.converters.eforms.bt_5131_lot import (
-    merge_place_performance_city,
-    parse_place_performance_city,
 )
 from ted_and_doffin_to_ocds.converters.eforms.bt_5131_part import (
     merge_place_performance_city_part,
     parse_place_performance_city_part,
 )
-from ted_and_doffin_to_ocds.converters.eforms.bt_5131_procedure import (
-    merge_place_performance_city_procedure,
-    parse_place_performance_city_procedure,
-)
-from ted_and_doffin_to_ocds.converters.eforms.bt_5141_lot import (
-    merge_lot_country,
-    parse_lot_country,
-)
 from ted_and_doffin_to_ocds.converters.eforms.bt_5141_part import (
     merge_part_country,
     parse_part_country,
 )
-from ted_and_doffin_to_ocds.converters.eforms.bt_5141_procedure import (
-    merge_procedure_country,
-    parse_procedure_country,
+from ted_and_doffin_to_ocds.converters.eforms.bt_place_performance_address_procedure import (
+    merge_procedure_place_performance_address,
+    parse_procedure_place_performance_address,
 )
 from ted_and_doffin_to_ocds.converters.eforms.bt_5421_lot import (
     merge_award_criterion_number_weight_lot,
@@ -4145,19 +4101,9 @@ def process_bt_sections(release_json: dict[str, Any], xml_content: bytes) -> Non
             "BT-507-ubo (ubo Country Subdivision)",
         ),
         (
-            parse_place_performance_country_subdivision,
-            merge_place_performance_country_subdivision,
-            "BT-5071-Lot (Place Performance Country Subdivision)",
-        ),
-        (
             parse_place_performance_country_subdivision_part,
             merge_place_performance_country_subdivision_part,
             "Place Performance Country Subdivision part (BT-5071)",
-        ),
-        (
-            parse_place_performance_country_subdivision_procedure,
-            merge_place_performance_country_subdivision_procedure,
-            "BT-5071-procedure (procedure Place Performance Country Subdivision)",
         ),
         (
             parse_buyer_profile_url,
@@ -4221,19 +4167,9 @@ def process_bt_sections(release_json: dict[str, Any], xml_content: bytes) -> Non
             "BT-510(c)-ubo (ubo Streetline 2)",
         ),
         (
-            parse_place_performance_street_lot,
-            merge_place_performance_street_lot,
-            "Place Performance Street Lot (BT-5101)",
-        ),
-        (
             parse_part_place_performance_street,
             merge_part_place_performance_street,
             "BT-5101(a)-part (part Place Performance Street)",
-        ),
-        (
-            parse_procedure_place_performance_street,
-            merge_procedure_place_performance_street,
-            "BT-5101(a)-procedure (procedure Place Performance Street)",
         ),
         (
             parse_part_place_performance_streetline1,
@@ -4241,19 +4177,14 @@ def process_bt_sections(release_json: dict[str, Any], xml_content: bytes) -> Non
             "BT-5101(b)-part (part Place Performance Streetline 1)",
         ),
         (
-            parse_procedure_place_performance_streetline1,
-            merge_procedure_place_performance_streetline1,
-            "BT-5101(b)-procedure (procedure Place Performance Streetline 1)",
-        ),
-        (
             parse_part_place_performance_streetline2,
             merge_part_place_performance_streetline2,
             "BT-5101(c)-part (part Place Performance Streetline 2)",
         ),
         (
-            parse_procedure_place_performance_streetline2,
-            merge_procedure_place_performance_streetline2,
-            "BT-5101(c)-procedure (procedure Place Performance Streetline 2)",
+            parse_procedure_place_performance_address,
+            merge_procedure_place_performance_address,
+            "Procedure Place Performance Address (RealizedLocation)",
         ),
         (
             parse_organization_postcode,
@@ -4267,19 +4198,9 @@ def process_bt_sections(release_json: dict[str, Any], xml_content: bytes) -> Non
         ),
         (parse_ubo_postcode, merge_ubo_postcode, "BT-512-ubo (ubo Postcode)"),
         (
-            parse_place_performance_post_code,
-            merge_place_performance_post_code,
-            "BT-5121-Lot (Place Performance Post Code)",
-        ),
-        (
             parse_place_performance_post_code_part,
             merge_place_performance_post_code_part,
             "BT-5121-part (Place Performance Post Code part)",
-        ),
-        (
-            parse_place_performance_post_code_procedure,
-            merge_place_performance_post_code_procedure,
-            "BT-5121-procedure (Place Performance Post Code)",
         ),
         (
             parse_organization_city,
@@ -4293,19 +4214,9 @@ def process_bt_sections(release_json: dict[str, Any], xml_content: bytes) -> Non
         ),
         (parse_ubo_city, merge_ubo_city, "BT-513-ubo (ubo City)"),
         (
-            parse_place_performance_city,
-            merge_place_performance_city,
-            "BT-5131 (Place Performance City)",
-        ),
-        (
             parse_place_performance_city_part,
             merge_place_performance_city_part,
             "BT-5131 part (Place Performance City part)",
-        ),
-        (
-            parse_place_performance_city_procedure,
-            merge_place_performance_city_procedure,
-            "BT-5131 procedure (Place Performance City procedure)",
         ),
         (
             parse_organization_country,
@@ -4318,12 +4229,11 @@ def process_bt_sections(release_json: dict[str, Any], xml_content: bytes) -> Non
             "BT-514-organization-touchpoint (touchpoint Country)",
         ),
         (parse_ubo_country, merge_ubo_country, "BT-514-ubo (ubo Country)"),
-        (parse_lot_country, merge_lot_country, "BT-5141-Lot (Lot Country)"),
         (parse_part_country, merge_part_country, "BT-5141-part (part Country)"),
         (
-            parse_procedure_country,
-            merge_procedure_country,
-            "BT-5141-procedure (procedure Country)",
+            parse_lot_place_performance_address,
+            merge_lot_place_performance_address,
+            "Lot Place Performance Address (RealizedLocation)",
         ),
         (
             parse_successive_reduction_indicator,
@@ -4356,89 +4266,14 @@ def process_bt_sections(release_json: dict[str, Any], xml_content: bytes) -> Non
         (parse_lot_duration_other, merge_lot_duration_other, "BT-538-Lot"),
         (parse_part_duration_other, merge_part_duration_other, "BT-538-part"),
         (
-            parse_award_criterion_type,
-            merge_award_criterion_type,
-            "BT-539-Lot (Award Criterion Type)",
-        ),
-        (
-            parse_award_criterion_type_lots_group,
-            merge_award_criterion_type_lots_group,
-            "BT-539-LotsGroup (Award Criterion Type for Lot Groups)",
-        ),
-        (
-            parse_award_criterion_description,
-            merge_award_criterion_description,
-            "BT-540-Lot (Award Criterion Description)",
-        ),
-        (
-            parse_award_criterion_description_lots_group,
-            merge_award_criterion_description_lots_group,
-            "BT-540-LotsGroup (Award Criterion Description for Lot Groups)",
+            parse_subordinate_award_criteria,
+            merge_subordinate_award_criteria,
+            "Award Criteria (SubordinateAwardingCriterion)",
         ),
         (
             parse_options_description,
             merge_options_description,
             "BT-54-Lot (Options Description)",
-        ),
-        (
-            parse_award_criterion_fixed_number,
-            merge_award_criterion_fixed_number,
-            "BT-541-Lot-FixedNumber (Award Criterion Fixed Number)",
-        ),
-        (
-            parse_award_criterion_threshold_number,
-            merge_award_criterion_threshold_number,
-            "BT_541_lot_thresholdnumber",
-        ),
-        (
-            parse_award_criterion_weight_number,
-            merge_award_criterion_weight_number,
-            "bt_541_lot_weightnumber",
-        ),
-        (
-            parse_award_criterion_fixed_number_lotsgroup,
-            merge_award_criterion_fixed_number_lotsgroup,
-            "bt_541_lotsgroup_fixednumber",
-        ),
-        (
-            parse_award_criterion_threshold_number_lotsgroup,
-            merge_award_criterion_threshold_number_lotsgroup,
-            "bt_541_lotsgroup_thresholdnumber",
-        ),
-        (
-            parse_award_criterion_weight_number_lotsgroup,
-            merge_award_criterion_weight_number_lotsgroup,
-            "bt_541_lotsgroup_weightnumber",
-        ),
-        (
-            parse_award_criterion_number_weight_lot,
-            merge_award_criterion_number_weight_lot,
-            "BT-5421-Lot",
-        ),
-        (
-            parse_award_criterion_number_weight_lotsgroup,
-            merge_award_criterion_number_weight_lotsgroup,
-            "BT-5421-LotsGroup",
-        ),
-        (
-            parse_award_criterion_number_fixed_lot,
-            merge_award_criterion_number_fixed_lot,
-            "BT-5422-Lot",
-        ),
-        (
-            parse_award_criterion_number_fixed_lotsgroup,
-            merge_award_criterion_number_fixed_lotsgroup,
-            "BT-5422-LotsGroup",
-        ),
-        (
-            parse_award_criterion_number_threshold_lot,
-            merge_award_criterion_number_threshold_lot,
-            "BT-5423-Lot",
-        ),
-        (
-            parse_award_criterion_number_threshold_lotsgroup,
-            merge_award_criterion_number_threshold_lotsgroup,
-            "BT-5423-LotsGroup",
         ),
         (
             parse_award_criteria_weighting_description_lot,
@@ -4694,19 +4529,9 @@ def process_bt_sections(release_json: dict[str, Any], xml_content: bytes) -> Non
             "procedure Place of Performance (BT-727-procedure)",
         ),
         (
-            parse_lot_place_performance_additional,
-            merge_lot_place_performance_additional,
-            "Additional Lot Place of Performance (BT-728-Lot)",
-        ),
-        (
             parse_part_place_performance_additional,
             merge_part_place_performance_additional,
             "Additional part Place of Performance (BT-728-part)",
-        ),
-        (
-            parse_procedure_place_performance_additional,
-            merge_procedure_place_performance_additional,
-            "Additional procedure Place of Performance (BT-728-procedure)",
         ),
         (
             parse_lot_subcontracting_obligation_maximum,
@@ -4727,16 +4552,6 @@ def process_bt_sections(release_json: dict[str, Any], xml_content: bytes) -> Non
             parse_lots_group_award_criteria_order_justification,
             merge_lots_group_award_criteria_order_justification,
             "Lots Group Award Criteria Order Justification (BT-733-LotsGroup)",
-        ),
-        (
-            parse_award_criterion_name,
-            merge_award_criterion_name,
-            "Lot Award Criterion Name (BT-734-Lot)",
-        ),
-        (
-            parse_lots_group_award_criterion_name,
-            merge_lots_group_award_criterion_name,
-            "Lots Group Award Criterion Name (BT-734-LotsGroup)",
         ),
         (
             parse_cvd_contract_type,

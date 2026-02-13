@@ -95,6 +95,7 @@ def parse_winner_chosen(xml_content: str | bytes) -> dict | None:
                         tender_result_code, "Unknown"
                     ),
                     "relatedLots": [lot_id],
+                    "tedStatus": tender_result_code,
                 }
                 result["awards"].append(award)
 

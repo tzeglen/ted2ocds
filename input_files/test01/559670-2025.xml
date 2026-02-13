@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><ContractAwardNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractAwardNotice-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2" xmlns:efac="http://data.europa.eu/p27/eforms-ubl-extension-aggregate-components/1" xmlns:efbc="http://data.europa.eu/p27/eforms-ubl-extension-basic-components/1" xmlns:efext="http://data.europa.eu/p27/eforms-ubl-extensions/1" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2">
+   <ext:UBLExtensions>
+      <ext:UBLExtension>
+         <ext:ExtensionContent>
+            <efext:EformsExtension>
+               <efac:NoticeResult>
+                  <efac:LotResult>
+                     <cbc:ID schemeName="result">RES-0001</cbc:ID>
+                     <cbc:TenderResultCode listName="winner-selection-status">clos-nw</cbc:TenderResultCode>
+                     <efac:DecisionReason>
+                        <efbc:DecisionReasonCode listName="non-award-justification">no-rece</efbc:DecisionReasonCode>
+                     </efac:DecisionReason>
+                     <efac:ReceivedSubmissionsStatistics>
+                        <efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+                  <efac:LotResult>
+                     <cbc:ID schemeName="result">RES-0002</cbc:ID>
+                     <cbc:TenderResultCode listName="winner-selection-status">clos-nw</cbc:TenderResultCode>
+                     <efac:DecisionReason>
+                        <efbc:DecisionReasonCode listName="non-award-justification">no-rece</efbc:DecisionReasonCode>
+                     </efac:DecisionReason>
+                     <efac:ReceivedSubmissionsStatistics>
+                        <efbc:StatisticsCode listName="received-submission-type">t-esubm</efbc:StatisticsCode>
+                        <efbc:StatisticsNumeric>0</efbc:StatisticsNumeric>
+                     </efac:ReceivedSubmissionsStatistics>
+                     <efac:TenderLot>
+                        <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+                     </efac:TenderLot>
+                  </efac:LotResult>
+               </efac:NoticeResult>
+               <efac:NoticeSubType>
+                  <cbc:SubTypeCode listName="notice-subtype">29</cbc:SubTypeCode>
+               </efac:NoticeSubType>
+               <efac:Organizations>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0002</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="POL">Krajowa Izba Odwoławcza</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Postępu 17a</cbc:StreetName>
+                           <cbc:CityName>Warszawa</cbc:CityName>
+                           <cbc:PostalZone>02-676</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">PL911</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">POL</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>5262239325</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>22 4587840</cbc:Telephone>
+                           <cbc:ElectronicMail>odwolania@uzp.gov.pl</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efac:Company>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="POL">Skarb Państwa Państwowe Gospodarstwo Leśne Lasy Państwowe Nadleśnictwo Gromnik</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:StreetName>Nadleśnictwo Gromnik</cbc:StreetName>
+                           <cbc:AdditionalStreetName>1 Generała Andersa</cbc:AdditionalStreetName>
+                           <cbc:CityName>Gromnik</cbc:CityName>
+                           <cbc:PostalZone>33-180</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">PL217</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">POL</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>8730208639</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+48 146514205</cbc:Telephone>
+                           <cbc:ElectronicMail>gromnik@krakow.lasy.gov.pl</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+                  <efac:Organization>
+                     <efbc:NaturalPersonIndicator>false</efbc:NaturalPersonIndicator>
+                     <efac:Company>
+                        <cbc:WebsiteURI>https://op.europa.eu</cbc:WebsiteURI>
+                        <cac:PartyIdentification>
+                           <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+                        </cac:PartyIdentification>
+                        <cac:PartyName>
+                           <cbc:Name languageID="POL">Publications Office of the European Union</cbc:Name>
+                        </cac:PartyName>
+                        <cac:PostalAddress>
+                           <cbc:CityName>Luxembourg</cbc:CityName>
+                           <cbc:PostalZone>2417</cbc:PostalZone>
+                           <cbc:CountrySubentityCode listName="nuts">LU000</cbc:CountrySubentityCode>
+                           <cac:Country>
+                              <cbc:IdentificationCode listName="country">LUX</cbc:IdentificationCode>
+                           </cac:Country>
+                        </cac:PostalAddress>
+                        <cac:PartyLegalEntity>
+                           <cbc:CompanyID>PUBL</cbc:CompanyID>
+                        </cac:PartyLegalEntity>
+                        <cac:Contact>
+                           <cbc:Telephone>+352 29291</cbc:Telephone>
+                           <cbc:ElectronicMail>ted@publications.europa.eu</cbc:ElectronicMail>
+                        </cac:Contact>
+                     </efac:Company>
+                  </efac:Organization>
+               </efac:Organizations>
+            <efac:Publication><efbc:NoticePublicationID schemeName="ojs-notice-id">00559670-2025</efbc:NoticePublicationID><efbc:GazetteID schemeName="ojs-id">163/2025</efbc:GazetteID><efbc:PublicationDate>2025-08-27+02:00</efbc:PublicationDate></efac:Publication></efext:EformsExtension>
+         </ext:ExtensionContent>
+      </ext:UBLExtension>
+   </ext:UBLExtensions>
+   <cbc:UBLVersionID>2.3</cbc:UBLVersionID>
+   <cbc:CustomizationID>eforms-sdk-1.13</cbc:CustomizationID>
+   <cbc:ID schemeName="notice-id">5552e21b-879e-44ea-9e45-cbed01f704cf</cbc:ID>
+   <cbc:ContractFolderID>59d289d0-7ad0-4031-8749-2faa5b07fb6d</cbc:ContractFolderID>
+   <cbc:IssueDate>2025-08-26Z</cbc:IssueDate>
+   <cbc:IssueTime>11:53:10Z</cbc:IssueTime>
+   <cbc:VersionID>01</cbc:VersionID>
+   <cbc:RegulatoryDomain>32014L0024</cbc:RegulatoryDomain>
+   <cbc:NoticeTypeCode listName="result">can-standard</cbc:NoticeTypeCode>
+   <cbc:NoticeLanguageCode listName="language">POL</cbc:NoticeLanguageCode>
+   <cac:ContractingParty>
+      <cbc:BuyerProfileURI>https://platformazakupowa.pl/pn/lasy_gromnik</cbc:BuyerProfileURI>
+      <cac:ContractingPartyType>
+         <cbc:PartyTypeCode listName="buyer-legal-type">body-pl</cbc:PartyTypeCode>
+      </cac:ContractingPartyType>
+      <cac:ContractingActivity>
+         <cbc:ActivityTypeCode listName="authority-activity">econ-aff</cbc:ActivityTypeCode>
+      </cac:ContractingActivity>
+      <cac:Party>
+         <cac:PartyIdentification>
+            <cbc:ID schemeName="organization">ORG-0003</cbc:ID>
+         </cac:PartyIdentification>
+         <cac:ServiceProviderParty>
+            <cbc:ServiceTypeCode listName="organisation-role">ted-esen</cbc:ServiceTypeCode>
+            <cac:Party>
+               <cac:PartyIdentification>
+                  <cbc:ID schemeName="organization">ORG-0000</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:Party>
+         </cac:ServiceProviderParty>
+      </cac:Party>
+   </cac:ContractingParty>
+   <cac:TenderingTerms>
+      <cac:ProcurementLegislationDocumentReference>
+         <cbc:ID>LocalLegalBasis</cbc:ID>
+         <cbc:DocumentDescription languageID="POL">– art. 129 ust. 1 pkt 1) w zw. z art. 129 ust. 2 oraz art. 132- 139 ustawy z dnia 11 września 2019 r. Prawo zamówień publicznych (tekst jedn.: Dz. U. z 2024 r. poz. 1320), procedura przyspieszona art.  138 ust. 4 ustawy Pzp.</cbc:DocumentDescription>
+      </cac:ProcurementLegislationDocumentReference>
+   </cac:TenderingTerms>
+   <cac:TenderingProcess>
+      <cbc:ProcedureCode listName="procurement-procedure-type">open</cbc:ProcedureCode>
+      <cac:NoticeDocumentReference>
+         <cbc:ID schemeName="ojs-notice-id">493012-2025</cbc:ID>
+      </cac:NoticeDocumentReference>
+      <cac:ProcessJustification>
+         <cbc:ProcessReasonCode listName="accelerated-procedure">true</cbc:ProcessReasonCode>
+         <cbc:ProcessReason languageID="POL">Zamawiający działając na podstawie art. 138 ust. 4 ustawy pzp wyznaczył termin składania ofert krótszy niż 35 dni od dnia przekazania ogłoszenia Urzędowi Publikacji Unii Europejskiej, ponieważ składanie ofert odbywa się w całości przy użyciu środków komunikacji elektronicznej. </cbc:ProcessReason>
+      </cac:ProcessJustification>
+   </cac:TenderingProcess>
+   <cac:ProcurementProject>
+      <cbc:ID schemeName="InternalID">S.270.10.2025</cbc:ID>
+      <cbc:Name languageID="POL">Wykonanie kompletnej dokumentacji projektowej wraz z uzyskaniem wszystkich decyzji administracyjnych niezbędnych do przeprowadzania robót budowlanych realizowanych w Nadleśnictwie Gromnik w ramach projektu kompleksowy projekt adaptacji lasów i leśnictwa do zmian klimatu – mała retencja oraz przeciwdziałanie erozji wodnej na terenach górskich – kontynuacja MRG 3  </cbc:Name>
+      <cbc:Description languageID="POL">Przedmiotem zamówienia jest wykonanie kompletnej dokumentacji projektowej (zwanej dalej dokumentacją) wraz z uzyskaniem wymaganych przepisami prawa budowalnego opinii, uzgodnień i decyzji administracyjnych, oraz pełnieniem nadzoru autorskiego z podziałem na części i zadania w ramach projektu kompleksowy projekt adaptacji lasów i leśnictwa do zmian klimatu – mała retencja oraz przeciwdziałanie erozji wodnej na terenach górskich – kontynuacja MRG 3  ( Fundusze Europejskie na Infrastrukturę, Środowisko 2021-2027 ( FEnIKS 2021-2027). Zadanie będzie współfinansowane z FEnIKS 2021-2027 w przypadku uzyskania dofinansowania. Zamawiający może unieważnić postępowanie o udzielenie zamówienia, jeżeli środki publiczne, które zamawiający zamierzał przeznaczyć na sfinansowanie całości lub części zamówienia, nie zostały mu przyznane. Zamawiający zgodnie z art. 95 ust. 1 PZP wymaga zatrudnienia przez wykonawcę lub podwykonawcę na podstawie umowy o pracę osób wykonujących wskazane przez zamawiającego czynności w zakresie realizacji zamówienia, których wykonanie polega na wykonywaniu pracy w sposób określony w art. 22 § 1 ustawy z dnia 26 czerwca 1974 r. Kodeks pracy . Rodzaj czynności niezbędnych do realizacji zamówienia przez osoby zatrudnione na podstawie umowy o pracę to czynności przy opracowaniu i sporządzeniu projektu budowlanego. UWAGA! Powyższy wymóg nie dotyczy osób wykonujących ww. czynności w ramach osobiście prowadzonej działalności gospodarczej.Sposób dokumentowania zatrudnienia osób, o których mowa powyżej oraz uprawnienia zamawiającego w zakresie kontroli spełniania przez wykonawcę wymagań, o których mowa w art. 95 ust. 1 PZP: Zamawiający wymaga przed zawarciem Umowy – o ile uczestniczą w realizacji zamówienia wykazu osób zatrudnionych na podstawie umowy o pracę, wykonujących czynności, o których mowa powyżej oraz pisemnych oświadczeń ww. osób o zatrudnieniu na podstawie umowy o pracę. Wykaz ma obejmować wyłącznie imię i nazwisko pracownika, datę zatrudnienia oraz informację o rodzaju wykonywanych przez niego czynności. Powyższe dokumenty będą zawierać wyłącznie imię i nazwisko pracownika, datę zatrudnienia oraz rodzaj wykonywanej pracy. W pozostałym zakresie wykonawca jest zobowiązany zanonimizować przekazywane dokumenty. Sankcje wynikające z niespełnienia wymagania, o którym mowa powyżej określa Projekt Umowy. W trakcie wykonywania przedmiotu zamówienia na każde wezwanie Zamawiającego w wyznaczonym w tym wezwaniu terminie, nie krótszym niż 5 dni, Wykonawca przedłoży Zamawiającemu wedle wyboru jeden z wskazanych poniżej dowodów w celu potwierdzenia spełnienia wymogu zatrudnienia na podstawie umowy o pracę przez Wykonawcę lub Podwykonawcę osób wykonujących wskazane czynności w trakcie realizacji zamówienia: oświadczenie zatrudnionego pracownika, oświadczenie Wykonawcy lub Podwykonawcy o zatrudnieniu pracownika na podstawie umowy o pracę, poświadczoną za zgodność z oryginałem kopię umowy o pracę zatrudnionego pracownika, inne dokumenty potwierdzające zatrudnienie u Wykonawcy lub Podwykonawcy.	
+Z chwilą przekazania Dokumentacji na Zamawiającego przechodzą autorskie prawa majątkowe do niej w odniesieniu do wszystkich pól eksploatacji znanych w dniu zawarcia Umowy, bez ograniczeń czasowych i terytorialnych, w tym w szczególności prawo do: utrwalania i zwielokrotniania - w tym wytwarzania każdą możliwą techniką, w tym techniką drukarską, reprograficzną, zapisu magnetycznego, techniką cyfrową, wykonywania odbitek, powielania, w tym poprzez użycie zewnętrznych nośników danych, poprzez druk, wprowadzanie do pamięci komputera, zapisywania i reprodukcji za pomocą zapisu magnetycznego, na kliszy fotograficznej;	udostępniania dokumentacji, wprowadzania dokumentacji do sieci informatycznych, w szczególności do Internetu, wprowadzania oryginału dokumentacji i jej kopii do obrotu gospodarczego;	użyczania, wynajmowania lub wydzierżawiania oryginału dokumentacji i jej kopii;	wykorzystywania dokumentacji w celu przeprowadzenia prac remontowych w obiektach powstałych na podstawie dokumentacji, jak również utrzymania ich w należytym stanie technicznym; wykorzystywania dokumentacji w celu realizacji inwestycji, dla której została ona wykonana; wykorzystywania dokumentacji w celach reklamowych, promocyjnych, marketingowych i wizerunkowych, w szczególności w celu promowania działalności Zamawiającego lub osób trzecich; wykorzystywania dokumentacji w celu uzyskiwania wszelkich zezwoleń w związku z realizacją Inwestycji, oraz wprowadzenia dalszych zmian w pozwoleniach uzyskanych w związku z realizacją ww. Inwestycji lub ich eksploatacją; wprowadzania do pamięci komputerów (instalacji) oraz do sieci komputerowych i rozpowszechniania w ramach sieci komputerowej Zamawiającego, digitalizacji; tłumaczenia, przystosowywania, lub wprowadzania jakichkolwiek zmian w dokumentacji.	W przedmiocie zamówienia zabrania się jego opisywania, w szczególności materiałów i urządzeń, za pomocą znaków towarowych, patentów, pochodzenia, źródła lub szczególnego procesu, który charakteryzuje produkty lub usługi dostarczane przez konkretnego wykonawcę, chyba że nie może opisać przedmiotu zamówienia w wystarczająco precyzyjny i zrozumiały sposób, a wskazaniu takiemu towarzyszą wyrazy „lub równoważny”. W tych przypadkach, Wykonawca wskazuje w opisie przedmiotu zamówienia kryteria stosowane w celu oceny równoważności. Jeżeli Wykonawca w przedmiocie zamówienia odnosić się będzie do norm, ocen technicznych, specyfikacji technicznych i systemów referencji technicznych, o których mowa w art. 101 ust. 1 pkt 2 oraz ust. 3 PZP, każdorazowo odniesieniu takiemu towarzyszyć będą wyrazy "lub równoważne". Wykonawca na żądanie Zamawiającego będzie zobowiązany do wykonania aktualizacji kosztorysu inwestorskiego – do trzech razy jeżeli będzie taka potrzeba w terminie.  Przedmiot zamówienia został podzielony na 2 części. Wykonawca może złożyć ofertę na jedną lub większą ilość części. </cbc:Description>
+      <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+      <cbc:Note languageID="POL">Przedmiot zamówienia został podzielony na 2 części:
+Część I Przebudowa śródleśnego zbiornika wodnego w leśnictwie Zalasowa:
+ - Zadanie 6 Przebudowa śródleśnego zbiornika wodnego w Leśnictwie Zalasowa (nr inw.  I/ZBIORZALAS) wykonanie kompletnej dokumentacji projektowej wraz z uzyskaniem wszystkich decyzji administracyjnych niezbędnych do przeprowadzania robót budowlanych;
+Część II – Przebudowa śródleśnych zbiorników wodnych w leśnictwie Skrzyszów z podziałem na 5 zadań:
+-  Zadanie 1 Przebudowa śródleśnego zbiornika wodnego w Leśnictwie Skrzyszów – nr 1 (nr inw.  I/ZBIORLSKA1) wykonanie kompletnej dokumentacji projektowej wraz z uzyskaniem wszystkich decyzji administracyjnych niezbędnych do przeprowadzania robót budowlanych;
+- Zadanie 2 Przebudowa śródleśnego zbiornika wodnego w Leśnictwie Skrzyszów – nr 2 (nr inw.  I/ZBIORLSKA2) wykonanie kompletnej dokumentacji projektowej wraz z uzyskaniem wszystkich decyzji administracyjnych niezbędnych do przeprowadzania robót budowlanych;
+- Zadanie 3 Przebudowa śródleśnego zbiornika wodnego w Leśnictwie Skrzyszów – nr 3 (nr inw.  I/ZBIORLSKA3) wykonanie kompletnej dokumentacji projektowej wraz z uzyskaniem wszystkich decyzji administracyjnych niezbędnych do przeprowadzania robót budowlanych;
+Zadanie 4 Przebudowa śródleśnego zbiornika wodnego w Leśnictwie Skrzyszów – nr 4 (nr inw.  I/ZBIORLSKA4) wykonanie kompletnej dokumentacji projektowej wraz z uzyskaniem wszystkich decyzji administracyjnych niezbędnych do przeprowadzania robót budowlanych;
+Zadanie 5 Przebudowa śródleśnego zbiornika wodnego w Leśnictwie Skrzyszów – nr 5 (nr inw.  I/ZBIORLSKA5) wykonanie kompletnej dokumentacji projektowej wraz z uzyskaniem wszystkich decyzji administracyjnych niezbędnych do przeprowadzania robót budowlanych;
+Wykonawca może złożyć ofertę na jedną lub większą ilość części. Oferta złożona na daną część musi jednakże obejmować cały zakres prac przewidzianych w SWZ dla tej części. Przedmiot zamówienia w obu częściach podzielono na następujące etapy: Etap I - koncepcja rozwiązań projektowych - przedstawienie wariantów (minimum dwóch) rozwiązań projektowych wraz z wstępnym oszacowaniem kosztów	Etap II – wykonanie kompletnej dokumentacji wraz z uzyskaniem prawomocnej decyzji o pozwoleniu na budowę lub potwierdzeniem braku podstaw do wniesienia sprzeciwu do  złożonego zgłoszenia robót 	Etap III - sprawowanie nadzoru autorskiego w zakresie zgodności robót budowlanych z dokumentacją - od dnia rozpoczęcia robót budowlanych nieprzerwanie do momentu odbioru końcowego i uzyskania pozwolenia na użytkowanie włącznie. Zamawiający nie zastrzega obowiązku osobistego wykonania przez Wykonawcę kluczowych zadań dotyczących przedmiotu zamówienia. Wykonawca może powierzyć realizację elementów (części) przedmiotu zamówienia podwykonawcom. W przypadku zamiaru wykonywania przedmiotu zamówienia z udziałem podwykonawców Wykonawca zobowiązany jest do wskazania w swojej ofercie części zamówienia (zakresów rzeczowych), których wykonanie zamierza powierzyć podwykonawcom, oraz podania nazw ewentualnych podwykonawców, jeżeli są już znani. Wskazanie takie należy umieścić na Ofercie. W przypadku braku wskazania w Ofercie podwykonawstwa Wykonawca będzie mógł wprowadzić podwykonawcę wyłącznie na warunkach określonych w umowie. Okres realizacji poszczególnych etapów Etap I – dla części I i II wykonanie koncepcji projektowej - przedstawienie wstępnych rozwiązań (minimum dwóch wariantów) projektowych wraz z wstępnym oszacowaniem kosztów - najpóźniej do 60 dni od dnia podpisania umowy z Wykonawcą
+Etap II – dla części I i II wykonanie kompletnej dokumentacji wraz z uzyskaniem prawomocnej decyzji o pozwoleniu na budowę lub potwierdzeniem braku podstaw do wniesienia sprzeciwu do  złożonego zgłoszenia robót do 18 miesięcy od dnia podpisania umowy;	Etap III – dla części I i II sprawowanie nadzoru autorskiego w zakresie zgodności robót budowlanych z dokumentacją - od dnia rozpoczęcia robót budowlanych nieprzerwanie do momentu odbioru końcowego i uzyskania pozwolenia na użytkowanie włącznie, nie dłużej jednak niż do 30 września 2028 roku (wskazana data jest związana z upływem terminu rozliczenia umowy o dofinansowanie projektu). 
+W postępowaniu mogą brać udział Wykonawcy, którzy nie podlegają wykluczeniu z postępowania na podstawie art. 7 ust. 1 pkt 13 ustawy z dnia 13 kwietnia 2022 r. o szczególnych rozwiązaniach w zakresie przeciwdziałania wspieraniu agresji na Ukrainę oraz służących ochronie bezpieczeństwa narodowego (tekst jedn.: Dz. U. z 2023 r. poz. 1497 – „Specustawa”). Na podstawie:1) art. 7 ust. 1 pkt 1 Specustawy Zamawiający wykluczy Wykonawcę wymienionego w wykazach określonych w rozporządzeniu 765/2006 i rozporządzeniu 269/2014 albo wpisanego na listę na podstawie decyzji w sprawie wpisu na listę rozstrzygającej o zastosowaniu środka, o którym mowa w art. 1 pkt 3 Specustawy, 2) art. 7 ust. 1 pkt 2 Specustawy Zamawiający wykluczy Wykonawcę, którego beneficjentem rzeczywistym w rozumieniu ustawy z dnia 1 marca 2018 r. o przeciwdziałaniu praniu pieniędzy oraz finansowaniu terroryzmu (tekst jedn.: Dz. U. z 2023 r. poz. 1124 z późn. zm.) jest osoba wymieniona w wykazach określonych w rozporządzeniu 765/2006 i rozporządzeniu 269/2014 albo wpisana na listę lub będąca takim beneficjentem rzeczywistym od dnia 24 lutego 2022 r., o ile została wpisana na listę na podstawie decyzji w sprawie wpisu na listę rozstrzygającej o zastosowaniu środka, o którym mowa w art. 1 pkt 3 Specustawy, 3) art. 7 ust. 1 pkt 3 Specustawy Zamawiający wykluczy Wykonawcę, którego jednostką dominującą w rozumieniu art. 3 ust.1 pkt 37 ustawy z dnia 29 września 1994 r. o rachunkowości (tekst jedn.: Dz. U. z 2023 r. poz. 120 z późn. zm.) jest podmiot wymieniony w wykazach określonych w rozporządzeniu 765/2006 i rozporządzeniu 269/2014 albo wpisany na listę lub będący taką jednostką dominującą od dnia 24 lutego 2022 r., o ile został wpisany na listę na podstawie decyzji w sprawie wpisu na listę rozstrzygającej o zastosowaniu środka, o którym mowa w art. 1 pkt 3 Specustawy.W postępowaniu mogą brać udział Wykonawcy, którzy nie podlegają wykluczeniu z postępowania na podstawie art. 5k rozporządzenia Rady (UE) Nr 833/2014 z dnia 31 lipca 2014 r. dotyczącego środków ograniczających w związku z działaniami Rosji destabilizującymi sytuację na Ukrainie (Dz. Urz. UE nr L 229 z 31.7.2014, str. 1 z późn. zm.). Na podstawie art. 5k ust. 1 w/w rozporządzenia Rady (UE) zakazuje się udzielania lub dalszego wykonywania wszelkich zamówień publicznych lub koncesji objętych zakresem dyrektyw w sprawie zamówień publicznych, a także zakresem art. 10 ust. 1, 3, ust. 6 lit. a)–e), ust. 8, 9 i 10, art. 11, 12, 13 i 14 dyrektywy 2014/23/UE, art. 7 lit a)d), art. 8, art. 10 lit. b)–f) i lit. h)–j) dyrektywy 2014/24/UE, art. 18, art. 21 lit. b)–e) i lit. g)–i), art. 29 i 30 dyrektywy 2014/25/UE oraz art. 13 lit. a)–d), lit. f)–h) i lit. j) dyrektywy 2009/81/WE oraz tytułu VII rozporządzenia (UE, Euratom) 2018/1046 na rzecz lub z udziałem: a) obywateli rosyjskich, osób fizycznych zamieszkałych w Rosji lub osób prawnych, podmiotów lub organów z siedzibą w Rosji; b) osób prawnych, podmiotów lub organów, do których prawa własności bezpośrednio lub pośrednio w ponad 50 % należą do podmiotu, o którym mowa w lit. a) niniejszego ustępu; lub c) osób fizycznych lub prawnych, podmiotów lub organów działających w imieniu lub pod kierunkiem podmiotu, o którym mowa w lit. a) lub b) niniejszego ustępu, w tym podwykonawców, dostawców lub podmiotów, na których zdolności polega się w rozumieniu dyrektyw w sprawie zamówień publicznych, w przypadku gdy przypada na nich ponad 10% wartości zamówienia.
+Zamawiający celem zwiększenia konkurencyjności korzysta z uprawnienia §9 ust. 4 pkt. 2)  Rozporządzenia Ministra Rozwoju, Pracy i Technologii z dnia 23 grudnia 2020 r. w sprawie podmiotowych środków dowodowych oraz innych dokumentów lub oświadczeń, jakich może żądać zamawiający od wykonawcy i dopuszcza w celu potwierdzenia spełniania przez wykonawcę warunków udziału w postępowaniu dotyczących zdolności technicznej i zawodowej, wykaz usług wykonanych w okresie ostatnich 6 latach.</cbc:Note>
+      <cac:MainCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">71322000</cbc:ItemClassificationCode>
+      </cac:MainCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">71320000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">71242000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:AdditionalCommodityClassification>
+         <cbc:ItemClassificationCode listName="cpv">71248000</cbc:ItemClassificationCode>
+      </cac:AdditionalCommodityClassification>
+      <cac:RealizedLocation>
+         <cac:Address>
+            <cbc:CityName>Gromnik</cbc:CityName>
+            <cbc:PostalZone>33-180</cbc:PostalZone>
+            <cbc:CountrySubentityCode listName="nuts">PL217</cbc:CountrySubentityCode>
+            <cac:Country>
+               <cbc:IdentificationCode listName="country">POL</cbc:IdentificationCode>
+            </cac:Country>
+         </cac:Address>
+      </cac:RealizedLocation>
+   </cac:ProcurementProject>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+      <cac:TenderingTerms>
+         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>60</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <cbc:Description languageID="POL">Przy wyborze ofert w każdej części Zamawiający będzie się kierował następującym kryterium oceny ofert:
+Cena - 60 %
+W ramach kryterium „Cena” (C) ocena ofert zostanie dokonana przy zastosowaniu wzoru: 
+Cn 
+C = ------------ x 60 % x 100 pkt 
+Co 
+gdzie:
+C – liczba punktów w ramach kryterium „Cena”,
+Cn - najniższa cena spośród ofert ocenianych
+Co - cena oferty ocenianej 
+Ocenie w ramach kryterium „Cena” podlegać będzie cena łączna brutto podana w Formularzu Oferty dla danej części
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>40</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Description languageID="POL">Przy wyborze ofert w każdej części Zamawiający będzie się kierował następującym kryterium oceny ofert:
+Doświadczenie projektanta realizującego zamówienie		- 40 %
+Kryterium „Doświadczenie Projektanta realizującego zamówienie” (D) oznacza posiadanie doświadczenia zawodowego przez osobę wskazaną w Formularzu oferty do pełnienia funkcji:
+- projektanta w specjalności hydrotechnicznej 
+który będzie uczestniczył w realizacji zamówienia, uzyskane w okresie ostatnich 10 lat przed terminem składania ofert.
+Punkty zostaną przyznane w skali punktowej od 0 do 40 punktów, na podstawie oświadczenia złożonego przez Wykonawcę w Formularzu Oferty odrębnie dla każdej części zamówienia.
+D=0 pkt – otrzyma Wykonawca, który do realizacji zamówienia posłuży się Projektantem, którego doświadczenie zawodowe spełnia warunek udziału w postępowaniu na daną część zamówienia tj.:
+a)	Dla części I  wykonał jedną dokumentację projektową na podstawie, której uzyskano zgodę na realizację robót budowlanych polegających na budowie, przebudowie zbiorników lub urządzeń wodnych o wartości kosztorysowej robót budowlanych nie mniejszej niż 200 000 zł brutto.
+D=20 pkt – otrzyma Wykonawca, który do realizacji zamówienia posłuży się Projektantem, którego doświadczenie zawodowe spełnia warunek udziału w postępowaniu na daną część zamówienia tj.: 
+a)	Dla części I  wykonał dwie dokumentacje projektowe na podstawie, których uzyskano zgodę na realizację robót budowlanych polegających na budowie, przebudowie zbiorników lub urządzeń wodnych o wartości kosztorysowej robót budowlanych nie mniejszej niż 200 000 zł brutto.
+D=40 pkt – otrzyma Wykonawca, który do realizacji zamówienia posłuży się Projektantem, którego doświadczenie zawodowe spełnia warunek udziału w postępowaniu na daną część zamówienia tj.:
+a)	Dla części I  wykonał trzy i więcej dokumentacje projektowe na podstawie, których uzyskano zgodę na realizację robót budowlanych polegających na budowie, przebudowie zbiorników lub urządzeń wodnych o wartości kosztorysowej robót budowlanych nie mniejszej niż 200 000 zł brutto.
+Za najkorzystniejszą ofertę zostanie uznana oferta Wykonawcy, który spełni wszystkie postawione w niniejszej SWZ warunki oraz uzyska łącznie największą liczbę punktów (P) stanowiących sumę punktów przyznanych w ramach każdego z podanych kryteriów, wyliczoną zgodnie z poniższym wzorem:
+P = C + D
+gdzie:  	C -     liczba punktów przyznana ofercie ocenianej w  kryterium „Cena”
+D -    liczba punktów przyznana ofercie ocenianej w kryterium „Doświadczenie Projektanta realizującego zamówienie”.
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="POL">1. Wykonawcy, a także innemu podmiotowi, jeżeli ma lub miał interes w uzyskaniu zamówienia oraz poniósł lub może ponieść szkodę w wyniku naruszenia przez Zamawiającego przepisów PZP, przysługują środki ochrony prawnej określone w dziale IX PZP tj. odwołanie i skarga do sądu. Postępowanie odwoławcze uregulowane zostało w przepisach art. 506578 PZP, a postępowanie skargowe w przepisach art. 579590 PZP. 2. Odwołanie przysługuje na: 1) niezgodną z przepisami PZP czynność Zamawiającego, podjętą w postępowaniu o udzielenie zamówienia, w tym na projektowane postanowienie umowy; 2) zaniechanie czynności w postępowaniu o udzielenie zamówienia, do której Zamawiający był obowiązany na podstawie PZP; 3) zaniechanie przeprowadzenia postępowania o udzielenie zamówienia na podstawie PZP, mimo że Zamawiający był do tego obowiązany. 3. Odwołanie wnosi się do Prezesa Krajowej Izby Odwoławczej. Odwołujący przekazuje Zamawiającemu odwołanie wniesione w formie elektronicznej albo w postaci elektronicznej albo kopię tego odwołania, jeżeli zostało ono wniesione w formie pisemnej, przed upływem terminu do wniesienia odwołania w taki sposób, aby mógł on zapoznać się z jego treścią przed upływem tego terminu. Domniemywa się, że Zamawiający mógł zapoznać się z treścią odwołania przed upływem terminu do jego wniesienia, jeżeli przekazanie odpowiednio odwołania albo jego kopii nastąpiło przed upływem terminu do jego wniesienia przy użyciu środków komunikacji elektronicznej. 4. Odwołanie wnosi się w terminie: (a) 10 dni od dnia przekazania informacji o czynności Zamawiającego stanowiącej podstawę jego wniesienia, jeżeli informacja została przekazana przy użyciu środków komunikacji elektronicznej, (b) 15 dni od dnia przekazania informacji o czynności Zamawiającego stanowiącej podstawę jego wniesienia, jeżeli informacja została przekazana w sposób inny niż określony w lit. (a). 5. Odwołanie wobec treści ogłoszenia wszczynającego postępowanie o udzielenie zamówienia lub wobec treści dokumentów zamówienia wnosi się w terminie 10 dni od dnia publikacji ogłoszenia w Dzienniku Urzędowym Unii Europejskiej lub zamieszczenia dokumentów zamówienia na stronie internetowej. 6. Odwołanie w przypadkach innych niż określone w pkt 4. i 5 wnosi się w terminie 10 dni od dnia, w którym powzięto lub przy zachowaniu należytej staranności można było powziąć wiadomość o okolicznościach stanowiących podstawę jego wniesienia. 7. Na orzeczenie Krajowej Izby Odwoławczej oraz postanowienie Prezesa Krajowej Izby Odwoławczej, o którym mowa w art. 519 ust. 1 PZP, stronom oraz uczestnikom postępowania przysługuje skarga do sądu. Skargę wnosi się do Sądu Okręgowego w Warszawie sądu zamówień publicznych. Skargę wnosi się za pośrednictwem Prezesa Krajowej Izby Odwoławczej, w terminie 14 dni od dnia doręczenia orzeczenia Krajowej Izby Odwoławczej lub postanowienia Prezesa Krajowej Izby Odwoławczej, o którym mowa w art. 519 ust. 1 PZP, przesyłając jednocześnie jej odpis przeciwnikowi skargi. Złożenie skargi w placówce pocztowej operatora wyznaczonego w rozumieniu ustawy z dnia 23 listopada 2012 r. Prawo pocztowe (tekst jedn. Dz. U. z 2022 r. poz. 896 z późn. zm.), jest równoznaczne z jej wniesieniem.</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealInformationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealInformationParty>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+            <cac:MediationParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:MediationParty>
+         </cac:AppealTerms>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">Część I</cbc:ID>
+         <cbc:Name languageID="POL">Wykonanie kompletnej dokumentacji projektowej (zwanej dalej dokumentacją) wraz z uzyskaniem wymaganych przepisami prawa budowalnego opinii, uzgodnień i decyzji administracyjnych, oraz pełnieniem nadzoru autorskiego dla Część 1 - Przebudowa śródleśnego zbiornika wodnego w leśnictwie Zalasowa
+</cbc:Name>
+         <cbc:Description languageID="POL">Przedmiotem zamówienia jest wykonanie kompletnej dokumentacji projektowej (zwanej dalej dokumentacją) wraz z uzyskaniem wymaganych przepisami prawa budowalnego opinii, uzgodnień i decyzji administracyjnych, oraz pełnieniem nadzoru autorskiego  dla: Zadanie nr 6 Nazwa zadania: Przebudowa śródleśnego zbiornika wodnego w Leśnictwie Zalasowa  (nr. inw.  I/ZBIORZALAS) Lokalizacja: Leśnictwo Zalasowa , oddz. 03-06-1-07-39-l , dane adresowe: Małopolskie, Tarnowski, Tuchów, obręb Tuchów nr działki 2301/1 Opis: Przebudowa istniejącego śródleśnego zbiornika wodnego w Leśnictwie Zalasowa w zakresie; odmulenia - pogłębienia czaszy zbiornika wraz z przebudową przepustu przeprowadzającego wodę do istniejącego przebudowanego sąsiedniego zbiornika, wykonanie ubezpieczenia skarp przy przepuście brukiem kamiennym, wykonanie ogrodzenia zbiornika barierkami z żerdzi drewnianych oraz wykonanie na dopływie do zbiornika wychwytywacza rumoszu i zanieczyszczeń w postaci wybranego zagłębienia o rzędnej dna mniejszej od rzędnej dna dopływu do zbiornika, konieczne zapewnienie dojazdu celem utrzymania/konserwacji. Planowana pojemność zbiornika nie powinna być mniejsza niż – 2 800,00 m3, powierzchnia – ok 0,14 ha. Zaproponowane rozwiązania muszą być zgodne z „Podręcznikiem wdrażania projektu. W skład dokumentacji odrębnie dla każdego zadania wchodzić będą: dokumentacja projektowa zawierająca: projekt budowlany w zakresie uwzględniającym specyfikę robót budowlanych, projekt wykonawczy. Dokumentacja kosztorysowa zawierająca: Kosztorys inwestorski wykonany zgodnie z Rozporządzenie Ministra Rozwoju i Technologii z dnia 20 grudnia 2021 r. w sprawie określenia metod i podstaw sporządzania kosztorysu inwestorskiego, obliczania planowanych kosztów prac projektowych oraz planowanych kosztów robót budowlanych określonych w programie funkcjonalno-użytkowym (Dz.U. 2021 poz. 2458),Przedmiar robót, który powinien zawierać zestawienie przewidywanych do wykonania robót podstawowych w kolejności technologicznej ich wykonania wraz z ich szczegółowym opisem lub wskazaniem podstaw ustalający szczegółowy opis oraz wskazaniem właściwych specyfikacji technicznych wykonania i odbioru robót budowlanych. Do przedmiaru należy dołączyć w formie załączników wyliczenie i zestawienia ilości jednostek przedmiarowych robót podstawowych wskazujące sposób obliczeń pozycji przedmiarowych.	Specyfikacja Techniczna Wykonania i Odbioru Robót (STWiOR), jako opracowanie szczegółowe dla danego zadania (obiektu budowlanego) i zawierające zbiory wymagań, które są niezbędne do określenia standardu i jakości wykonania roboty budowlanej, stosowania materiałów i technologii oraz zasad odbierania i oceny prawidłowości wykonania poszczególnych robót. STWiOR winien zawierać jedynie elementy odnoszące się do konkretnego zadania z uwzględnieniem przebiegu procesu realizacji zadania (w tym: kolejność robót, wymagania dotyczące technologii i materiałów, sposób dokonywania kontroli i odbiorów istotnych elementów obiektów czy robót zanikowych) a z całkowitym wyeliminowaniem ogólnych norm, przepisów i tabel, których znajomość nie jest potrzebna do realizacji i nadzorowania konkretnej roboty budowlanej. Dokumentacja będzie przekazana w trzech egzemplarzach w wersji papierowej. Ponadto Wykonawca dostarczy dokumentację w wersji elektronicznej w formacie .pdf, formacie .dwg – dla części rysunkowej (zawierająca przynajmniej rysunki planu sytuacyjnego w układzie współrzędnych PUWG 1992) oraz .docx i .xlsx (dla części opisowej) na nośniku elektronicznym. Katalog decyzji administracyjnych i innych dokumentów koniecznych do uzyskania: Decyzja o środowiskowych uwarunkowaniach inwestycji (łącznie z ewentualnym wykonaniem raportu odziaływania na środowisko, Decyzja o warunkach zabudowy i zagospodarowania terenu (jeżeli wymagane),Zgłoszenie prowadzenia robót na obszarach form ochrony przyrody (nie wymagane w przypadku opracowywania Raportu OOŚ), Decyzja wodnoprawna, Deklaracja organu odpowiedzialnego za monitorowanie obszarów Natura 2000 (tzw. Załącznik nr 1),Deklaracja organu odpowiedzialnego za gospodarkę wodną (tzw. Załącznik nr 2), Prawomocnej decyzji o pozwoleniu na budowę lub potwierdzenie braku podstaw do wniesienia sprzeciwu do  złożonego zgłoszenia robót. Uzyskaniu innych, wymaganych przepisami szczególnymi, pozwoleń, uzgodnień lub opinii innych organów. Nadzór autorski – sprawowanie nadzoru autorskiego na żądanie inwestora lub organu administracji architektoniczno-budowlanej w zakresie: Stwierdzania w toku wykonywania robót budowlanych zgodności realizacji z projektem, Uzgadniania możliwości wprowadzenia rozwiązań zamiennych w stosunku do przewidzianych w projekcie, zgłoszonych przez kierownika budowy lub inspektora nadzoru inwestorskiego.
+Udział w postępowaniu o udzielenie zamówienia publicznego na wybór wykonawcy robót budowlanych przy formułowaniu odpowiedzi na złożone w trakcie postępowania pytania dotyczące treści SWZ, w szczególności opisu przedmiotu zamówienia oraz w charakterze biegłego przy ocenie złożonych ofert. Wykonawca na żądanie Zamawiającego będzie zobowiązany do wykonania aktualizacji kosztorysu inwestorskiego – do trzech razy jeżeli będzie taka potrzeba w terminie 7 dni od daty zlecenia.</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <cbc:Note languageID="POL">W postępowaniu mogą brać udział Wykonawcy, którzy spełniają warunki udziału w postępowaniu dotyczące:
+1)	zdolności do występowania w obrocie gospodarczym: Zamawiający nie stawia szczególnych wymagań w zakresie opisu spełniania tego warunku udziału w postępowaniu.
+2)	uprawnień do prowadzenia określonej działalności gospodarczej lub  zawodowej: Zamawiający nie stawia szczególnych wymagań w zakresie opisu spełniania tego warunku udziału w postępowaniu.
+3)	sytuacji ekonomicznej lub finansowej: Zamawiający nie stawia szczególnych wymagań w zakresie opisu spełniania warunku udziału w postępowaniu w odniesieniu do warunku dot. sytuacji ekonomicznej lub finansowej. 
+4)	zdolności technicznej lub zawodowej: Warunek ten, w zakresie doświadczenia, zostanie uznany za spełniony, jeśli Wykonawca wykaże, że w okresie ostatnich 6 lat liczonych wstecz od dnia, w którym upływa termin składania ofert (a jeżeli okres prowadzenia działalności jest krótszy – w tym okresie): zrealizował usługi z zakresu wykonania co najmniej jednej dokumentacji projektowej na podstawie, której wydana została ostateczna decyzja administracyjna na podstawie której uzyskano zgodę na realizację robót budowlanych polegających na budowie, przebudowie zbiorników lub urządzeń wodnych o wartości kosztorysowej robót budowlanych nie mniejszej niż 200 000 zł brutto.
+Warunek ten, w zakresie osób skierowanych przez Wykonawcę do realizacji zamówienia, zostanie uznany za spełniony, jeśli Wykonawca wykaże, że dysponuje lub będzie dysponować: co najmniej 1 osobę, z odpowiednimi uprawnieniami do projektowania w specjalności inżynierii hydrotechnicznej bez ograniczeń lub odpowiadające im ważne uprawnienia budowlane wydane na podstawie wcześniej obowiązujących przepisów, z tym że dopuszcza się również odpowiadające im uprawnienia, wydane obywatelom państw Europejskiego Obszaru Gospodarczego oraz Konfederacji Szwajcarskiej, zastrzeżeniem art. 12a oraz innych przepisów ustawy Prawo budowlane (Dz. U. 2023 r., poz. 682) oraz ustawy o zasadach uznawania kwalifikacji zawodowych nabytych w państwach członkowskich Unii Europejskiej (Dz. U. 2021 r., poz. 1646), która wykonała co najmniej jedną dokumentację projektową na podstawie, której uzyskano zgodę na realizację robót budowlanych polegających na budowie, przebudowie zbiorników lub urządzeń wodnych o wartości kosztorysowej robót budowlanych nie mniejszej niż 200 000 zł brutto .  Ocena spełniania warunków udziału w postępowaniu dokonana zostanie zgodnie z formułą „spełnia”/„nie spełnia”. Zamawiający dopuszcza możliwość, aby ta sama osoba projektanta mogła wykonywać prace w I i II części zamówienia.
+Dokumenty potwierdzające warunek: wykaz wykonanych usług wraz z dowodami potwierdzającymi ich należyte wykonanie, wykaz osób skierowanych przez Wykonawcę do realizacji zamówienia wraz z informacją o podstawie do dysponowania tymi zasobami. Wykaz oświadczeń oraz podmiotowych środków dowodowych w celu wykazania spełniania warunków udziału w postępowaniu składanych przez Wykonawcę zawarty został w Rozdziale 9 SWZ.
+Wykonawca może w celu potwierdzenia spełnienia warunków udziału w postępowaniu polegać na zdolnościach technicznych lub zawodowych innych podmiotów, niezależnie od charakteru prawnego łączących go z nimi stosunków prawnych. 	
+Wykonawca, który polega na zdolnościach technicznych lub zawodowych  podmiotów udostępniających zasoby, składa wraz z ofertą:
+1)	zobowiązanie podmiotu udostępniającego zasoby do oddania mu do dyspozycji niezbędnych zasobów na potrzeby realizacji niniejszego zamówienia lub inny podmiotowy środek dowodowy potwierdzający, że Wykonawca realizując zamówienie, będzie dysponował niezbędnymi zasobami tych podmiotów.
+Zobowiązanie podmiotu udostępniającego zasoby, o którym mowa wyżej, potwierdza, że stosunek łączący Wykonawcę z podmiotami udostępniającymi zasoby gwarantuje rzeczywisty dostęp do tych zasobów oraz określa w szczególności: (1) zakres dostępnych Wykonawcy zasobów podmiotu udostępniającego zasoby; (2) sposób i okres udostępnienia Wykonawcy i wykorzystania przez niego zasobów podmiotu udostępniającego te zasoby przy wykonywaniu zamówienia; (3) czy i w jakim zakresie podmiot udostępniający zasoby, na zdolnościach którego Wykonawca polega w odniesieniu do warunków udziału w postępowaniu dotyczących kwalifikacji zawodowych lub doświadczenia, zrealizuje usługi, których wskazane zdolności dotyczą. Niewiążący wzór zobowiązania do oddania wykonawcy do dyspozycji niezbędnych zasobów na potrzeby wykonania zamówienia stanowi Załącznik nr 7 do SWZ;
+Zadanie będzie współfinansowane z FEnIKS 2021-2027 w przypadku uzyskania dofinansowania. Zamawiający może unieważnić postępowanie o udzielenie zamówienia, jeżeli środki publiczne, które zamawiający zamierzał przeznaczyć na sfinansowanie całości lub części zamówienia, nie zostały mu przyznane.
+W postępowaniu mogą brać udział Wykonawcy, którzy nie podlegają wykluczeniu z postępowania o udzielenie zamówienia w okolicznościach, o których mowa w art. 108 ust. 1 PZP. Na podstawie:
+1)	art. 108 ust. 1 pkt 1) PZP Zamawiający wykluczy Wykonawcę będącego osobą fizyczną, którego prawomocnie skazano za przestępstwo:
+a)	udziału w zorganizowanej grupie przestępczej albo związku mającym na celu popełnienie przestępstwa lub przestępstwa skarbowego, o którym mowa w art. 258 ustawy z dnia 6 czerwca 1997 r. Kodeks karny (tekst jedn.: Dz. U. z 2022 r. poz.–1138 z późn. zm. - „KK”),
+b)	handlu ludźmi, o którym mowa w art. 189a KK,
+c)	o którym mowa w art. 228-230a, art. 250a KK, w art. 46 - 48 ustawy z dnia 25 czerwca 2010 r. o sporcie (tekst jedn.: Dz. U. z 2022 r. poz. 1599 z późn. zm.) lub w art. 54 ust. 1-4 ustawy z dnia 12 maja 2011 r. o refundacji leków, środków spożywczych specjalnego przeznaczenia żywieniowego oraz wyrobów medycznych (tekst jedn.: Dz. U. z 2023 r. poz. 826),
+d)	finansowania przestępstwa o charakterze terrorystycznym, o którym mowa w art. 165a KK, lub przestępstwo udaremniania lub utrudniania stwierdzenia przestępnego pochodzenia pieniędzy lub ukrywania ich pochodzenia, o którym mowa w art. 299 KK,
+e)	o charakterze terrorystycznym, o którym mowa w art. 115 § 20 KK, lub mające na celu popełnienie tego przestępstwa,
+f)	powierzenia wykonywania pracy małoletniemu cudzoziemcowi, o którym mowa w art. 9 ust. 2 ustawy z dnia 15 czerwca 2012 r. o skutkach powierzania wykonywania pracy cudzoziemcom przebywającym wbrew przepisom na terytorium Rzeczypospolitej Polskiej (tekst jedn.: Dz. U. z 2021 r. poz. 1745),
+g)	przeciwko obrotowi gospodarczemu, o których mowa w art. 296-307 KK, przestępstwo oszustwa, o którym mowa w art. 286 KK, przestępstwo przeciwko wiarygodności dokumentów, o których mowa w art. 270-277d KK, lub przestępstwo skarbowe,
+h)	o którym mowa w art. 9 ust. 1 i 3 lub art. 10 ustawy z dnia 15 czerwca 2012 r. o skutkach powierzania wykonywania pracy cudzoziemcom przebywającym wbrew przepisom na terytorium Rzeczypospolitej Polskiej (tekst jedn.: Dz. U. z 2021 r. poz. 1745)
+- lub za odpowiedni czyn zabroniony określony w przepisach prawa obcego;
+2)	art. 108 ust. 1 pkt 2) PZP Zamawiający wykluczy Wykonawcę, jeżeli urzędującego członka jego organu zarządzającego lub nadzorczego, wspólnika spółki w spółce jawnej lub partnerskiej albo komplementariusza w spółce komandytowej lub komandytowo-akcyjnej lub prokurenta prawomocnie skazano za przestępstwo, o którym mowa w art. 108 ust. 1 pkt 1) PZP;
+3)	art. 108 ust. 1 pkt 3) PZP Zamawiający wykluczy Wykonawcę, wobec którego wydano prawomocny wyrok sądu lub ostateczną decyzję administracyjną o zaleganiu z uiszczeniem podatków, opłat lub składek na ubezpieczenie społeczne lub zdrowotne, chyba że Wykonawca odpowiednio przed upływem terminu do składania wniosków o dopuszczenie do udziału w postępowaniu albo przed upływem terminu składania ofert dokonał płatności należnych podatków, opłat lub składek na ubezpieczenie społeczne lub zdrowotne wraz z odsetkami lub grzywnami lub zawarł wiążące porozumienie w sprawie spłaty tych należności;
+4)	art. 108 ust. 1 pkt 4) PZP Zamawiający wykluczy Wykonawcę, wobec którego prawomocnie orzeczono zakaz ubiegania się o zamówienia publiczne;
+5)	art. 108 ust. 1 pkt 5) PZP Zamawiający wykluczy Wykonawcę, jeżeli Zamawiający może stwierdzić, na podstawie wiarygodnych przesłanek, że Wykonawca zawarł z innymi wykonawcami porozumienie mające na celu zakłócenie konkurencji, w szczególności jeżeli należąc do tej samej grupy kapitałowej w rozumieniu ustawy z dnia 16 lutego 2007 r. o ochronie konkurencji i konsumentów (tekst jedn.: Dz. U. z 2021 r. poz. 275 z późn. zm.), złożyli odrębne oferty, oferty częściowe lub wnioski o dopuszczenie do udziału w postępowaniu, chyba że wykażą, że przygotowali te oferty lub wnioski niezależnie od siebie;
+6)	art. 108 ust. 1 pkt 6 PZP Zamawiający wykluczy Wykonawcę, jeżeli, w przypadkach, o których mowa w art. 85 ust. 1 PZP, doszło do zakłócenia konkurencji wynikającego z wcześniejszego zaangażowania tego Wykonawcy lub podmiotu, który należy z Wykonawcą do tej samej grupy kapitałowej w rozumieniu ustawy z dnia 16 lutego 2007 r. o ochronie konkurencji i konsumentów (tekst jedn.: Dz. U. z 2021 r. poz. 275 z późn. zm.), chyba że spowodowane tym zakłócenie konkurencji może być wyeliminowane w inny sposób niż przez wykluczenie Wykonawcy z udziału w postępowaniu o udzielenie zamówienia. W postępowaniu mogą brać udział Wykonawcy, którzy nie podlegają wykluczeniu z postępowania o udzielenie zamówienia w okolicznościach, o których mowa w art. 109 ust. 1 pkt 4 PZP. Na podstawie:
+1)	art. 109 ust. 1 pkt 4) PZP Zamawiający wykluczy Wykonawcę, w stosunku do którego otwarto likwidację, ogłoszono upadłość, którego aktywami zarządza likwidator lub sąd, zawarł układ z wierzycielami, którego działalność gospodarcza jest zawieszona albo znajduje się on w innej tego rodzaju sytuacji wynikającej z podobnej procedury przewidzianej w przepisach miejsca wszczęcia tej procedury.
+</cbc:Note>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71322000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71320000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71242000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71248000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:RealizedLocation>
+            <cbc:Description languageID="POL">leśnictwo Zalasowa</cbc:Description>
+            <cac:Address>
+               <cbc:CityName>Leśnictwo Zalasowa</cbc:CityName>
+               <cbc:CountrySubentityCode listName="nuts">PL217</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">POL</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:StartDate>2025-09-30+02:00</cbc:StartDate>
+            <cbc:EndDate>2028-09-30+02:00</cbc:EndDate>
+         </cac:PlannedPeriod>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:ProcurementProjectLot>
+      <cbc:ID schemeName="Lot">LOT-0002</cbc:ID>
+      <cac:TenderingTerms>
+         <ext:UBLExtensions>
+            <ext:UBLExtension>
+               <ext:ExtensionContent>
+                  <efext:EformsExtension>
+                     <efac:StrategicProcurement>
+                        <efbc:ApplicableLegalBasis listName="eed-scope">false</efbc:ApplicableLegalBasis>
+                     </efac:StrategicProcurement>
+                  </efext:EformsExtension>
+               </ext:ExtensionContent>
+            </ext:UBLExtension>
+         </ext:UBLExtensions>
+         <cbc:FundingProgramCode listName="eu-funded">eu-funds</cbc:FundingProgramCode>
+         <cac:AwardingTerms>
+            <cac:AwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>60</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">price</cbc:AwardingCriterionTypeCode>
+                  <cbc:Description languageID="POL">Przy wyborze ofert w każdej części Zamawiający będzie się kierował następującym kryterium oceny ofert:
+Cena - 60 %
+W ramach kryterium „Cena” (C) ocena ofert zostanie dokonana przy zastosowaniu wzoru: 
+Cn 
+C = ------------ x 60 % x 100 pkt 
+Co 
+gdzie:
+C – liczba punktów w ramach kryterium „Cena”,
+Cn - najniższa cena spośród ofert ocenianych
+Co - cena oferty ocenianej 
+Ocenie w ramach kryterium „Cena” podlegać będzie cena łączna brutto podana w Formularzu Oferty dla danej części
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+               <cac:SubordinateAwardingCriterion>
+                  <ext:UBLExtensions>
+                     <ext:UBLExtension>
+                        <ext:ExtensionContent>
+                           <efext:EformsExtension>
+                              <efac:AwardCriterionParameter>
+                                 <efbc:ParameterCode listName="number-weight">per-exa</efbc:ParameterCode>
+                                 <efbc:ParameterNumeric>40</efbc:ParameterNumeric>
+                              </efac:AwardCriterionParameter>
+                           </efext:EformsExtension>
+                        </ext:ExtensionContent>
+                     </ext:UBLExtension>
+                  </ext:UBLExtensions>
+                  <cbc:AwardingCriterionTypeCode listName="award-criterion-type">quality</cbc:AwardingCriterionTypeCode>
+                  <cbc:Description languageID="POL">
+Przy wyborze ofert w każdej części Zamawiający będzie się kierował następującym kryterium oceny ofert:
+Doświadczenie projektanta realizującego zamówienie		- 40 %
+Kryterium „Doświadczenie Projektanta realizującego zamówienie” (D) oznacza posiadanie doświadczenia zawodowego przez osobę wskazaną w Formularzu oferty do pełnienia funkcji:
+- projektanta w specjalności hydrotechnicznej (dotyczy części II)
+który będzie uczestniczył w realizacji zamówienia, uzyskane w okresie ostatnich 10 lat przed terminem składania ofert.
+Punkty zostaną przyznane w skali punktowej od 0 do 40 punktów, na podstawie oświadczenia złożonego przez Wykonawcę w Formularzu Oferty odrębnie dla każdej części zamówienia.
+D=0 pkt – otrzyma Wykonawca, który do realizacji zamówienia posłuży się Projektantem, którego doświadczenie zawodowe spełnia warunek udziału w postępowaniu na daną część zamówienia tj.:
+a)	Dla części II  wykonał jedną dokumentację projektową na podstawie, której uzyskano zgodę na realizację robót budowlanych polegających na budowie, przebudowie zbiorników lub urządzeń wodnych o wartości kosztorysowej robót budowlanych nie mniejszej niż 300 000 zł brutto.
+D=20 pkt – otrzyma Wykonawca, który do realizacji zamówienia posłuży się Projektantem, którego doświadczenie zawodowe spełnia warunek udziału w postępowaniu na daną część zamówienia tj.: 
+a)	Dla części II  wykonał dwie dokumentacje projektowe na podstawie, których uzyskano zgodę na realizację robót budowlanych polegających na budowie, przebudowie zbiorników lub urządzeń wodnych o wartości kosztorysowej robót budowlanych nie mniejszej niż 300 000 zł brutto.
+D=40 pkt – otrzyma Wykonawca, który do realizacji zamówienia posłuży się Projektantem, którego doświadczenie zawodowe spełnia warunek udziału w postępowaniu na daną część zamówienia tj.:
+a)	Dla części II  wykonał trzy i więcej dokumentacje projektowe na podstawie, których uzyskano zgodę na realizację robót budowlanych polegających na budowie, przebudowie zbiorników lub urządzeń wodnych o wartości kosztorysowej robót budowlanych nie mniejszej niż 300 000 zł brutto.
+Za najkorzystniejszą ofertę zostanie uznana oferta Wykonawcy, który spełni wszystkie postawione w niniejszej SWZ warunki oraz uzyska łącznie największą liczbę punktów (P) stanowiących sumę punktów przyznanych w ramach każdego z podanych kryteriów, wyliczoną zgodnie z poniższym wzorem:
+P = C + D
+gdzie:  	C -     liczba punktów przyznana ofercie ocenianej w  kryterium „Cena”
+D -    liczba punktów przyznana ofercie ocenianej w kryterium „Doświadczenie Projektanta realizującego zamówienie”.
+</cbc:Description>
+               </cac:SubordinateAwardingCriterion>
+            </cac:AwardingCriterion>
+         </cac:AwardingTerms>
+         <cac:AppealTerms>
+            <cac:PresentationPeriod>
+               <cbc:Description languageID="POL">1. Wykonawcy, a także innemu podmiotowi, jeżeli ma lub miał interes w uzyskaniu zamówienia oraz poniósł lub może ponieść szkodę w wyniku naruszenia przez Zamawiającego przepisów PZP, przysługują środki ochrony prawnej określone w dziale IX PZP tj. odwołanie i skarga do sądu. Postępowanie odwoławcze uregulowane zostało w przepisach art. 506578 PZP, a postępowanie skargowe w przepisach art. 579590 PZP. 2. Odwołanie przysługuje na: 1) niezgodną z przepisami PZP czynność Zamawiającego, podjętą w postępowaniu o udzielenie zamówienia, w tym na projektowane postanowienie umowy; 2) zaniechanie czynności w postępowaniu o udzielenie zamówienia, do której Zamawiający był obowiązany na podstawie PZP; 3) zaniechanie przeprowadzenia postępowania o udzielenie zamówienia na podstawie PZP, mimo że Zamawiający był do tego obowiązany. 3. Odwołanie wnosi się do Prezesa Krajowej Izby Odwoławczej. Odwołujący przekazuje Zamawiającemu odwołanie wniesione w formie elektronicznej albo w postaci elektronicznej albo kopię tego odwołania, jeżeli zostało ono wniesione w formie pisemnej, przed upływem terminu do wniesienia odwołania w taki sposób, aby mógł on zapoznać się z jego treścią przed upływem tego terminu. Domniemywa się, że Zamawiający mógł zapoznać się z treścią odwołania przed upływem terminu do jego wniesienia, jeżeli przekazanie odpowiednio odwołania albo jego kopii nastąpiło przed upływem terminu do jego wniesienia przy użyciu środków komunikacji elektronicznej. 4. Odwołanie wnosi się w terminie: (a) 10 dni od dnia przekazania informacji o czynności Zamawiającego stanowiącej podstawę jego wniesienia, jeżeli informacja została przekazana przy użyciu środków komunikacji elektronicznej, (b) 15 dni od dnia przekazania informacji o czynności Zamawiającego stanowiącej podstawę jego wniesienia, jeżeli informacja została przekazana w sposób inny niż określony w lit. (a). 5. Odwołanie wobec treści ogłoszenia wszczynającego postępowanie o udzielenie zamówienia lub wobec treści dokumentów zamówienia wnosi się w terminie 10 dni od dnia publikacji ogłoszenia w Dzienniku Urzędowym Unii Europejskiej lub zamieszczenia dokumentów zamówienia na stronie internetowej. 6. Odwołanie w przypadkach innych niż określone w pkt 4. i 5 wnosi się w terminie 10 dni od dnia, w którym powzięto lub przy zachowaniu należytej staranności można było powziąć wiadomość o okolicznościach stanowiących podstawę jego wniesienia. 7. Na orzeczenie Krajowej Izby Odwoławczej oraz postanowienie Prezesa Krajowej Izby Odwoławczej, o którym mowa w art. 519 ust. 1 PZP, stronom oraz uczestnikom postępowania przysługuje skarga do sądu. Skargę wnosi się do Sądu Okręgowego w Warszawie sądu zamówień publicznych. Skargę wnosi się za pośrednictwem Prezesa Krajowej Izby Odwoławczej, w terminie 14 dni od dnia doręczenia orzeczenia Krajowej Izby Odwoławczej lub postanowienia Prezesa Krajowej Izby Odwoławczej, o którym mowa w art. 519 ust. 1 PZP, przesyłając jednocześnie jej odpis przeciwnikowi skargi. Złożenie skargi w placówce pocztowej operatora wyznaczonego w rozumieniu ustawy z dnia 23 listopada 2012 r. Prawo pocztowe (tekst jedn. Dz. U. z 2022 r. poz. 896 z późn. zm.), jest równoznaczne z jej wniesieniem.</cbc:Description>
+            </cac:PresentationPeriod>
+            <cac:AppealReceiverParty>
+               <cac:PartyIdentification>
+                  <cbc:ID>ORG-0002</cbc:ID>
+               </cac:PartyIdentification>
+            </cac:AppealReceiverParty>
+         </cac:AppealTerms>
+      </cac:TenderingTerms>
+      <cac:TenderingProcess>
+         <cbc:GovernmentAgreementConstraintIndicator>false</cbc:GovernmentAgreementConstraintIndicator>
+         <cac:AuctionTerms>
+            <cbc:AuctionConstraintIndicator>false</cbc:AuctionConstraintIndicator>
+         </cac:AuctionTerms>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="framework-agreement">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+         <cac:ContractingSystem>
+            <cbc:ContractingSystemTypeCode listName="dps-usage">none</cbc:ContractingSystemTypeCode>
+         </cac:ContractingSystem>
+      </cac:TenderingProcess>
+      <cac:ProcurementProject>
+         <cbc:ID schemeName="InternalID">część II</cbc:ID>
+         <cbc:Name languageID="POL">Wykonanie kompletnej dokumentacji projektowej (zwanej dalej dokumentacją) wraz z uzyskaniem wymaganych przepisami prawa budowalnego opinii, uzgodnień i decyzji administracyjnych, oraz pełnieniem nadzoru autorskiego dla części II Przebudowa śródleśnych zbiorników wodnych w leśnictwie Skrzyszów z podziałem na 5 zadań
+</cbc:Name>
+         <cbc:Description languageID="POL">Przedmiotem zamówienia jest wykonanie kompletnej dokumentacji projektowej wraz z uzyskaniem wymaganych przepisami prawa budowalnego opinii, uzgodnień i decyzji administracyjnych, oraz pełnieniem nadzoru autorskiego dla: Zadanie 1 Przebudowa śródleś. zbiornika wodnego w Leś. Skrzyszów  nr 1 oddz. 03-06-1-08-9-f i l Pojemność zbiornika nie powinna być mniejsza niż 20720,00 m3, pow.  ok 1,36 ha. Zadanie 2 Przebudowa śródleś. zbiornika wodnego w Leś. Skrzyszów nr 2 Pojemność zbiornika nie powinna być mniejsza niż 7800,00 m3, pow. ok 0,39 ha. Zadanie 3 Przebudowa śródleś. zbiornika wodnego w Leś. Skrzyszów nr 3  Pojemność zbiornika nie powinna być mniejsza niż 5600,00 m3, pow.  ok 0,28 ha. Zadanie 4 Przebudowa śródleś. zbiornika wodnego w Leś. Skrzyszów nr 4  Pojemność zbiornika nie powinna być mniejsza niż 9200,00 m3, pow. ok 0,46 ha. Zadanie 5 Przebudowa śródleś. zbiornika wodnego w Leś. Skrzyszów nr 5  Pojemność zbiornika nie powinna być mniejsza niż 11600,00 m3, pow. ok 0,58 ha. Zakres prac dla każdego z powyższych zbiorników: odmulenia /pogłębienia czaszy zbiornika celem zwiększenia możliwości retencyjnych, naprawa /przebudowa w zakresie uszczelnienia oraz ubezpieczenia skarp grobli, wykonanie ogrodzenia  barierkami z żerdzi drewnianych oraz przebudowa uszkodzonego mnicha wraz z przepustem.  W skład dokumentacji odrębnie dla każdego zadania wchodzić będą: dokumentacja projektowa zawierająca: projekt budowlany w zakresie uwzględniającym specyfikę robót budowlanych, projekt wykonawczy. Dokumentacja kosztorysowa zawierająca: Kosztorys inwestorski wykonany zgodnie z RMRiT z dnia 20 grudnia 2021 r. w sprawie określenia metod i podstaw sporządzania kosztorysu inwestorskiego, obliczania planowanych kosztów prac projektowych oraz planowanych kosztów robót budowlanych określonych w programie funkcjonalno-użytkowym, Przedmiar robót, który powinien zawierać zestawienie przewidywanych do wykonania robót podstawowych w kolejności technologicznej ich wykonania wraz z ich szczegółowym opisem lub wskazaniem podstaw ustalający szczegółowy opis oraz wskazaniem właściwych specyfikacji technicznych wykonania i odbioru robót budowlanych. Do przedmiaru należy dołączyć w formie załączników wyliczenie i zestawienia ilości jednostek przedmiarowych robót podstawowych wskazujące sposób obliczeń pozycji przedmiarowych.	Specyfikacja Techniczna Wykonania i Odbioru Robót (STWiOR), jako opracowanie szczegółowe dla danego zadania (obiektu budowlanego) i zawierające zbiory wymagań, które są niezbędne do określenia standardu i jakości wykonania roboty budowlanej, stosowania materiałów i technologii oraz zasad odbierania i oceny prawidłowości wykonania poszczególnych robót. STWiOR winien zawierać jedynie elementy odnoszące się do konkretnego zadania z uwzględnieniem przebiegu procesu realizacji zadania (w tym: kolejność robót, wymagania dotyczące technologii i materiałów, sposób dokonywania kontroli i odbiorów istotnych elementów obiektów czy robót zanikowych) a z całkowitym wyeliminowaniem ogólnych norm, przepisów i tabel, których znajomość nie jest potrzebna do realizacji i nadzorowania konkretnej roboty budowlanej. Dokumentacja będzie przekazana w 3 egzemplarzach w wersji papierowej. Ponadto Wykonawca dostarczy dokumentację w wersji elektronicznej w formacie .pdf, formacie .dwg – dla części rysunkowej (zawierająca przynajmniej rysunki planu sytuacyjnego w układzie współrzędnych PUWG 1992) oraz .docx i .xlsx (dla części opisowej) na nośniku elektronicznym. Katalog decyzji administracyjnych i innych dokumentów koniecznych do uzyskania: Decyzja o środowiskowych uwarunkowaniach inwestycji (łącznie z ewentualnym wykonaniem raportu odziaływania na środowisko, Decyzja o warunkach zabudowy i zagospodarowania terenu (jeżeli wymagane),Zgłoszenie prowadzenia robót na obszarach form ochrony przyrody (nie wymagane w przypadku opracowywania Raportu OOŚ), Decyzja wodnoprawna, Deklaracja organu odpowiedzialnego za monitorowanie obszarów Natura 2000 (tzw. Załącznik nr 1),Deklaracja organu odpowiedzialnego za gospodarkę wodną (tzw. Załącznik nr 2),Prawomocnej decyzji o pozwoleniu na budowę lub potwierdzenie braku podstaw do wniesienia sprzeciwu do  złożonego zgłoszenia robót. Uzyskaniu innych, wymaganych przepisami szczególnymi, pozwoleń, uzgodnień lub opinii innych organów. Nadzór autorski – sprawowanie nadzoru autorskiego na żądanie inwestora lub organu administracji architektoniczno-budowlanej w zakresie: Stwierdzania w toku wykonywania robót budowlanych zgodności realizacji z projektem, Uzgadniania możliwości wprowadzenia rozwiązań zamiennych w stosunku do przewidzianych w projekcie, zgłoszonych przez kierownika budowy lub inspektora nadzoru inwestorskiego.
+Udział w postępowaniu o udzielenie zamówienia publicznego na wybór wykonawcy robót budowlanych przy formułowaniu odpowiedzi na złożone w trakcie postępowania pytania dotyczące treści SWZ, w szczególności opisu przedmiotu zamówienia oraz w charakterze biegłego przy ocenie złożonych ofert. Wykonawca na żądanie Zamawiającego będzie zobowiązany do wykonania aktualizacji kosztorysu inwestorskiego – do trzech razy jeżeli będzie taka potrzeba w terminie 7 dni od daty zlecenia.</cbc:Description>
+         <cbc:ProcurementTypeCode listName="contract-nature">services</cbc:ProcurementTypeCode>
+         <cbc:Note languageID="POL">W postępowaniu mogą brać udział Wykonawcy, którzy spełniają warunki udziału w postępowaniu dotyczące:
+1)	zdolności do występowania w obrocie gospodarczym: Zamawiający nie stawia szczególnych wymagań w zakresie opisu spełniania tego warunku udziału w postępowaniu. 2) uprawnień do prowadzenia określonej działalności gospodarczej lub  zawodowej:
+Zamawiający nie stawia szczególnych wymagań w zakresie opisu spełniania tego warunku udziału w postępowaniu.
+Warunek zdolności technicznej lub zawodowej: a)	Warunek ten, w zakresie doświadczenia, zostanie uznany za spełniony, jeśli Wykonawca wykaże, że w okresie ostatnich 6 lat liczonych wstecz od dnia, w którym upływa termin składania ofert (a jeżeli okres prowadzenia działalności jest krótszy – w tym okresie): zrealizował usługi z zakresu wykonania co najmniej jednej dokumentacji projektowej na podstawie, której wydana została ostateczna decyzja administracyjna na podstawie której uzyskano zgodę na realizację robót budowlanych polegających na budowie, przebudowie zbiorników lub urządzeń wodnych o wartości kosztorysowej robót budowlanych nie mniejszej niż 300 000 zł brutto każda. Warunek ten, w zakresie osób skierowanych przez Wykonawcę do realizacji zamówienia, zostanie uznany za spełniony, jeśli Wykonawca wykaże, że dysponuje lub będzie dysponować: co najmniej 1 osobę, z odpowiednimi uprawnieniami do projektowania w specjalności inżynierii hydrotechnicznej bez ograniczeń lub odpowiadające im ważne uprawnienia budowlane wydane na podstawie wcześniej obowiązujących przepisów, z tym że dopuszcza się również odpowiadające im uprawnienia, wydane obywatelom państw Europejskiego Obszaru Gospodarczego oraz Konfederacji Szwajcarskiej, zastrzeżeniem art. 12a oraz innych przepisów ustawy Prawo budowlane (Dz. U. 2023 r., poz. 682) oraz ustawy o zasadach uznawania kwalifikacji zawodowych nabytych w państwach członkowskich Unii Europejskiej (Dz. U. 2021 r., poz. 1646), która wykonała co najmniej jedną dokumentację projektową na podstawie, której uzyskano zgodę na realizację robót budowlanych polegających na budowie, przebudowie zbiorników lub urządzeń wodnych o wartości kosztorysowej robót budowlanych nie mniejszej niż 300 000 zł brutto. Zamawiający dopuszcza możliwość, aby ta sama osoba projektanta mogła wykonywać prace w I i II części zamówienia.
+Ocena spełniania warunków udziału w postępowaniu dokonana zostanie zgodnie z formułą „spełnia”/„nie spełnia”. 
+Dokumenty potwierdzające warunek: wykaz wykonanych usług wraz z dowodami potwierdzającymi ich należyte wykonanie, wykaz osób skierowanych przez Wykonawcę do realizacji zamówienia wraz z informacją o podstawie do dysponowania tymi zasobami. Wykaz oświadczeń oraz podmiotowych środków dowodowych w celu wykazania spełniania warunków udziału w postępowaniu składanych przez Wykonawcę zawarty został w Rozdziale 9 SWZ
+Wykonawca może w celu potwierdzenia spełnienia warunków udziału w postępowaniu polegać na zdolnościach technicznych lub zawodowych innych podmiotów, niezależnie od charakteru prawnego łączących go z nimi stosunków prawnych. 	
+Wykonawca, który polega na zdolnościach technicznych lub zawodowych  podmiotów udostępniających zasoby, składa wraz z ofertą:
+1)	zobowiązanie podmiotu udostępniającego zasoby do oddania mu do dyspozycji niezbędnych zasobów na potrzeby realizacji niniejszego zamówienia lub inny podmiotowy środek dowodowy potwierdzający, że Wykonawca realizując zamówienie, będzie dysponował niezbędnymi zasobami tych podmiotów.
+Zobowiązanie podmiotu udostępniającego zasoby, o którym mowa wyżej, potwierdza, że stosunek łączący Wykonawcę z podmiotami udostępniającymi zasoby gwarantuje rzeczywisty dostęp do tych zasobów oraz określa w szczególności: (1) zakres dostępnych Wykonawcy zasobów podmiotu udostępniającego zasoby; (2) sposób i okres udostępnienia Wykonawcy i wykorzystania przez niego zasobów podmiotu udostępniającego te zasoby przy wykonywaniu zamówienia; (3) czy i w jakim zakresie podmiot udostępniający zasoby, na zdolnościach którego Wykonawca polega w odniesieniu do warunków udziału w postępowaniu dotyczących kwalifikacji zawodowych lub doświadczenia, zrealizuje usługi, których wskazane zdolności dotyczą. Niewiążący wzór zobowiązania do oddania wykonawcy do dyspozycji niezbędnych zasobów na potrzeby wykonania zamówienia stanowi Załącznik nr 7 do SWZ;
+Zadanie będzie współfinansowane z FEnIKS 2021-2027 w przypadku uzyskania dofinansowania. Zamawiający może unieważnić postępowanie o udzielenie zamówienia, jeżeli środki publiczne, które zamawiający zamierzał przeznaczyć na sfinansowanie całości lub części zamówienia, nie zostały mu przyznane.
+W postępowaniu mogą brać udział Wykonawcy, którzy nie podlegają wykluczeniu z postępowania o udzielenie zamówienia w okolicznościach, o których mowa w art. 108 ust. 1 PZP. Na podstawie:
+1)	art. 108 ust. 1 pkt 1) PZP Zamawiający wykluczy Wykonawcę będącego osobą fizyczną, którego prawomocnie skazano za przestępstwo:
+a)	udziału w zorganizowanej grupie przestępczej albo związku mającym na celu popełnienie przestępstwa lub przestępstwa skarbowego, o którym mowa w art. 258 ustawy z dnia 6 czerwca 1997 r. Kodeks karny (tekst jedn.: Dz. U. z 2022 r. poz.–1138 z późn. zm. - „KK”),
+b)	handlu ludźmi, o którym mowa w art. 189a KK,
+c)	o którym mowa w art. 228-230a, art. 250a KK, w art. 46 - 48 ustawy z dnia 25 czerwca 2010 r. o sporcie (tekst jedn.: Dz. U. z 2022 r. poz. 1599 z późn. zm.) lub w art. 54 ust. 1-4 ustawy z dnia 12 maja 2011 r. o refundacji leków, środków spożywczych specjalnego przeznaczenia żywieniowego oraz wyrobów medycznych (tekst jedn.: Dz. U. z 2023 r. poz. 826),
+d)	finansowania przestępstwa o charakterze terrorystycznym, o którym mowa w art. 165a KK, lub przestępstwo udaremniania lub utrudniania stwierdzenia przestępnego pochodzenia pieniędzy lub ukrywania ich pochodzenia, o którym mowa w art. 299 KK,
+e)	o charakterze terrorystycznym, o którym mowa w art. 115 § 20 KK, lub mające na celu popełnienie tego przestępstwa,
+f)	powierzenia wykonywania pracy małoletniemu cudzoziemcowi, o którym mowa w art. 9 ust. 2 ustawy z dnia 15 czerwca 2012 r. o skutkach powierzania wykonywania pracy cudzoziemcom przebywającym wbrew przepisom na terytorium Rzeczypospolitej Polskiej (tekst jedn.: Dz. U. z 2021 r. poz. 1745),
+g)	przeciwko obrotowi gospodarczemu, o których mowa w art. 296-307 KK, przestępstwo oszustwa, o którym mowa w art. 286 KK, przestępstwo przeciwko wiarygodności dokumentów, o których mowa w art. 270-277d KK, lub przestępstwo skarbowe,
+h)	o którym mowa w art. 9 ust. 1 i 3 lub art. 10 ustawy z dnia 15 czerwca 2012 r. o skutkach powierzania wykonywania pracy cudzoziemcom przebywającym wbrew przepisom na terytorium Rzeczypospolitej Polskiej (tekst jedn.: Dz. U. z 2021 r. poz. 1745)
+- lub za odpowiedni czyn zabroniony określony w przepisach prawa obcego;
+2)	art. 108 ust. 1 pkt 2) PZP Zamawiający wykluczy Wykonawcę, jeżeli urzędującego członka jego organu zarządzającego lub nadzorczego, wspólnika spółki w spółce jawnej lub partnerskiej albo komplementariusza w spółce komandytowej lub komandytowo-akcyjnej lub prokurenta prawomocnie skazano za przestępstwo, o którym mowa w art. 108 ust. 1 pkt 1) PZP;
+3)	art. 108 ust. 1 pkt 3) PZP Zamawiający wykluczy Wykonawcę, wobec którego wydano prawomocny wyrok sądu lub ostateczną decyzję administracyjną o zaleganiu z uiszczeniem podatków, opłat lub składek na ubezpieczenie społeczne lub zdrowotne, chyba że Wykonawca odpowiednio przed upływem terminu do składania wniosków o dopuszczenie do udziału w postępowaniu albo przed upływem terminu składania ofert dokonał płatności należnych podatków, opłat lub składek na ubezpieczenie społeczne lub zdrowotne wraz z odsetkami lub grzywnami lub zawarł wiążące porozumienie w sprawie spłaty tych należności;
+4)	art. 108 ust. 1 pkt 4) PZP Zamawiający wykluczy Wykonawcę, wobec którego prawomocnie orzeczono zakaz ubiegania się o zamówienia publiczne;
+5)	art. 108 ust. 1 pkt 5) PZP Zamawiający wykluczy Wykonawcę, jeżeli Zamawiający może stwierdzić, na podstawie wiarygodnych przesłanek, że Wykonawca zawarł z innymi wykonawcami porozumienie mające na celu zakłócenie konkurencji, w szczególności jeżeli należąc do tej samej grupy kapitałowej w rozumieniu ustawy z dnia 16 lutego 2007 r. o ochronie konkurencji i konsumentów (tekst jedn.: Dz. U. z 2021 r. poz. 275 z późn. zm.), złożyli odrębne oferty, oferty częściowe lub wnioski o dopuszczenie do udziału w postępowaniu, chyba że wykażą, że przygotowali te oferty lub wnioski niezależnie od siebie;
+6)	art. 108 ust. 1 pkt 6 PZP Zamawiający wykluczy Wykonawcę, jeżeli, w przypadkach, o których mowa w art. 85 ust. 1 PZP, doszło do zakłócenia konkurencji wynikającego z wcześniejszego zaangażowania tego Wykonawcy lub podmiotu, który należy z Wykonawcą do tej samej grupy kapitałowej w rozumieniu ustawy z dnia 16 lutego 2007 r. o ochronie konkurencji i konsumentów (tekst jedn.: Dz. U. z 2021 r. poz. 275 z późn. zm.), chyba że spowodowane tym zakłócenie konkurencji może być wyeliminowane w inny sposób niż przez wykluczenie Wykonawcy z udziału w postępowaniu o udzielenie zamówienia. W postępowaniu mogą brać udział Wykonawcy, którzy nie podlegają wykluczeniu z postępowania o udzielenie zamówienia w okolicznościach, o których mowa w art. 109 ust. 1 pkt 4 PZP. Na podstawie:
+1)	art. 109 ust. 1 pkt 4) PZP Zamawiający wykluczy Wykonawcę, w stosunku do którego otwarto likwidację, ogłoszono upadłość, którego aktywami zarządza likwidator lub sąd, zawarł układ z wierzycielami, którego działalność gospodarcza jest zawieszona albo znajduje się on w innej tego rodzaju sytuacji wynikającej z podobnej procedury przewidzianej w przepisach miejsca wszczęcia tej procedury.
+</cbc:Note>
+         <cac:MainCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71322000</cbc:ItemClassificationCode>
+         </cac:MainCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71320000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71242000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:AdditionalCommodityClassification>
+            <cbc:ItemClassificationCode listName="cpv">71248000</cbc:ItemClassificationCode>
+         </cac:AdditionalCommodityClassification>
+         <cac:RealizedLocation>
+            <cbc:Description languageID="POL">leśnictwo  Skrzyszów</cbc:Description>
+            <cac:Address>
+               <cbc:CityName>Leśnictwo Skrzyszów</cbc:CityName>
+               <cbc:CountrySubentityCode listName="nuts">PL217</cbc:CountrySubentityCode>
+               <cac:Country>
+                  <cbc:IdentificationCode listName="country">POL</cbc:IdentificationCode>
+               </cac:Country>
+            </cac:Address>
+         </cac:RealizedLocation>
+         <cac:PlannedPeriod>
+            <cbc:StartDate>2025-09-30+02:00</cbc:StartDate>
+            <cbc:EndDate>2028-09-30+02:00</cbc:EndDate>
+         </cac:PlannedPeriod>
+      </cac:ProcurementProject>
+   </cac:ProcurementProjectLot>
+   <cac:TenderResult>
+      <cbc:AwardDate>2000-01-01Z</cbc:AwardDate>
+   </cac:TenderResult>
+</ContractAwardNotice>

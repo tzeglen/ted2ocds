@@ -82,6 +82,7 @@ def parse_not_awarded_reason(xml_content: str | bytes) -> dict | None:
                 "status": "unsuccessful",
                 "statusDetails": REASON_CODE_MAPPING.get(reason_code[0], "Unknown"),
                 "relatedLots": [lot_id[0]],
+                "tedStatusDecision": reason_code[0],
             }
             result["awards"].append(award)
             logger.debug(

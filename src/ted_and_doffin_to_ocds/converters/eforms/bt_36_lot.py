@@ -59,7 +59,14 @@ def parse_lot_duration(xml_content: str | bytes) -> dict | None:
                 continue
 
             result["tender"]["lots"].append(
-                {"id": lot_id, "contractPeriod": {"durationInDays": duration_in_days}},
+                {
+                    "id": lot_id,
+                    "contractPeriod": {
+                        "durationInDays": duration_in_days,
+                        "duration": duration_value,
+                        "durationUnit": unit_code,
+                    },
+                },
             )
 
     return result if result["tender"]["lots"] else None

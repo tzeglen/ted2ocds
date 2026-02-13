@@ -62,7 +62,15 @@ def parse_part_duration(xml_content: str | bytes) -> dict[str, Any] | None:
         logger.exception("Invalid duration value")
         return None
     else:
-        return {"tender": {"contractPeriod": {"durationInDays": duration_in_days}}}
+        return {
+            "tender": {
+                "contractPeriod": {
+                    "durationInDays": duration_in_days,
+                    "duration": duration_value,
+                    "durationUnit": unit_code,
+                }
+            }
+        }
 
 
 def calculate_duration_in_days(value: int, unit_code: str) -> int | None:
@@ -109,8 +117,6 @@ def merge_part_duration(
 
     tender = release_json.setdefault("tender", {})
     contract_period = tender.setdefault("contractPeriod", {})
-    contract_period["durationInDays"] = part_duration_data["tender"]["contractPeriod"][
-        "durationInDays"
-    ]
+    contract_period.update(part_duration_data["tender"]["contractPeriod"])
 
     logger.info("Merged contract duration: %d days", contract_period["durationInDays"])

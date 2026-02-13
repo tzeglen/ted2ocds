@@ -38,7 +38,10 @@ def parse_procedure_internal_identifier(
 
     if internal_id:
         return {
-            "tender": {"identifiers": [{"id": internal_id[0], "scheme": "internal"}]}
+            "tender": {
+                "identifiers": [{"id": internal_id[0], "scheme": "internal"}],
+                "internalId": internal_id[0],
+            }
         }
 
     return None
@@ -59,6 +62,6 @@ def merge_procedure_internal_identifier(
         logger.warning("No procedure internal identifier data to merge")
         return
 
-    release_json.setdefault("tender", {})["identifiers"] = (
-        procedure_internal_identifier_data["tender"]["identifiers"]
-    )
+    tender = release_json.setdefault("tender", {})
+    tender["identifiers"] = procedure_internal_identifier_data["tender"]["identifiers"]
+    tender["internalId"] = procedure_internal_identifier_data["tender"]["internalId"]

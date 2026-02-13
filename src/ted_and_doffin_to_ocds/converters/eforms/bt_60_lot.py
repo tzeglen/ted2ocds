@@ -50,31 +50,36 @@ def parse_eu_funds(xml_content: str | bytes) -> dict | None:
     xpath = "/*/cac:ProcurementProjectLot[cbc:ID/@schemeName='Lot']/cac:TenderingTerms/cbc:FundingProgramCode[@listName='eu-funded']"
 
     lots_with_eu_funds = {}
+    lot_eu_funded_flags = {}
 
     funding_elements = root.xpath(xpath, namespaces=namespaces)
     for element in funding_elements:
         # Check if the element text is 'eu-funds' or 'true'
-        if element.text in ("eu-funds", "true"):
+        text_value = (element.text or "").strip()
+        lot_element = element.xpath(
+            "ancestor::cac:ProcurementProjectLot[1]", namespaces=namespaces
+        )[0]
+        lot_id_elements = lot_element.xpath(
+            "cbc:ID[@schemeName='Lot']/text()", namespaces=namespaces
+        )
+        if not lot_id_elements:
+            continue
+        lot_id = lot_id_elements[0]
+
+        if text_value in ("eu-funds", "true"):
             # Navigate up the tree to find the ProcurementProjectLot element
-            lot_element = element.xpath(
-                "ancestor::cac:ProcurementProjectLot[1]", namespaces=namespaces
-            )[0]
-            lot_id_elements = lot_element.xpath(
-                "cbc:ID[@schemeName='Lot']/text()", namespaces=namespaces
+            funding_program = lot_element.xpath(
+                "cac:TenderingTerms/cbc:FundingProgram/text()",
+                namespaces=namespaces,
             )
 
-            if lot_id_elements:
-                lot_id = lot_id_elements[0]
-
-                funding_program = lot_element.xpath(
-                    "cac:TenderingTerms/cbc:FundingProgram/text()",
-                    namespaces=namespaces,
-                )
-
-                lots_with_eu_funds[lot_id] = {
-                    "id": lot_id,
-                    "funding_program": funding_program[0] if funding_program else None,
-                }
+            lots_with_eu_funds[lot_id] = {
+                "id": lot_id,
+                "funding_program": funding_program[0] if funding_program else None,
+            }
+            lot_eu_funded_flags[lot_id] = True
+        elif text_value in ("no-eu-funds", "false"):
+            lot_eu_funded_flags[lot_id] = False
 
     funding_project_id = None
     funding_elements = root.xpath(
@@ -83,21 +88,35 @@ def parse_eu_funds(xml_content: str | bytes) -> dict | None:
     if funding_elements:
         funding_project_id = funding_elements[0]
 
+    result = {}
+
+    if lot_eu_funded_flags:
+        result["tender"] = {
+            "lots": [
+                {"id": lot_id, "euFunded": flag}
+                for lot_id, flag in lot_eu_funded_flags.items()
+            ]
+        }
+
     if not lots_with_eu_funds:
+        if result:
+            return result
         logger.info("No EU funds indicator found. Skipping parse_eu_funds.")
         return None
 
     eu_party_id = str(uuid.uuid4())
-    result = {
-        "parties": [
-            {
-                "id": eu_party_id,
-                "name": "European Union",
-                "roles": ["funder"],
-            }
-        ],
-        "finance": [],
-    }
+    result.update(
+        {
+            "parties": [
+                {
+                    "id": eu_party_id,
+                    "name": "European Union",
+                    "roles": ["funder"],
+                }
+            ],
+            "finance": [],
+        }
+    )
 
     finance_obj = {
         "id": str(uuid.uuid4()),
@@ -154,5 +173,17 @@ def merge_eu_funds(release_json: dict, eu_funds_data: dict | None) -> None:
     for finance_obj in eu_funds_data.get("finance", []):
         finance_obj["financingParty"]["id"] = eu_party["id"]
         release_json["planning"]["budget"]["finance"].append(finance_obj)
+
+    if "tender" in eu_funds_data and "lots" in eu_funds_data["tender"]:
+        existing_lots = release_json.setdefault("tender", {}).setdefault("lots", [])
+        for new_lot in eu_funds_data["tender"]["lots"]:
+            existing_lot = next(
+                (lot for lot in existing_lots if lot["id"] == new_lot["id"]),
+                None,
+            )
+            if existing_lot:
+                existing_lot["euFunded"] = new_lot["euFunded"]
+            else:
+                existing_lots.append(new_lot)
 
     logger.info("Merged EU funds data")
