@@ -18,6 +18,10 @@ from ted_and_doffin_to_ocds.converters.eforms.bt_05_notice import (
     merge_notice_dispatch_date_time,
     parse_notice_dispatch_date_time,
 )
+from ted_and_doffin_to_ocds.converters.eforms.bt_publication_date_notice import (
+    merge_notice_publication_date,
+    parse_notice_publication_date,
+)
 from ted_and_doffin_to_ocds.converters.eforms.bt_06_lot import (
     merge_strategic_procurement,
     parse_strategic_procurement,
@@ -2467,6 +2471,11 @@ def process_bt_sections(release_json: dict[str, Any], xml_content: bytes) -> Non
             parse_notice_dispatch_date_time,
             merge_notice_dispatch_date_time,
             "notice Dispatch Date and Time (BT-05)",
+        ),
+        (
+            parse_notice_publication_date,
+            merge_notice_publication_date,
+            "notice Publication Date (efac:Publication/efbc:PublicationDate)",
         ),
         (
             parse_strategic_procurement,
