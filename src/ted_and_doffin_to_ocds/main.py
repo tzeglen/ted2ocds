@@ -44,8 +44,8 @@ class NoticeConverter:
             msg = f"Expected XML file, got: {input_path}"
             raise ValueError(msg)
 
-    def process_file(self, input_path: Path, output_folder: Path) -> None:
-        """Process a single XML file."""
+    def process_file(self, input_path: Path, output_folder: Path) -> int:
+        """Process a single XML file and return number of generated releases."""
         try:
             self.logger.info("Processing file: %s", input_path)
             self._validate_input_file(input_path)
@@ -61,20 +61,27 @@ class NoticeConverter:
             releases = self._process_input_file(xml_content)
             if not releases:
                 self.logger.warning("No releases generated for file: %s", input_path)
-                return
+                return 0
 
             # Finally try to write the output
             self._write_releases(input_path, output_folder, releases)
             self.logger.info("Successfully processed file: %s", input_path)
+            return len(releases)
 
         except Exception as e:
             self._handle_process_error(input_path, e)
             self.logger.exception("Error processing file %s", input_path)
             raise
 
-    def process_files_parallel(self, files: list[Path]) -> None:
-        """Process files in parallel with improved error handling and progress tracking."""
+    def process_files_parallel(self, files: list[Path]) -> dict[str, int]:
+        """Process files in parallel and return summary statistics."""
         self.logger.info("Starting parallel processing of %d files", len(files))
+        summary = {
+            "input_files": len(files),
+            "processed_files": 0,
+            "failed_files": 0,
+            "generated_releases": 0,
+        }
 
         with ThreadPoolExecutor(max_workers=self.MAX_WORKERS) as executor:
             # Submit all files individually
@@ -85,14 +92,22 @@ class NoticeConverter:
 
             # Track progress and handle errors
             failed_files = []
-            with tqdm(total=len(files), desc="Processing files", unit="file") as pbar:
+            with tqdm(
+                total=len(files),
+                desc="Processing files",
+                unit="file",
+                disable=not self.config.show_progress,
+            ) as pbar:
                 for future in as_completed(futures):
                     try:
-                        future.result()
+                        release_count = future.result()
+                        summary["processed_files"] += 1
+                        summary["generated_releases"] += release_count
                         pbar.update(1)
                     except Exception as e:
                         file_path = futures[future]
                         failed_files.append((file_path, str(e)))
+                        summary["failed_files"] += 1
                         self.logger.exception("Failed to process file: %s", file_path)
                         pbar.set_postfix({"failed": len(failed_files)}, refresh=True)
                         pbar.update(1)
@@ -103,6 +118,8 @@ class NoticeConverter:
                     self.logger.error("  %s: %s", file_path.name, error)
                 error_msg = f"Failed to process {len(failed_files)} files. Check the log for details."
                 raise RuntimeError(error_msg)
+
+        return summary
 
     def _handle_process_error(self, file_path: Path, error: Exception) -> None:
         """Handle processing errors for specific files."""
@@ -198,6 +215,7 @@ def parse_arguments(
     ocid_prefix: str | None = None,
     scheme: str | None = None,
     db_path: str | None = None,
+    show_progress: bool | None = None,
 ) -> Config:
     """Parse command line arguments or use provided values."""
     if all(arg is not None for arg in [input_path, output_folder, ocid_prefix]):
@@ -209,6 +227,7 @@ def parse_arguments(
             db_path=Path(db_path or "notices.db"),
             clear_db=False,
             log_level="INFO",
+            show_progress=True if show_progress is None else show_progress,
         )
 
     parser = argparse.ArgumentParser(description="Convert XML eForms to OCDS JSON")
@@ -236,6 +255,11 @@ def parse_arguments(
         default="INFO",
         help="Set the logging level",
     )
+    parser.add_argument(
+        "--no-progress",
+        action="store_true",
+        help="Disable progress bars on console",
+    )
     args = parser.parse_args()
 
     return Config(
@@ -246,6 +270,7 @@ def parse_arguments(
         db_path=Path(args.db),
         clear_db=args.clear_db,
         log_level=args.log_level,
+        show_progress=not args.no_progress,
     )
 
 
@@ -255,20 +280,22 @@ def main(
     ocid_prefix: str | None = None,
     scheme: str | None = None,
     db_path: str | None = None,
+    show_progress: bool | None = None,
 ) -> None:
     """Main entry point for notice conversion."""
     logger = logging.getLogger(__name__)
 
     try:
         config = parse_arguments(
-            input_path, output_folder, ocid_prefix, scheme, db_path
+            input_path, output_folder, ocid_prefix, scheme, db_path, show_progress
         )
         configure_logging(config.log_level)
 
         logger.info("Starting conversion with config: %s", vars(config))
 
         converter = NoticeConverter(config)
-        process_files(converter, config)
+        summary = process_files(converter, config)
+        print_summary(summary, config.output_folder)
 
         logger.info("Conversion completed successfully")
     except Exception:
@@ -276,8 +303,8 @@ def main(
         raise
 
 
-def process_files(converter: NoticeConverter, config: Config) -> None:
-    """Process all input files."""
+def process_files(converter: NoticeConverter, config: Config) -> dict[str, int]:
+    """Process all input files and return summary statistics."""
     logger = logging.getLogger(__name__)
 
     try:
@@ -296,23 +323,47 @@ def process_files(converter: NoticeConverter, config: Config) -> None:
 
         if input_path.is_file():
             # Process single file directly
-            converter.process_file(input_path, config.output_folder)
-            return
+            release_count = converter.process_file(input_path, config.output_folder)
+            return {
+                "input_files": 1,
+                "processed_files": 1,
+                "failed_files": 0,
+                "generated_releases": release_count,
+            }
 
         # Process multiple files
-        with NoticeFileProcessor(input_path, config.output_folder) as processor:
+        with NoticeFileProcessor(
+            input_path, config.output_folder, show_progress=config.show_progress
+        ) as processor:
             processor.copy_input_files()
             files = processor.get_sorted_files()
 
             if not files:
                 logger.warning("No XML files found to process")
-                return
+                return {
+                    "input_files": 0,
+                    "processed_files": 0,
+                    "failed_files": 0,
+                    "generated_releases": 0,
+                }
 
-            converter.process_files_parallel(files)
+            return converter.process_files_parallel(files)
 
     except Exception:
         logger.exception("Failed to process files")
         raise
+
+
+def print_summary(summary: dict[str, int], output_folder: Path) -> None:
+    """Print end-of-run summary to console."""
+    print(
+        "Summary: "
+        f"input_files={summary['input_files']}, "
+        f"processed={summary['processed_files']}, "
+        f"failed={summary['failed_files']}, "
+        f"releases={summary['generated_releases']}, "
+        f"output_folder={output_folder}"
+    )
 
 
 if __name__ == "__main__":

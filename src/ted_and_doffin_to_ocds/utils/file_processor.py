@@ -30,10 +30,13 @@ class NoticeFileProcessor:
 
     MAX_FILE_SIZE: Final[int] = 100 * 1024 * 1024  # 100MB limit
 
-    def __init__(self, input_path: Path, output_path: Path) -> None:
+    def __init__(
+        self, input_path: Path, output_path: Path, show_progress: bool = True
+    ) -> None:
         """Initialize the processor with input and output paths."""
         self.input_path = input_path
         self.output_path = output_path
+        self.show_progress = show_progress
         self.temp_dir = None
 
     def __enter__(self) -> Self:
@@ -152,7 +155,7 @@ class NoticeFileProcessor:
             raise UninitializedError
 
         files = list(self.input_path.glob("*.xml"))
-        with tqdm(files, desc="Copying files") as pbar:
+        with tqdm(files, desc="Copying files", disable=not self.show_progress) as pbar:
             for xml_file in pbar:
                 if xml_file.stat().st_size > self.MAX_FILE_SIZE:
                     logger.warning("File %s exceeds size limit", xml_file)

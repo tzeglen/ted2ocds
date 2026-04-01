@@ -38,6 +38,36 @@ def test_parse_lot_public_opening_date() -> None:
     )
 
 
+def test_parse_lot_public_opening_date_date_with_z_time_with_offset() -> None:
+    xml_content = """
+    <root xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+          xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+        <cac:ProcurementProjectLot>
+            <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+            <cac:TenderingProcess>
+                <cac:OpenTenderEvent>
+                    <cbc:OccurrenceDate>2026-04-28Z</cbc:OccurrenceDate>
+                    <cbc:OccurrenceTime>09:00:00+02:00</cbc:OccurrenceTime>
+                </cac:OpenTenderEvent>
+            </cac:TenderingProcess>
+        </cac:ProcurementProjectLot>
+    </root>
+    """
+
+    result = parse_lot_public_opening_date(xml_content)
+
+    assert result is not None
+    assert len(result["tender"]["lots"]) == 1
+    assert result["tender"]["lots"][0]["id"] == "LOT-0001"
+    assert (
+        result["tender"]["lots"][0]["awardPeriod"]["startDate"]
+        == "2026-04-28T09:00:00+02:00"
+    )
+    assert (
+        result["tender"]["lots"][0]["bidOpening"]["date"] == "2026-04-28T09:00:00+02:00"
+    )
+
+
 def test_merge_lot_public_opening_date() -> None:
     release_json = {"tender": {"lots": [{"id": "LOT-0001", "title": "Existing Lot"}]}}
 

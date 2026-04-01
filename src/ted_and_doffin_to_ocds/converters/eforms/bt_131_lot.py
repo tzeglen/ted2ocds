@@ -4,7 +4,7 @@ import logging
 
 from lxml import etree
 
-from ted_and_doffin_to_ocds.utils.date_utils import end_date
+from ted_and_doffin_to_ocds.utils.date_utils import convert_to_iso_format, end_date
 
 logger = logging.getLogger(__name__)
 
@@ -67,8 +67,28 @@ def parse_deadline_receipt_tenders(xml_content: str | bytes) -> dict | None:
                 # Combine date and time if available, otherwise just use date
                 date_str = end_date_str[0]
                 if end_time_str:
-                    date_str = f"{date_str.split('+')[0]}T{end_time_str[0]}"
-                deadline = end_date(date_str)
+                    date_parts = date_str.split("+", 1)
+                    base_date = date_parts[0].rstrip("Z")
+
+                    time_str = end_time_str[0]
+                    time_parts = time_str.split("+", 1)
+                    base_time = time_parts[0].rstrip("Z")
+
+                    # Use timezone from time first, then from date, default to UTC.
+                    if len(time_parts) > 1:
+                        tz = f"+{time_parts[1]}"
+                    elif time_str.endswith("Z"):
+                        tz = "Z"
+                    elif len(date_parts) > 1:
+                        tz = f"+{date_parts[1]}"
+                    elif date_str.endswith("Z"):
+                        tz = "Z"
+                    else:
+                        tz = "Z"
+
+                    deadline = convert_to_iso_format(f"{base_date}T{base_time}{tz}")
+                else:
+                    deadline = end_date(date_str)
                 result["tender"]["lots"].append(
                     {"id": lot_id, "tenderPeriod": {"endDate": deadline}}
                 )

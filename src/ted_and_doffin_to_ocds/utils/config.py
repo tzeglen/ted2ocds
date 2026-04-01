@@ -13,3 +13,4 @@ class Config:
     db_path: Path
     clear_db: bool
     log_level: str
+    show_progress: bool

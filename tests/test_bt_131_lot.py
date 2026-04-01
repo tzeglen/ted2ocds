@@ -79,5 +79,37 @@ def test_bt_131_lot_integration(tmp_path, setup_logging, temp_output_dir) -> Non
     ), f"Expected endDate '2019-11-30T12:00:00+01:00', got {lot['tenderPeriod']['endDate']}"
 
 
+def test_bt_131_lot_integration_date_with_z_time_with_offset(
+    tmp_path, setup_logging, temp_output_dir
+) -> None:
+    logger = setup_logging
+
+    xml_content = """<?xml version="1.0" encoding="UTF-8"?>
+    <ContractNotice xmlns="urn:oasis:names:specification:ubl:schema:xsd:ContractNotice-2"
+        xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+        xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+        <cbc:ID>notice-1</cbc:ID>
+        <cac:ProcurementProjectLot>
+            <cbc:ID schemeName="Lot">LOT-0001</cbc:ID>
+            <cac:TenderingProcess>
+                <cac:TenderSubmissionDeadlinePeriod>
+                    <cbc:EndDate>2026-04-28Z</cbc:EndDate>
+                    <cbc:EndTime>08:45:00+02:00</cbc:EndTime>
+                </cac:TenderSubmissionDeadlinePeriod>
+            </cac:TenderingProcess>
+        </cac:ProcurementProjectLot>
+    </ContractNotice>
+    """
+
+    xml_file = tmp_path / "test_input_deadline_receipt_tenders_z_date.xml"
+    xml_file.write_text(xml_content)
+
+    result = run_main_and_get_result(xml_file, temp_output_dir)
+
+    lot = result["tender"]["lots"][0]
+    assert lot["id"] == "LOT-0001"
+    assert lot["tenderPeriod"]["endDate"] == "2026-04-28T08:45:00+02:00"
+
+
 if __name__ == "__main__":
     pytest.main(["-v"])

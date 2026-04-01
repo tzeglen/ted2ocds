@@ -2,7 +2,7 @@ import logging
 
 from lxml import etree
 
-from ted_and_doffin_to_ocds.utils.date_utils import start_date
+from ted_and_doffin_to_ocds.utils.date_utils import convert_to_iso_format, start_date
 
 logger = logging.getLogger(__name__)
 
@@ -68,8 +68,28 @@ def parse_lot_public_opening_date(xml_content: str | bytes) -> dict | None:
                 # Combine date and time if available
                 date_str = date[0]
                 if time:
-                    date_str = f"{date_str.split('+')[0]}T{time[0]}"
-                iso_date = start_date(date_str)
+                    date_parts = date_str.split("+", 1)
+                    base_date = date_parts[0].rstrip("Z")
+
+                    time_str = time[0]
+                    time_parts = time_str.split("+", 1)
+                    base_time = time_parts[0].rstrip("Z")
+
+                    # Use timezone from time first, then from date, default to UTC.
+                    if len(time_parts) > 1:
+                        tz = f"+{time_parts[1]}"
+                    elif time_str.endswith("Z"):
+                        tz = "Z"
+                    elif len(date_parts) > 1:
+                        tz = f"+{date_parts[1]}"
+                    elif date_str.endswith("Z"):
+                        tz = "Z"
+                    else:
+                        tz = "Z"
+
+                    iso_date = convert_to_iso_format(f"{base_date}T{base_time}{tz}")
+                else:
+                    iso_date = start_date(date_str)
                 lot_data = {
                     "id": lot_id,
                     "awardPeriod": {"startDate": iso_date},
